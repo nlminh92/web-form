@@ -1,0 +1,51 @@
+
+<div class="text-center">
+    <h4>Thống kê theo ngành</h4>
+</div>
+
+<div class="container">
+    <div class="mdc-layout-grid" style="padding-left: 0 !important; padding-bottom: 0; !important;">
+        <div class="mdc-layout-grid__inner">
+            <div class="mdc-layout-grid__cell--span-8">
+                <mat-form-field appearance="outline">
+                    <mat-label>Đợt đăng ký (*)</mat-label>
+                    <mat-select [(ngModel)]="session_id" (selectionChange)="changeSession($event)">
+                        <mat-option *ngFor="let item of list_sessions" [value]="item.id">
+                            {{item.name}}
+                        </mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </div>
+
+            <div class="mdc-layout-grid__cell--span-4" style="text-align: right; margin-top: 10px;">
+<!--                <h4>Tổng số: {{data.length}}</h4>-->
+            </div>
+        </div>
+    </div>
+</div>
+
+<div layout="row">
+    <mat-table [dataSource]="dataSource" matSort>
+        <ng-container matColumnDef="stt">
+            <mat-header-cell *matHeaderCellDef> STT </mat-header-cell>
+            <mat-cell *matCellDef="let item;  let i = index"> {{i+1}} </mat-cell>
+        </ng-container>
+
+        <!-- Position Column -->
+        <ng-container matColumnDef="career">
+            <mat-header-cell *matHeaderCellDef mat-sort-header> Ngành </mat-header-cell>
+            <mat-cell *matCellDef="let item"> {{item.name}} </mat-cell>
+        </ng-container>
+
+        <!-- Name Column -->
+        <ng-container matColumnDef="count">
+            <mat-header-cell *matHeaderCellDef mat-sort-header> Số lượng </mat-header-cell>
+            <mat-cell *matCellDef="let item"> {{item.count }} </mat-cell>
+        </ng-container>
+
+        <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+        <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+    </mat-table>
+
+    <!--    <mat-paginator [pageSizeOptions]="[10, 20, 50]" showFirstLastButtons></mat-paginator>-->
+</div>

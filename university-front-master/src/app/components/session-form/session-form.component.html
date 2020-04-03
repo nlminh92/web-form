@@ -1,0 +1,30 @@
+<h1 mat-dialog-title *ngIf="data.id">Chỉnh sửa đợt đăng ký</h1>
+<h1 mat-dialog-title *ngIf="!data.id">Thêm mới đợt đăng ký</h1>
+<div mat-dialog-content>
+    <form id="login" [formGroup]="form">
+        <mat-form-field>
+            <mat-label>Tên đợt đăng ký</mat-label>
+            <input matInput type="text" formControlName="name" placeholder="Tên đợt đăng ký" aria-label="Username">
+            <mat-error class="error-message" *ngIf="form.get('name').invalid && submited">
+                <span *ngIf="form.get('name').hasError('required')">Vui lòng nhập dữ liệu</span>
+            </mat-error>
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput formControlName="from_time" type="datetime-local" placeholder="Thời gian bắt đầu">
+            <mat-error class="error-message" *ngIf="form.get('name').invalid && submited">
+                <span *ngIf="form.get('from_time').hasError('required')">Vui lòng nhập dữ liệu</span>
+            </mat-error>
+        </mat-form-field>
+
+        <mat-form-field>
+            <input matInput formControlName="to_time" type="datetime-local" placeholder="Thời gian kết thúc">
+            <mat-error class="error-message" *ngIf="form.get('name').invalid && submited">
+                <span *ngIf="form.get('to_time').hasError('required')">Vui lòng nhập dữ liệu</span>
+            </mat-error>
+        </mat-form-field>
+    </form>
+</div>
+<div mat-dialog-actions>
+    <button mat-button (click)="onNoClick()">Đóng</button>
+    <button mat-button (click)="submit()" cdkFocusInitial>Lưu</button>
+</div>

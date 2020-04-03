@@ -1,0 +1,8 @@
+.idea/*
+node_modules/
+uploads/*
+package-lock.json
+.vscode/*
+errors.log
+usernodes.log
+public/*

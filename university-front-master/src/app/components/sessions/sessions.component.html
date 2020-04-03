@@ -1,0 +1,49 @@
+
+<div class="text-center">
+    <h4>Danh sách đợt đăng ký</h4>
+</div>
+<div style="text-align: right; padding: 10px;">
+    <button mat-raised-button color="primary" (click)="openDialog({})">Thêm mới đợt đăng ký</button>
+</div>
+<div layout="row">
+    <mat-table [dataSource]="dataSource" matSort>
+        <ng-container matColumnDef="stt">
+            <mat-header-cell *matHeaderCellDef> STT </mat-header-cell>
+            <mat-cell *matCellDef="let item;  let i = index"> {{i+1}} </mat-cell>
+        </ng-container>
+
+        <!-- Position Column -->
+        <ng-container matColumnDef="name">
+            <mat-header-cell *matHeaderCellDef mat-sort-header> Tên đợt </mat-header-cell>
+            <mat-cell *matCellDef="let item"> {{item.name}} </mat-cell>
+        </ng-container>
+
+        <!-- Name Column -->
+        <ng-container matColumnDef="from">
+            <mat-header-cell *matHeaderCellDef mat-sort-header> Từ </mat-header-cell>
+            <mat-cell *matCellDef="let item"> {{item.from_time | date: 'dd/MM/y h:mm:ss a'}} </mat-cell>
+        </ng-container>
+
+        <!-- Weight Column -->
+        <ng-container matColumnDef="to">
+            <mat-header-cell *matHeaderCellDef mat-sort-header> Đến </mat-header-cell>
+            <mat-cell *matCellDef="let item"> {{item.to_time | date: 'dd/MM/y h:mm:ss a'}} </mat-cell>
+        </ng-container>
+
+        <!-- Symbol Column -->
+<!--        <ng-container matColumnDef="edit">-->
+<!--            <mat-header-cell *matHeaderCellDef mat-sort-header> Sửa </mat-header-cell>-->
+<!--            <mat-cell *matCellDef="let item"> </mat-cell>-->
+<!--        </ng-container>-->
+
+<!--        <ng-container matColumnDef="delete">-->
+<!--            <mat-header-cell *matHeaderCellDef mat-sort-header> Xóa </mat-header-cell>-->
+<!--            <mat-cell *matCellDef="let item"> </mat-cell>-->
+<!--        </ng-container>-->
+
+        <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+        <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+    </mat-table>
+
+<!--    <mat-paginator [pageSizeOptions]="[10, 20, 50]" showFirstLastButtons></mat-paginator>-->
+</div>
