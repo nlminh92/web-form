@@ -21,7 +21,7 @@
     "docx-pdf": "0.0.1",
     "docx-templates": "^3.1.1",
     "docxtemplater": "^3.16.11",
-    "ejs": "~2.3.3",
+    "ejs": "~3.0.2",
     "express": "~4.13.1",
     "fs-extra": "latest",
     "http-proxy": "latest",
