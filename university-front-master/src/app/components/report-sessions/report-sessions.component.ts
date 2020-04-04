@@ -18,7 +18,7 @@ export class ReportSessionsComponent implements OnInit {
 
     list_sessions = [];
     data = [];
-    displayedColumns = ['stt', 'name', 'gender', 'birthday', 'place_of_birth', 'address', 'mobilephone', 'email', 'career_1', 'career_2', 'career_3', 'career_4'];
+    displayedColumns = ['stt', 'typee', 'code', 'name', 'mobilephone', 'email', 'created_at'];
     dataSource = new MatTableDataSource([]);
     session_id = -1;
     from_time = new Date();

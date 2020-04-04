@@ -1,4 +1,4 @@
-
+<div class="container" style="overflow-x: scroll; height: 90vh">
 <div class="text-center">
     <h4>Thống kê theo ngành</h4>
 </div>
@@ -16,15 +16,12 @@
                     </mat-select>
                 </mat-form-field>
             </div>
-
-            <div class="mdc-layout-grid__cell--span-4" style="text-align: right; margin-top: 10px;">
-<!--                <h4>Tổng số: {{data.length}}</h4>-->
-            </div>
         </div>
     </div>
 </div>
 
-<div layout="row">
+<p> Dành cho thí sinh thi đánh giá năng lực </p>
+<div class="container" id="form1">
     <mat-table [dataSource]="dataSource" matSort>
         <ng-container matColumnDef="stt">
             <mat-header-cell *matHeaderCellDef> STT </mat-header-cell>
@@ -48,4 +45,33 @@
     </mat-table>
 
     <!--    <mat-paginator [pageSizeOptions]="[10, 20, 50]" showFirstLastButtons></mat-paginator>-->
+</div>
+
+<p> Dành cho thí sinh xét tuyển bằng học bạ </p>
+
+<div class="container" id="form2">
+    <mat-table [dataSource]="dataSource" matSort>
+        <ng-container matColumnDef="stt">
+            <mat-header-cell *matHeaderCellDef> STT </mat-header-cell>
+            <mat-cell *matCellDef="let item;  let i = index"> {{i+1}} </mat-cell>
+        </ng-container>
+
+        <!-- Position Column -->
+        <ng-container matColumnDef="career">
+            <mat-header-cell *matHeaderCellDef mat-sort-header> Ngành </mat-header-cell>
+            <mat-cell *matCellDef="let item"> {{item.name}} </mat-cell>
+        </ng-container>
+
+        <!-- Name Column -->
+        <ng-container matColumnDef="count">
+            <mat-header-cell *matHeaderCellDef mat-sort-header> Số lượng </mat-header-cell>
+            <mat-cell *matCellDef="let item"> {{item.count }} </mat-cell>
+        </ng-container>
+
+        <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+        <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+    </mat-table>
+
+    <!--    <mat-paginator [pageSizeOptions]="[10, 20, 50]" showFirstLastButtons></mat-paginator>-->
+</div>
 </div>

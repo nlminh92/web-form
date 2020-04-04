@@ -19,7 +19,7 @@ import { formatDate } from '@angular/common';
 export class ListCurriculumsComponent implements OnInit {
     list_sessions = [];
     data = [];
-    displayedColumns = ['stt', 'name', 'gender', 'birthday', 'place_of_birth', 'address', 'mobilephone', 'email', 'career_1', 'career_2', 'career_3', 'career_4'];
+    displayedColumns = ['stt', 'typee', 'code', 'name', 'gender', 'birthday', 'mobilephone', 'email', 'identity_card'];
     dataSource = new MatTableDataSource([]);
     session_id = -1;
     constructor(
@@ -59,7 +59,7 @@ export class ListCurriculumsComponent implements OnInit {
       const locale = 'en-US';
       const title = 'Danh sách đăng ký';
       const header = ['STT', 'Họ tên', 'Giới tính', 'Ngày sinh', 'Nơi sinh', 'Số Chứng minh nhân dân / Thẻ căn cước công dân',
-          'Địa chỉ liên hệ', 'Điện thoại liên hệ', 'Email', "Năm lớp 10", "Mã tỉnh", "Mã trường", "Năm lớp 11", "Mã tỉnh", "Mã trường", "Năm lớp 12", "Mã tỉnh", "Mã trường",
+          'Địa chỉ liên hệ', 'Điện thoại liên hệ', 'Email', 'Loai', "Năm lớp 10", "Mã tỉnh", "Mã trường", "Năm lớp 11", "Mã tỉnh", "Mã trường", "Năm lớp 12", "Mã tỉnh", "Mã trường",
       'Năm tốt nghiệp', 'Khu vực', 'Đối tượng ưu tiên', 'Ngày thi đánh giá năng lực', 'Số báo danh', 'Điểm thi', 'Ngành 1', 'Mã ngành',
           'Ngành 2', 'Mã ngành', 'Ngành 3', 'Mã ngành', 'Ngành 4', 'Mã ngành'];
 
@@ -90,6 +90,7 @@ export class ListCurriculumsComponent implements OnInit {
                   element.address,
                   element.mobilephone,
                   element.email,
+                  element.typee,
                   element.grade_ten,
                   element.grade_ten_province_code,
                   element.grade_ten_school_code,

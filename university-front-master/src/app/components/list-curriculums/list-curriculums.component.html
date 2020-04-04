@@ -31,6 +31,16 @@
                 <mat-cell *matCellDef="let item"> {{item.name}} </mat-cell>
             </ng-container>
 
+            <ng-container matColumnDef="typee">
+                <mat-header-cell *matHeaderCellDef mat-sort-header> Loại form </mat-header-cell>
+                <mat-cell *matCellDef="let item"> {{item.typee}} </mat-cell>
+            </ng-container>
+
+            <ng-container matColumnDef="code">
+                <mat-header-cell *matHeaderCellDef mat-sort-header> Mã hồ sơ </mat-header-cell>
+                <mat-cell *matCellDef="let item"> {{item.code}} </mat-cell>
+            </ng-container>
+
             <!-- Name Column -->
             <ng-container matColumnDef="gender">
                 <mat-header-cell *matHeaderCellDef mat-sort-header> Giới tính </mat-header-cell>
@@ -62,24 +72,9 @@
                 <mat-cell *matCellDef="let item"> {{item.email}} </mat-cell>
             </ng-container>
 
-            <ng-container matColumnDef="career_1">
-                <mat-header-cell *matHeaderCellDef mat-sort-header> Ngành 1 </mat-header-cell>
-                <mat-cell *matCellDef="let item"> {{item.career_1_name}} </mat-cell>
-            </ng-container>
-
-            <ng-container matColumnDef="career_2">
-                <mat-header-cell *matHeaderCellDef mat-sort-header> Ngành 2 </mat-header-cell>
-                <mat-cell *matCellDef="let item"> {{item.career_2_name}} </mat-cell>
-            </ng-container>
-
-            <ng-container matColumnDef="career_3">
-                <mat-header-cell *matHeaderCellDef mat-sort-header> Ngành 3 </mat-header-cell>
-                <mat-cell *matCellDef="let item"> {{item.career_3_name}} </mat-cell>
-            </ng-container>
-
-            <ng-container matColumnDef="career_4">
-                <mat-header-cell *matHeaderCellDef mat-sort-header> Ngành 4 </mat-header-cell>
-                <mat-cell *matCellDef="let item"> {{item.career_4_name}} </mat-cell>
+            <ng-container matColumnDef="identity_card">
+                <mat-header-cell *matHeaderCellDef mat-sort-header> CMT </mat-header-cell>
+                <mat-cell *matCellDef="let item"> {{item.identity_card}} </mat-cell>
             </ng-container>
 
 

@@ -1,3 +1,4 @@
+<div class="container" style="overflow-x: scroll; height: 90vh">
 <div class="container">
     <div class="mdc-layout-grid" style="padding-left: 0 !important; padding-bottom: 0; !important;">
         <div class="mdc-layout-grid__inner">
@@ -11,7 +12,7 @@
             </div>
             <div class="mdc-layout-grid__cell--span-4">
                 <mat-form-field appearance="outline">
-                    <mat-label>Từ ngày (*)</mat-label>
+                    <mat-label>Tới ngày (*)</mat-label>
                     <input matInput [matDatepicker]="picker2" [(ngModel)]="to_time">
                     <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
                     <mat-datepicker #picker2></mat-datepicker>
@@ -42,24 +43,20 @@
         </ng-container>
 
         <!-- Name Column -->
-        <ng-container matColumnDef="gender">
-            <mat-header-cell *matHeaderCellDef mat-sort-header> Giới tính </mat-header-cell>
-            <mat-cell *matCellDef="let item"> {{item.gender}} </mat-cell>
+
+        <ng-container matColumnDef="created_at">
+            <mat-header-cell *matHeaderCellDef mat-sort-header> Thời gian tạo </mat-header-cell>
+            <mat-cell *matCellDef="let item"> {{item.created_at | date: 'dd/MM/y'}} </mat-cell>
         </ng-container>
 
-        <ng-container matColumnDef="birthday">
-            <mat-header-cell *matHeaderCellDef mat-sort-header> Ngày sinh </mat-header-cell>
-            <mat-cell *matCellDef="let item"> {{item.birthday | date: 'dd/MM/y'}} </mat-cell>
+        <ng-container matColumnDef="typee">
+            <mat-header-cell *matHeaderCellDef mat-sort-header> Loại form </mat-header-cell>
+            <mat-cell *matCellDef="let item"> {{item.typee}} </mat-cell>
         </ng-container>
 
-        <ng-container matColumnDef="place_of_birth">
-            <mat-header-cell *matHeaderCellDef mat-sort-header> Nơi sinh </mat-header-cell>
-            <mat-cell *matCellDef="let item"> {{item.place_of_birth}} </mat-cell>
-        </ng-container>
-
-        <ng-container matColumnDef="address">
-            <mat-header-cell *matHeaderCellDef mat-sort-header> Địa chỉ </mat-header-cell>
-            <mat-cell *matCellDef="let item"> {{item.address}} </mat-cell>
+        <ng-container matColumnDef="code">
+            <mat-header-cell *matHeaderCellDef mat-sort-header> Mã hồ sơ </mat-header-cell>
+            <mat-cell *matCellDef="let item"> {{item.code}} </mat-cell>
         </ng-container>
 
         <ng-container matColumnDef="mobilephone">
@@ -72,28 +69,8 @@
             <mat-cell *matCellDef="let item"> {{item.email}} </mat-cell>
         </ng-container>
 
-        <ng-container matColumnDef="career_1">
-            <mat-header-cell *matHeaderCellDef mat-sort-header> Ngành 1 </mat-header-cell>
-            <mat-cell *matCellDef="let item"> {{item.career_1_name}} </mat-cell>
-        </ng-container>
-
-        <ng-container matColumnDef="career_2">
-            <mat-header-cell *matHeaderCellDef mat-sort-header> Ngành 2 </mat-header-cell>
-            <mat-cell *matCellDef="let item"> {{item.career_2_name}} </mat-cell>
-        </ng-container>
-
-        <ng-container matColumnDef="career_3">
-            <mat-header-cell *matHeaderCellDef mat-sort-header> Ngành 3 </mat-header-cell>
-            <mat-cell *matCellDef="let item"> {{item.career_3_name}} </mat-cell>
-        </ng-container>
-
-        <ng-container matColumnDef="career_4">
-            <mat-header-cell *matHeaderCellDef mat-sort-header> Ngành 4 </mat-header-cell>
-            <mat-cell *matCellDef="let item"> {{item.career_4_name}} </mat-cell>
-        </ng-container>
-
-
         <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
         <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
     </mat-table>
+</div>
 </div>

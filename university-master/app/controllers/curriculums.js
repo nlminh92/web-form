@@ -1,6 +1,7 @@
 const CurriculumVitaeCms = require("../models").CurriculumVitaeCms;
 const ProvinceCms = require("../models").ProvinceCms;
 const CareerCms = require("../models").CareerCms;
+const CareersFormCms = require("../models").CareersFormCms;
 const Sequelize = require('sequelize');
 const Op = Sequelize.Op;
 const SessionCms = require("../models").SessionCms;
@@ -31,10 +32,10 @@ exports.index = async function(req, res) {
     return handleSuccessResponse(res, data);
 };
 // Ma nganh cho Form 2
-exports.reportCareerForm2 = async function(req, res) {
+exports.reportCareersForm = async function(req, res) {
     let session_id = req.query.session_id;
 
-    let careers = await CareerCms.findAll({
+    let careers = await CareersFormCms.findAll({
         raw: true
     });
 
@@ -42,7 +43,7 @@ exports.reportCareerForm2 = async function(req, res) {
 
     for(let i = 0; i < careers.length; i++) {
         let object = {
-            name: careers_form2[i].name,
+            name: careers_form[i].name,
             count: 0
         };
 
@@ -51,34 +52,34 @@ exports.reportCareerForm2 = async function(req, res) {
                 session_id: session_id,
                 [Op.or]: [
                     {
-                        career_form2_1: careers[i].id
+                        career_form_1: careers[i].id
                     },
                     {
-                        career_form2_2: careers[i].id
+                        career_form_2: careers[i].id
                     },
                     {
-                        career_form2_3: careers[i].id
+                        career_form_3: careers[i].id
                     },
                     {
-                        career_form2_4: careers[i].id
+                        career_form_4: careers[i].id
                     },
                     {
-                        career_form2_5: careers[i].id
+                        career_form_5: careers[i].id
                     },
                     {
-                        career_form2_6: careers[i].id
+                        career_form_6: careers[i].id
                     },
                     {
-                        career_form2_7: careers[i].id
+                        career_form_7: careers[i].id
                     },
                     {
-                        career_form2_8: careers[i].id
+                        career_form_8: careers[i].id
                     },
                     {
-                        career_form2_9: careers[i].id
+                        career_form_9: careers[i].id
                     },
                     {
-                        career_form2_10: careers[i].id
+                        career_form_10: careers[i].id
                     }
                 ]
             }
@@ -193,10 +194,13 @@ async function getData(item) {
         name: item.name,
         gender: item.gender == "female" ? "Nữ" : "Nam",
         birthday: item.birthday,
+        created_at: item.created_at,
         place_of_birth: "",
+        typee: item.typee,
         identity_card: item.identity_card,
         address: item.address,
         mobilephone: item.mobilephone,
+        code: item.code,
         email: item.email,
         grade_ten: item.email,
         grade_ten_province_code: item.grade_ten_province_code,
@@ -334,26 +338,7 @@ async function getData(item) {
         data.career_4_name = career_4_obj.name;
     }
 
-    let career_form2_1_obj = await CareerCms.findOne({
-        where: {
-            id: item.career_form_1
-        },
-        raw: true
-    });
 
-    console.log(career_form2_1_obj);
-
-    let career_form2_2_obj = await CareerCms.findOne({
-        where: {
-            id: item.career_form_2
-        },
-        raw: true
-    });
-
-    if(career_form2_2_obj) {
-        data.career_form2_2_code = career_form2_2_obj.code;
-        data.career_form2_2_name = career_form2_2_obj.name;
-    }
 
     return data;
 
