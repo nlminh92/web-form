@@ -61,7 +61,7 @@
             <div class="mdc-layout-grid__inner">
               <div class="mdc-layout-grid__cell--span-6">
                   <mat-form-field appearance="outline">
-                      <mat-label>Dân tộc ()*)</mat-label>
+                      <mat-label>Dân tộc (*)</mat-label>
                       <input matInput type="text" formControlName="nation" placeholder="Ghi bằng chữ" aria-label="identity_card">
                       <mat-error class="error-message" *ngIf="form.get('identity_card').invalid && submited">
                           <span *ngIf="form.get('identity_card').hasError('required')">Vui lòng nhập dữ liệu</span>
