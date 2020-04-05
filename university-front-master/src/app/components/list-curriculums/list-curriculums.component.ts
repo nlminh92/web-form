@@ -249,7 +249,7 @@ export class ListCurriculumsComponent implements OnInit {
 
       workbook.xlsx.writeBuffer().then((data) => {
           let blob = new Blob([data], { type: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' });
-          fs.saveAs(blob, 'thong_ke.xlsx');
+          fs.saveAs(blob, 'thong_ke_theo_danh_sach.xlsx');
       });
   }
 
