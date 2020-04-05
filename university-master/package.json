@@ -26,6 +26,7 @@
     "fs-extra": "latest",
     "http-proxy": "latest",
     "jsonwebtoken": "^8.1.0",
+    "libreoffice-convert": "^1.0.5",
     "md5": "latest",
     "mime": "latest",
     "mongoose": "latest",
@@ -35,6 +36,7 @@
     "node-constants": "latest",
     "nodemon": "^1.19.1",
     "numeral": "latest",
+    "office-to-pdf": "^4.0.0",
     "pizzip": "^3.0.6",
     "pm2": "latest",
     "randomstring": "^1.1.5",
@@ -46,6 +48,6 @@
     "tzdata": "^1.0.18",
     "underscore": "latest",
     "winston": "^3.0.0",
-    "word2pdf": "^1.0.8"
+    "word2pdf": "1.0.11"
   }
 }
