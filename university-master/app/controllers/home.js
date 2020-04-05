@@ -2,6 +2,9 @@ const createReport = require('docx-templates').default;
 var PizZip = require('pizzip');
 var Docxtemplater = require('docxtemplater');
 var fs = require('fs');
+
+const libre = require('libreoffice-convert');
+
 const word2pdf = require('word2pdf');
 var path = require('path');
 const Sequelize = require('sequelize');
@@ -191,10 +194,12 @@ exports.saveAndCreateDocx = async function (req, res) {
 
         let length = 5 - code.length;
         code = "0".repeat(length) + code;
+        let typee = 1;
 
         let data = await CurriculumVitaeCms.findOne({
             where: {
-                identity_card: identity_card
+                identity_card: identity_card,
+                typee
             }});
         if(data) {
             return res.json({
@@ -208,7 +213,6 @@ exports.saveAndCreateDocx = async function (req, res) {
         // console.log(session);
         //  let session_id = 1  ;
 
-          let typee = 1;
 
         let result = await CurriculumVitaeCms.create({name, gender, birthday, place_of_birth, place_of_birth2, identity_card, address, mobilephone, email, grade_ten,
             grade_ten_province_code, grade_ten_school_code, grade_eleven, grade_eleven_province_code, grade_eleven_school_code,
@@ -344,13 +348,26 @@ exports.saveAndCreateDocx = async function (req, res) {
         var buf = doc.getZip()
             .generate({type: 'nodebuffer'});
         let file_name = new Date().getTime().toString();
-        await fs.writeFileSync(path.resolve(`public/files/${file_name}.docx`), buf);
-        const dataPdf = await word2pdf(`public/files/${file_name}.docx`);
-        fs.writeFileSync(`public/files/${file_name}.pdf`, dataPdf);
-        return res.json({
-            code: 1,
-            data: `/files/${file_name}.pdf`
-        })
+        // await fs.writeFileSync(path.resolve(`public/files/${file_name}.docx`), buf);
+        // const dataPdf = await word2pdf(`public/files/${file_name}.docx`);
+        // fs.writeFileSync(`public/files/${file_name}.pdf`, dataPdf);
+        // return res.json({
+        //     code: 1,
+        //     data: `/files/${file_name}.pdf`
+        // })
+        libre.convert(buf, '.pdf', undefined, (err, done) => {
+            if (err) {
+              console.log(`Error converting file: ${err}`);
+            }
+            
+            // Here in done you have pdf file which you can save or transfer in another stream
+            console.log(done);
+            fs.writeFileSync(`public/files/${file_name}.pdf`, done);
+            return res.json({
+                code: 1,
+                data: `/files/${file_name}.pdf`
+            })
+        });
     } catch (error) {
         errorSystem(req, res, error);
     }

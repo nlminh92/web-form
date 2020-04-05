@@ -3,6 +3,9 @@ var PizZip = require('pizzip');
 var Docxtemplater = require('docxtemplater');
 var fs = require('fs');
 const word2pdf = require('word2pdf');
+
+const libre = require('libreoffice-convert');
+
 var path = require('path');
 const Sequelize = require('sequelize');
 const Op = Sequelize.Op;
@@ -46,10 +49,12 @@ exports.saveAndCreateDocx = async function (req, res) {
 
         let length = 5 - code.length;
         code = "0".repeat(length) + code;
+        let typee = 3;
 
         let data = await CurriculumVitaeCms.findOne({
             where: {
-                identity_card: identity_card
+                identity_card: identity_card,
+                typee: typee
             }});
         if(data) {
             return res.json({
@@ -61,7 +66,6 @@ exports.saveAndCreateDocx = async function (req, res) {
         //let session_id = 3;
          let session_id = session.id;
 
-        let typee = 3;
 
 // Lưu dữ liệu vào bảng
         let result = await CurriculumVitaeCms.create({name, gender, birthday,
@@ -124,13 +128,22 @@ exports.saveAndCreateDocx = async function (req, res) {
         var buf = doc.getZip()
             .generate({type: 'nodebuffer'});
         let file_name = new Date().getTime().toString();
-        await fs.writeFileSync(path.resolve(`public/files/${file_name}.docx`), buf);
-        const dataPdf = await word2pdf(`public/files/${file_name}.docx`);
-        fs.writeFileSync(`public/files/${file_name}.pdf`, dataPdf);
-        return res.json({
-            code: 1,
-            data: `/files/${file_name}.pdf`
-        })
+        // await fs.writeFileSync(path.resolve(`public/files/${file_name}.docx`), buf);
+        // const dataPdf = await word2pdf(`public/files/${file_name}.docx`);
+        // await fs.writeFileSync(`public/files/${file_name}.pdf`, dataPdf);
+        libre.convert(buf, '.pdf', undefined, (err, done) => {
+            if (err) {
+              console.log(`Error converting file: ${err}`);
+            }
+            
+            // Here in done you have pdf file which you can save or transfer in another stream
+            console.log(done);
+            fs.writeFileSync(`public/files/${file_name}.pdf`, done);
+            return res.json({
+                code: 1,
+                data: `/files/${file_name}.pdf`
+            })
+        });
     } catch (error) {
         errorSystem(req, res, error);
     }
