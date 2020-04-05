@@ -58,9 +58,9 @@ export class ListCurriculumsComponent implements OnInit {
       const format = 'dd/MM/yyyy';
       const locale = 'en-US';
       const title = 'Danh sách đăng ký';
-      const header = ['STT', 'Loại form', 'Mã hồ sơ', 'Họ tên', 'Giới tính', 'Ngày sinh', 'Nơi sinh', 'Số Chứng minh nhân dân / Thẻ căn cước công dân',
+      const header = ['STT', 'Loại form', 'Mã hồ sơ', 'Họ tên', 'Giới tính', 'Ngày sinh', 'Nơi sinh', 'Số CMND / Thẻ CCCD',
           'Địa chỉ liên hệ', 'Điện thoại liên hệ', 'Email', "Năm lớp 10", "Mã tỉnh lớp 10", "Mã trường lớp 10", "Năm lớp 11", "Mã tỉnh lớp 11", "Mã trường lớp 11", "Năm lớp 12", "Mã tỉnh lớp 12", "Mã trường lớp 12",
-          'Năm tốt nghiệp', 'Khu vực', 'Đối tượng ưu tiên', 'Ngày thi đánh giá năng lực', 'Số báo danh', 'Điểm thi', 'Ngành 1 (Form1)', 'Ngành 2 (Form2)', 'Ngành 3 (Form1)', 'Ngành 4 (Form1)',
+          'Năm tốt nghiệp', 'Khu vực', 'Ưu tiên', 'Ngày thi đánh giá năng lực', 'Số báo danh', 'Điểm thi', 'Ngành 1 (Form1)', 'Ngành 2 (Form2)', 'Ngành 3 (Form1)', 'Ngành 4 (Form1)',
           'Dân tộc', 'Ngày cấp CMND', 'Nơi cấp CMND', 'Hộ khẩu thường trú', 'Mã tỉnh (Hộ khẩu)', 'Mã huyện (Hộ khẩu)', 'Mã xã(Hộ khẩu)',
           'Ngành 1(form2)', 'Tổ hợp ngành 1', 'Điểm tb 1', 'Điểm tb 2', 'Điểm tb 3',
           'Ngành 2(form2)', 'Tổ hợp ngành 2', 'Điểm tb 1', 'Điểm tb 2', 'Điểm tb 3',
@@ -84,11 +84,11 @@ export class ListCurriculumsComponent implements OnInit {
           cell.border = {top: {style: 'thin'}, left: {style: 'thin'}, bottom: {style: 'thin'}, right: {style: 'thin'}};
           cell.font = {bold: true};
           worksheet.getColumn(4).width = 30;
-          worksheet.getColumn(7).width = 30;
+          worksheet.getColumn(7).width = 60;
           worksheet.getColumn(8).width = 30;
-          worksheet.getColumn(9).width = 60;
+          worksheet.getColumn(9).width = 90;
           worksheet.getColumn(10).width = 20;
-          worksheet.getColumn(11).width = 20;
+          worksheet.getColumn(11).width = 40;
           worksheet.getColumn(12).width = 30;
           worksheet.getColumn(15).width = 30;
           worksheet.getColumn(18).width = 30;
@@ -117,7 +117,7 @@ export class ListCurriculumsComponent implements OnInit {
           worksheet.getColumn(19).width = 20;
           worksheet.getColumn(20).width = 20;
           worksheet.getColumn(21).width = 20;
-          worksheet.getColumn(24).width = 30;
+          worksheet.getColumn(24).width = 25;
           worksheet.getColumn(32).width = 20;
           worksheet.getColumn(34).width = 25;
           worksheet.getColumn(35).width = 25;

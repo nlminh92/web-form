@@ -203,7 +203,7 @@ async function getData(item) {
         mobilephone: item.mobilephone,
         code: item.code,
         email: item.email,
-        grade_ten: item.email,
+        grade_ten: item.grade_ten,
         grade_ten_province_code: item.grade_ten_province_code,
         grade_ten_school_code: item.grade_ten_school_code,
         grade_eleven: item.grade_eleven,
