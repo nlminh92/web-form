@@ -349,7 +349,126 @@ async function getData(item) {
         data.career_4_name = career_4_obj.name;
     }
 
+// Form2
+    let career_form_1_obj = await CareersFormCms.findOne({
+        where: {
+            id: item.career_form_1
+        },
+        raw: true
+    });
 
+    if(career_form_1_obj) {
+        data.career_form_1_code = career_form_1_obj.code;
+        data.career_form_1_name = career_form_1_obj.name;
+    }
+
+    let career_form_2_obj = await CareersFormCms.findOne({
+        where: {
+            id: item.career_form_2
+        },
+        raw: true
+    });
+
+    if(career_form_2_obj) {
+        data.career_form_2_code = career_form_2_obj.code;
+        data.career_form_2_name = career_form_2_obj.name;
+    }
+
+    let career_form_3_obj = await CareersFormCms.findOne({
+        where: {
+            id: item.career_form_3
+        },
+        raw: true
+    });
+
+    if(career_form_3_obj) {
+        data.career_form_3_code = career_form_3_obj.code;
+        data.career_form_3_name = career_form_3_obj.name;
+    }
+
+    let career_form_4_obj = await CareersFormCms.findOne({
+        where: {
+            id: item.career_form_4
+        },
+        raw: true
+    });
+
+    if(career_form_4_obj) {
+        data.career_form_4_code = career_form_4_obj.code;
+        data.career_form_4_name = career_form_4_obj.name;
+    }
+
+    let career_form_5_obj = await CareersFormCms.findOne({
+        where: {
+            id: item.career_form_5
+        },
+        raw: true
+    });
+
+    if(career_form_5_obj) {
+        data.career_form_5_code = career_form_5_obj.code;
+        data.career_form_5_name = career_form_5_obj.name;
+    }
+
+    let career_form_6_obj = await CareersFormCms.findOne({
+        where: {
+            id: item.career_form_6
+        },
+        raw: true
+    });
+
+    if(career_form_6_obj) {
+        data.career_form_6_code = career_form_6_obj.code;
+        data.career_form_6_name = career_form_6_obj.name;
+    }
+
+    let career_form_7_obj = await CareersFormCms.findOne({
+        where: {
+            id: item.career_form_7
+        },
+        raw: true
+    });
+
+    if(career_form_7_obj) {
+        data.career_form_7_code = career_form_7_obj.code;
+        data.career_form_7_name = career_form_7_obj.name;
+    }
+
+    let career_form_8_obj = await CareersFormCms.findOne({
+        where: {
+            id: item.career_form_8
+        },
+        raw: true
+    });
+
+    if(career_form_8_obj) {
+        data.career_form_8_code = career_form_8_obj.code;
+        data.career_form_8_name = career_form_8_obj.name;
+    }
+
+    let career_form_9_obj = await CareersFormCms.findOne({
+        where: {
+            id: item.career_form_9
+        },
+        raw: true
+    });
+
+    if(career_form_9_obj) {
+        data.career_form_9_code = career_form_9_obj.code;
+        data.career_form_9_name = career_form_9_obj.name;
+    }
+
+    let career_form_10_obj = await CareersFormCms.findOne({
+        where: {
+            id: item.career_form_10
+        },
+        raw: true
+    });
+
+    if(career_form_10_obj) {
+        data.career_form_10_code = career_form_10_obj.code;
+        data.career_form_10_name = career_form_10_obj.name;
+    }
 
     return data;
 

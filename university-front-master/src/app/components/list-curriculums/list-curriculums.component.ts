@@ -93,22 +93,22 @@ export class ListCurriculumsComponent implements OnInit {
           worksheet.getColumn(15).width = 30;
           worksheet.getColumn(18).width = 30;
           worksheet.getColumn(25).width = 15;
-          worksheet.getColumn(27).width = 30;
-          worksheet.getColumn(28).width = 30;
-          worksheet.getColumn(29).width = 30;
-          worksheet.getColumn(30).width = 30;
+          worksheet.getColumn(27).width = 50;
+          worksheet.getColumn(28).width = 50;
+          worksheet.getColumn(29).width = 50;
+          worksheet.getColumn(30).width = 50;
           worksheet.getColumn(33).width = 30;
-          worksheet.getColumn(38).width = 30;
-          worksheet.getColumn(43).width = 30;
-          worksheet.getColumn(48).width = 30;
-          worksheet.getColumn(53).width = 30;
-          worksheet.getColumn(58).width = 30;
-          worksheet.getColumn(63).width = 30;
-          worksheet.getColumn(68).width = 30;
-          worksheet.getColumn(73).width = 30;
-          worksheet.getColumn(78).width = 30;
-          worksheet.getColumn(83).width = 30;
-          worksheet.getColumn(88).width = 30;
+          worksheet.getColumn(38).width = 50;
+          worksheet.getColumn(43).width = 50;
+          worksheet.getColumn(48).width = 50;
+          worksheet.getColumn(53).width = 50;
+          worksheet.getColumn(58).width = 50;
+          worksheet.getColumn(63).width = 50;
+          worksheet.getColumn(68).width = 50;
+          worksheet.getColumn(73).width = 50;
+          worksheet.getColumn(78).width = 50;
+          worksheet.getColumn(83).width = 50;
+          worksheet.getColumn(88).width = 50;
           worksheet.getColumn(6).width = 20;
           worksheet.getColumn(13).width = 20;
           worksheet.getColumn(14).width = 20;
@@ -179,7 +179,7 @@ export class ListCurriculumsComponent implements OnInit {
                   element.district_code,
                   element.village_code,
                   element.career_form_1_name,
-                  element.combination1_code,
+                  element.combination1,
                   element.diemtb11,
                   element.diemtb12,
                   element.diemtb13,
