@@ -136,7 +136,10 @@ export const form2Validation = {
     'birthday': [
         { type: 'required', messageKey: 'form.validation.required' }
     ],
-    'place_of_birth': [
+    // 'place_of_birth': [
+    //     { type: 'required', messageKey: 'form.validation.required' }
+    // ],
+    'place_of_birth2': [
         { type: 'required', messageKey: 'form.validation.required' }
     ],
     'nation': [

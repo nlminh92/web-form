@@ -43,7 +43,7 @@ exports.getCombination = async function(req, res) {
 exports.saveAndCreateDocx = async function (req, res) {
     try {
         // Đây bạn thay bằng các param clien gửi lên
-        let {name, gender, birthday, place_of_birth, identity_card, address, mobilephone, email, nation, area, priority, graduate_year,
+        let {name, gender, birthday, place_of_birth, place_of_birth2, identity_card, address, mobilephone, email, nation, area, priority, graduate_year,
             grade_ten, grade_ten_province_code, grade_ten_school_code, grade_eleven, grade_eleven_school_code, grade_eleven_province_code,
             grade_twelve, grade_twelve_school_code, grade_twelve_province_code, identity_card_date,identity_card_address, province_code, district_code, village_code, permanent_residence,
             career_form_2, career_form_3, career_form_4, career_form_5, career_form_6, career_form_7, career_form_8, career_form_9, career_form_10, career_form_1,
@@ -352,7 +352,7 @@ exports.saveAndCreateDocx = async function (req, res) {
         let typee = 2;
 
 // Lưu dữ liệu vào bảng
-        let result = await CurriculumVitaeCms.create({name, gender, birthday, place_of_birth, identity_card, address, mobilephone, email, nation, graduate_year,
+        let result = await CurriculumVitaeCms.create({name, gender, birthday, place_of_birth, place_of_birth2, identity_card, address, mobilephone, email, nation, graduate_year,
             grade_ten, grade_ten_province_code, grade_ten_school_code, grade_eleven, grade_eleven_school_code, grade_eleven_province_code,
             grade_twelve, grade_twelve_school_code, grade_twelve_province_code, area, priority, identity_card_date,identity_card_address, province_code, district_code, village_code, permanent_residence, career_form_1,
             career_form_2, career_form_3, career_form_4, career_form_5, career_form_6, career_form_7, career_form_8, career_form_9, career_form_10,
@@ -397,6 +397,7 @@ exports.saveAndCreateDocx = async function (req, res) {
             birthday: birthday,
             province: place_province.name,
           //  place_of_birth: place_province ? place_province.name : "",
+            place_of_birth2: place_of_birth2,
             identity_card_date: day,
             identity_card_address: identity_card_address,
             province_code: province_code,

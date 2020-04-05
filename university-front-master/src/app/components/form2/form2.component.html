@@ -45,7 +45,7 @@
 
                 <div class="mdc-layout-grid__cell--span-6">
                     <mat-form-field appearance="outline">
-                        <mat-label>Nơi sinh (*)</mat-label>
+                        <!-- <mat-label>Nơi sinh (*)</mat-label>
                         <mat-select formControlName="place_of_birth">
                             <mat-option *ngFor="let item of provinces" [value]="item.id">
                                 {{item.name}}
@@ -53,6 +53,11 @@
                         </mat-select>
                         <mat-error class="error-message" *ngIf="form.get('place_of_birth').invalid && submited">
                             <span *ngIf="form.get('place_of_birth').hasError('required')">Vui lòng nhập dữ liệu</span>
+                        </mat-error> -->
+                        <mat-label>Nơi sinh (*)</mat-label>
+                        <input matInput type="text" formControlName="place_of_birth2" placeholder="Nơi sinh" aria-label="place_of_birth2">
+                        <mat-error class="error-message" *ngIf="form.get('place_of_birth2').invalid && submited">
+                            <span *ngIf="form.get('place_of_birth2').hasError('required')">Vui lòng nhập dữ liệu</span>
                         </mat-error>
                     </mat-form-field>
                 </div>
