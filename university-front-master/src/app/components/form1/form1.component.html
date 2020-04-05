@@ -2,7 +2,7 @@
     <div class="mdc-layout-grid">
         <div class="text-center">
             <h3 class="page-title">ĐƠN XÉT TUYỂN ĐẠI HỌC CHÍNH QUY </h3>
-            <p>(Dành cho xét tuyển bằng kết quả thi đánh giá năng lực)</p>
+            <p>(Dành cho thí sinh xét tuyển bằng kết quả thi đánh giá năng lực)</p>
         </div>
         <form id="login" [formGroup]="form" (ngSubmit)="onSubmit()">
             <h4 class="online-steps-heading">THÔNG TIN THÍ SINH</h4>
@@ -10,7 +10,7 @@
                 <div class="mdc-layout-grid__cell--span-8">
                     <mat-form-field appearance="outline">
                         <mat-label>Họ và tên (*)</mat-label>
-                        <input matInput type="text" formControlName="name" placeholder="Họ và tên" aria-label="Username">
+                        <input matInput type="text" formControlName="name" placeholder="Viết đúng như trong giấy khai sinh bằng chữ in hoa có dấu" aria-label="Username">
                         <mat-error class="error-message" *ngIf="form.get('name').invalid && submited">
                             <span *ngIf="form.get('name').hasError('required')">Vui lòng nhập dữ liệu</span>
                         </mat-error>
@@ -46,7 +46,7 @@
 
                 <div class="mdc-layout-grid__cell--span-6">
                     <mat-form-field appearance="outline">
-                        <mat-label>Nơi sinh (*)</mat-label>
+                        <!-- <mat-label>Nơi sinh (*)</mat-label>
                         <mat-select formControlName="place_of_birth">
                             <mat-option *ngFor="let item of provinces" [value]="item.id">
                                 {{item.name}}
@@ -54,6 +54,11 @@
                         </mat-select>
                         <mat-error class="error-message" *ngIf="form.get('place_of_birth').invalid && submited">
                             <span *ngIf="form.get('place_of_birth').hasError('required')">Vui lòng nhập dữ liệu</span>
+                        </mat-error> -->
+                        <mat-label>Nơi sinh (*)</mat-label>
+                        <input matInput type="text" formControlName="place_of_birth2" placeholder="Nơi sinh" aria-label="place_of_birth2">
+                        <mat-error class="error-message" *ngIf="form.get('place_of_birth2').invalid && submited">
+                            <span *ngIf="form.get('place_of_birth2').hasError('required')">Vui lòng nhập dữ liệu</span>
                         </mat-error>
                     </mat-form-field>
                 </div>

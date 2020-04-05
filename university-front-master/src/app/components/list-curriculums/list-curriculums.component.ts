@@ -147,7 +147,7 @@ export class ListCurriculumsComponent implements OnInit {
                   element.name,
                   element.gender,
                   element.birthday,
-                  element.place_of_birth,
+                  element.place_of_birth2,
                   element.identity_card,
                   element.address,
                   element.mobilephone,

@@ -43,7 +43,7 @@ exports.getCombination = async function(req, res) {
 exports.saveAndCreateDocx = async function (req, res) {
     try {
         // Đây bạn thay bằng các param clien gửi lên
-        let {name, gender, birthday, place_of_birth, identity_card, address, mobilephone, email, nation,
+        let {name, gender, birthday, place_of_birth, identity_card, address, mobilephone, email, nation, area, priority, graduate_year,
             grade_ten, grade_ten_province_code, grade_ten_school_code, grade_eleven, grade_eleven_school_code, grade_eleven_province_code,
             grade_twelve, grade_twelve_school_code, grade_twelve_province_code, identity_card_date,identity_card_address, province_code, district_code, village_code, permanent_residence,
             career_form_2, career_form_3, career_form_4, career_form_5, career_form_6, career_form_7, career_form_8, career_form_9, career_form_10, career_form_1,
@@ -352,9 +352,9 @@ exports.saveAndCreateDocx = async function (req, res) {
         let typee = 2;
 
 // Lưu dữ liệu vào bảng
-        let result = await CurriculumVitaeCms.create({name, gender, birthday, place_of_birth, identity_card, address, mobilephone, email, nation,
+        let result = await CurriculumVitaeCms.create({name, gender, birthday, place_of_birth, identity_card, address, mobilephone, email, nation, graduate_year,
             grade_ten, grade_ten_province_code, grade_ten_school_code, grade_eleven, grade_eleven_school_code, grade_eleven_province_code,
-            grade_twelve, grade_twelve_school_code, grade_twelve_province_code, identity_card_date,identity_card_address, province_code, district_code, village_code, permanent_residence, career_form_1,
+            grade_twelve, grade_twelve_school_code, grade_twelve_province_code, area, priority, identity_card_date,identity_card_address, province_code, district_code, village_code, permanent_residence, career_form_1,
             career_form_2, career_form_3, career_form_4, career_form_5, career_form_6, career_form_7, career_form_8, career_form_9, career_form_10,
             combination1, combination2, combination3, combination4, combination5, combination6, combination7, combination8, combination9, combination10,
             diemtb11, diemtb12, diemtb13, diemtb21, diemtb22, diemtb23, diemtb31, diemtb32, diemtb33,

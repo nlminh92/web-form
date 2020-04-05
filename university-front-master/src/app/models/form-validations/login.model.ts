@@ -26,7 +26,10 @@ export const formValidation = {
     'birthday': [
         { type: 'required', messageKey: 'form.validation.required' }
     ],
-    'place_of_birth': [
+    // 'place_of_birth': [
+    //     { type: 'required', messageKey: 'form.validation.required' }
+    // ],
+    'place_of_birth2': [
         { type: 'required', messageKey: 'form.validation.required' }
     ],
     'identity_card': [
@@ -142,6 +145,14 @@ export const form2Validation = {
     'identity_card_date': [
       { type: 'required', messageKey: 'form.validation.required' }
     ],
+    'area': [
+        { type: 'required', messageKey: 'form.validation.required' }
+    ],
+    'graduate_year': [
+        { type: 'required', messageKey: 'form.validation.required' }
+    ],
+    'priority': [
+    ],
     'combination1': [
     ],
     'combination2': [
@@ -160,7 +171,7 @@ export const form2Validation = {
     ],
     'combination9': [
     ],
-    'combination10': [  
+    'combination10': [
     ],
     'identity_card_address': [
       { type: 'required', messageKey: 'form.validation.required' }

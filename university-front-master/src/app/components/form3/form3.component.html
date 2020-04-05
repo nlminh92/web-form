@@ -10,7 +10,7 @@
                 <div class="mdc-layout-grid__cell--span-8">
                     <mat-form-field appearance="outline">
                         <mat-label>Họ và tên (*)</mat-label>
-                        <input matInput type="text" formControlName="name" placeholder="Họ và tên" aria-label="Username">
+                        <input matInput type="text" formControlName="name" placeholder="Viết đúng như trong giấy khai sinh bằng chữ in hoa có dấu" aria-label="Username">
                         <mat-error class="error-message" *ngIf="form.get('name').invalid && submited">
                             <span *ngIf="form.get('name').hasError('required')">Vui lòng nhập dữ liệu</span>
                         </mat-error>

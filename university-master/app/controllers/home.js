@@ -98,7 +98,7 @@ exports.wards = async function(req, res) {
 exports.saveAndCreateDocx = async function (req, res) {
     try {
         // Đây là param do client gửi lên, chính là các formControlName ở front ấy
-        let {name, gender, birthday, place_of_birth, identity_card, address, mobilephone, email, grade_ten,
+        let {name, gender, birthday, place_of_birth, place_of_birth2, identity_card, address, mobilephone, email, grade_ten,
             grade_ten_province_code, grade_ten_school_code, grade_eleven, grade_eleven_province_code, grade_eleven_school_code,
             grade_twelve, grade_twelve_province_code, grade_twelve_school_code, graduate_year, area, priority, fixture,
             registration_number, point, career_1, career_2, career_3, career_4} = req.body;
@@ -210,7 +210,7 @@ exports.saveAndCreateDocx = async function (req, res) {
 
           let typee = 1;
 
-        let result = await CurriculumVitaeCms.create({name, gender, birthday, place_of_birth, identity_card, address, mobilephone, email, grade_ten,
+        let result = await CurriculumVitaeCms.create({name, gender, birthday, place_of_birth, place_of_birth2, identity_card, address, mobilephone, email, grade_ten,
             grade_ten_province_code, grade_ten_school_code, grade_eleven, grade_eleven_province_code, grade_eleven_school_code,
             grade_twelve, grade_twelve_province_code, grade_twelve_school_code, graduate_year, area, priority, fixture,
             registration_number, point, career_1, career_2, career_3, career_4, code, typee, session_id});
@@ -233,6 +233,7 @@ exports.saveAndCreateDocx = async function (req, res) {
             month: tmp[1],
             year: tmp[0],
             province: place_province.name,
+            place_of_birth2: place_of_birth2,
             address: address,
             mobilephone: mobilephone,
             email: email,

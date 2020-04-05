@@ -196,6 +196,7 @@ async function getData(item) {
         birthday: item.birthday,
         created_at: item.created_at,
         place_of_birth: "",
+        place_of_birth2: item.place_of_birth2,
         typee: item.typee,
         identity_card: item.identity_card,
         address: item.address,
