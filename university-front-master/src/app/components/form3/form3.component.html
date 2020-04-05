@@ -93,10 +93,15 @@
             </div>
 
             <div class="mdc-layout-grid__inner">
-                <div class="mdc-layout-grid__cell--span-12">
+                <div class="mdc-layout-grid__cell--span-6">
                     <p class="p-custom">
                         Đăng ký dự thi môn: Vẽ mỹ thuật (Nộp kèm ảnh khổ 3x4)
                     </p>
+                </div>
+                <div class="mdc-layout-grid__cell--span-6">
+                    <form id="frmUploader" enctype="multipart/form-data" action="api/Upload/" method="post">
+                        <input type="file" name="imgUploader" multiple />
+                        <input type="submit" name="submit" id="btnSubmit" value="Upload" /> </form>
                 </div>
             </div>
             <div class="mdc-layout-grid__inner">
@@ -106,6 +111,8 @@
                     </p>
                 </div>
             </div>
+
+
             <div class="mdc-layout-grid__inner">
                 <div class="mdc-layout-grid__cell--span-12 text-center">
                     <button mat-flat-button color="primary" [disabled]="waiting">  <mat-icon matSuffix>save</mat-icon>  Lưu </button>
