@@ -12,6 +12,7 @@ export class ReportCareersComponent implements OnInit {
     data = [];
     displayedColumns = ['stt', 'career', 'count'];
     dataSource = new MatTableDataSource([]);
+    dataSourceForm = new MatTableDataSource([]);
     list_sessions = [];
     session_id = -1;
 
@@ -33,6 +34,7 @@ export class ReportCareersComponent implements OnInit {
             if (res.data.length > 0) {
                 this.session_id = res.data[res.data.length - 1].id;
                 this.getData();
+                this.getDataForm();
             }
         });
     }
@@ -40,6 +42,11 @@ export class ReportCareersComponent implements OnInit {
     getData() {
         this.reportService.getReportCareer(this.session_id).subscribe(res => {
             this.dataSource = new MatTableDataSource(res.data);
+        });
+    }
+    getDataForm() {
+        this.reportService.getReportCareerForm(this.session_id).subscribe(res => {
+            this.dataSourceForm = new MatTableDataSource(res.data);
         });
     }
 

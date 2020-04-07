@@ -149,13 +149,19 @@ export class Form1Component implements OnInit {
                     // this.form.reset();
                     this._snackBar.open('Lưu thông tin thành công', "x", {
                         duration: 2000,
+                        panelClass: ['background-success']
                     });
                     // location.reload();
                 } else {
                     this._snackBar.open(res.message, "x", {
                         duration: 2000,
+                        panelClass: ['background-error']
                     });
                 }
+            });
+        } else {
+            this._snackBar.open('Dữ liệu không hợp lệ, lưu thông tin thất bại', "x", {
+                duration: 2000,
             });
         }
     }
