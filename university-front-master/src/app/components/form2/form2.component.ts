@@ -164,7 +164,7 @@ export class Form2Component implements OnInit {
         console.log(this.form);
         console.log(this.form.value);
         this.submited = true;
-        // if (this.form.valid) {
+        if (this.form.valid) {
           this._snackBar.open("Thành công", "Đang chờ lưu thông tin", {
               duration: 2000,
           });
@@ -185,7 +185,11 @@ export class Form2Component implements OnInit {
                     });
                 }
             });
-        // }
+        } else {
+            this._snackBar.open('Dữ liệu không hợp lệ, lưu thông tin thất bại', "x", {
+                duration: 2000,
+            });
+        }
     }
 
     exportFile(url) {

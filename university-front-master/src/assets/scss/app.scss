@@ -58,3 +58,12 @@
 @import './login.scss';
 @import './spinner.scss';
 @import './responsive.scss';
+
+.mat-snack-bar-container.background-error{
+    background: #e14545!important;
+    color: #ffffff
+}
+.mat-snack-bar-container.background-success{
+    background: #a9dafa!important;
+    color: #ffffff
+}

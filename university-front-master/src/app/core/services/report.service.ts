@@ -28,6 +28,14 @@ export class ReportService extends HttpService {
         );
     }
 
+    getReportCareerForm(session_id) {
+        return this.GET(`/report-careers-form?session_id=${session_id}`).pipe(
+            map(response => {
+                return response;
+            })
+        );
+    }
+
     getReportSession(data) {
         return this.POST('/report-sessions', data).pipe(
             map(response => {

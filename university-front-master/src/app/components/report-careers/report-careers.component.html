@@ -50,7 +50,7 @@
 <p> Dành cho thí sinh xét tuyển bằng học bạ </p>
 
 <div class="container" id="form2">
-    <mat-table [dataSource]="dataSource" matSort>
+    <mat-table [dataSource]="dataSourceForm" matSort>
         <ng-container matColumnDef="stt">
             <mat-header-cell *matHeaderCellDef> STT </mat-header-cell>
             <mat-cell *matCellDef="let item;  let i = index"> {{i+1}} </mat-cell>

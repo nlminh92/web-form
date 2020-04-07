@@ -24,5 +24,6 @@ module.exports = function (app) {
   app.post('/sessions', session.create);
   app.get('/curriculumns', curriculumn.index);
   app.get('/report-careers', curriculumn.reportCareer);
+  app.get('/report-careers-form', curriculumn.reportCareersForm);
   app.post('/report-sessions', curriculumn.reportSession);
 };
