@@ -43,7 +43,7 @@ exports.reportCareersForm = async function(req, res) {
 
     for(let i = 0; i < careers.length; i++) {
         let object = {
-            name: careers_form[i].name,
+            name: careers[i].name,
             count: 0
         };
 
