@@ -370,9 +370,19 @@ async function getData(item) {
         raw: true
     })
 
+    let combination2_object = await CombinationCms.findOne({
+        where: {
+            id: item.combination2
+        },
+        raw: true
+    })
+
+
+
     if(career_form_1_obj) {
         data.combination1 = combination1_object.name;
     }
+
 
     let career_form_2_obj = await CareersFormCms.findOne({
         where: {
@@ -386,6 +396,11 @@ async function getData(item) {
         data.career_form_2_name = career_form_2_obj.name;
     }
 
+    if(career_form_2_obj) {
+        data.combination2 = combination2_object.name;
+    }
+
+
     let career_form_3_obj = await CareersFormCms.findOne({
         where: {
             id: item.career_form_3
@@ -393,9 +408,20 @@ async function getData(item) {
         raw: true
     });
 
+    let combination3_object = await CombinationCms.findOne({
+        where: {
+            id: item.combination3
+        },
+        raw: true
+    })
+
     if(career_form_3_obj) {
         data.career_form_3_code = career_form_3_obj.code;
         data.career_form_3_name = career_form_3_obj.name;
+    }
+
+    if(career_form_3_obj) {
+        data.combination3 = combination3_object.name;
     }
 
     let career_form_4_obj = await CareersFormCms.findOne({
@@ -405,9 +431,20 @@ async function getData(item) {
         raw: true
     });
 
+    let combination4_object = await CombinationCms.findOne({
+        where: {
+            id: item.combination4
+        },
+        raw: true
+    })
+
     if(career_form_4_obj) {
         data.career_form_4_code = career_form_4_obj.code;
         data.career_form_4_name = career_form_4_obj.name;
+    }
+
+    if(career_form_4_obj) {
+        data.combination4 = combination4_object.name;
     }
 
     let career_form_5_obj = await CareersFormCms.findOne({
@@ -417,9 +454,20 @@ async function getData(item) {
         raw: true
     });
 
+    let combination5_object = await CombinationCms.findOne({
+        where: {
+            id: item.combination5
+        },
+        raw: true
+    })
+
     if(career_form_5_obj) {
         data.career_form_5_code = career_form_5_obj.code;
         data.career_form_5_name = career_form_5_obj.name;
+    }
+
+    if(career_form_5_obj) {
+        data.combination5 = combination5_object.name;
     }
 
     let career_form_6_obj = await CareersFormCms.findOne({
@@ -429,9 +477,20 @@ async function getData(item) {
         raw: true
     });
 
+    let combination6_object = await CombinationCms.findOne({
+        where: {
+            id: item.combination6
+        },
+        raw: true
+    })
+
     if(career_form_6_obj) {
         data.career_form_6_code = career_form_6_obj.code;
         data.career_form_6_name = career_form_6_obj.name;
+    }
+
+    if(career_form_6_obj) {
+        data.combination6 = combination6_object.name;
     }
 
     let career_form_7_obj = await CareersFormCms.findOne({
@@ -441,9 +500,20 @@ async function getData(item) {
         raw: true
     });
 
+    let combination7_object = await CombinationCms.findOne({
+        where: {
+            id: item.combination7
+        },
+        raw: true
+    })
+
     if(career_form_7_obj) {
         data.career_form_7_code = career_form_7_obj.code;
         data.career_form_7_name = career_form_7_obj.name;
+    }
+
+    if(career_form_7_obj) {
+        data.combination7 = combination7_object.name;
     }
 
     let career_form_8_obj = await CareersFormCms.findOne({
@@ -453,9 +523,20 @@ async function getData(item) {
         raw: true
     });
 
+    let combination8_object = await CombinationCms.findOne({
+        where: {
+            id: item.combination8
+        },
+        raw: true
+    })
+
     if(career_form_8_obj) {
         data.career_form_8_code = career_form_8_obj.code;
         data.career_form_8_name = career_form_8_obj.name;
+    }
+
+    if(career_form_8_obj) {
+        data.combination8 = combination8_object.name;
     }
 
     let career_form_9_obj = await CareersFormCms.findOne({
@@ -465,9 +546,20 @@ async function getData(item) {
         raw: true
     });
 
+    let combination9_object = await CombinationCms.findOne({
+        where: {
+            id: item.combination9
+        },
+        raw: true
+    })
+
     if(career_form_9_obj) {
         data.career_form_9_code = career_form_9_obj.code;
         data.career_form_9_name = career_form_9_obj.name;
+    }
+
+    if(career_form_9_obj) {
+        data.combination9 = combination9_object.name;
     }
 
     let career_form_10_obj = await CareersFormCms.findOne({
@@ -477,9 +569,20 @@ async function getData(item) {
         raw: true
     });
 
+    let combination10_object = await CombinationCms.findOne({
+        where: {
+            id: item.combination10
+        },
+        raw: true
+    })
+
     if(career_form_10_obj) {
         data.career_form_10_code = career_form_10_obj.code;
         data.career_form_10_name = career_form_10_obj.name;
+    }
+
+    if(career_form_10_obj) {
+        data.combination10 = combination10_object.name;
     }
 
     return data;
