@@ -1,6 +1,7 @@
 const CurriculumVitaeCms = require("../models").CurriculumVitaeCms;
 const ProvinceCms = require("../models").ProvinceCms;
 const CareerCms = require("../models").CareerCms;
+const CombinationCms = require("../models").CombinationCms;
 const CareersFormCms = require("../models").CareersFormCms;
 const Sequelize = require('sequelize');
 const Op = Sequelize.Op;
@@ -360,6 +361,17 @@ async function getData(item) {
     if(career_form_1_obj) {
         data.career_form_1_code = career_form_1_obj.code;
         data.career_form_1_name = career_form_1_obj.name;
+    }
+
+    let combination1_object = await CombinationCms.findOne({
+        where: {
+            id: item.combination1
+        },
+        raw: true
+    })
+
+    if(career_form_1_obj) {
+        data.combination1 = combination1_object.name;
     }
 
     let career_form_2_obj = await CareersFormCms.findOne({
