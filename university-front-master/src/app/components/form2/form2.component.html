@@ -332,7 +332,20 @@ tiên như bảng sau:
                     </p>
                 </div>
             </div>
+            <div class="mdc-layout-grid__inner">
+                <div class="mdc-layout-grid__cell--span-12">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Số lượng ngành đăng ký xét tuyển</mat-label>
+                        <mat-select [(ngModel)]="numberCareer" [ngModelOptions]="{standalone: true}">
+                            <mat-option *ngFor="let item of number_careers" [value]="item">
+                                {{item}}
+                            </mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                </div>
+            </div>
 <p>// Thông tin đăng ký xét tuyển </p>
+<div *ngIf="numberCareer > 0">
 <p>// Nguyện vọng 1 </p>
             <div class="mdc-layout-grid__inner">
                 <div class="mdc-layout-grid__cell--span-6">
@@ -363,7 +376,7 @@ tiên như bảng sau:
                     </mat-form-field>
                 </div>
             </div>
-            <div class="mdc-layout-grid__inner">
+            <div class="mdc-layout-grid__inner ">
                 <div class="mdc-layout-grid__cell--span-4">
                     <mat-form-field appearance="outline">
                         <mat-label>Điểm trung bình 3 năm THPT (Môn 1)</mat-label>
@@ -386,7 +399,8 @@ tiên như bảng sau:
                     </mat-form-field>
                 </div>
             </div>
-
+</div>
+<div *ngIf="numberCareer > 1">
   <p>// Nguyện vọng 2 </p>
               <div class="mdc-layout-grid__inner">
                   <div class="mdc-layout-grid__cell--span-6">
@@ -440,6 +454,8 @@ tiên như bảng sau:
                       </mat-form-field>
                   </div>
               </div>
+</div>
+<div *ngIf="numberCareer > 2">
   <p>// Nguyện vọng 3 </p>
                   <div class="mdc-layout-grid__inner">
                     <div class="mdc-layout-grid__cell--span-6">
@@ -493,7 +509,8 @@ tiên như bảng sau:
                         </mat-form-field>
                     </div>
                   </div>
-
+</div>
+<div *ngIf="numberCareer > 3">
     <p>// Nguyện vọng 4 </p>
                   <div class="mdc-layout-grid__inner">
                       <div class="mdc-layout-grid__cell--span-6">
@@ -547,6 +564,8 @@ tiên như bảng sau:
                           </mat-form-field>
                       </div>
                   </div>
+</div>
+<div *ngIf="numberCareer > 4">
     <p>// Nguyện vọng 5 </p>
                   <div class="mdc-layout-grid__inner">
                       <div class="mdc-layout-grid__cell--span-6">
@@ -600,7 +619,8 @@ tiên như bảng sau:
                           </mat-form-field>
                       </div>
                   </div>
-
+</div>
+<div *ngIf="numberCareer > 5">
   <p>// Nguyện vọng 6 </p>
               <div class="mdc-layout-grid__inner">
                   <div class="mdc-layout-grid__cell--span-6">
@@ -654,7 +674,8 @@ tiên như bảng sau:
                       </mat-form-field>
                   </div>
               </div>
-
+</div>
+<div *ngIf="numberCareer > 6">
   <p>// Nguyện vọng 7 </p>
               <div class="mdc-layout-grid__inner">
                   <div class="mdc-layout-grid__cell--span-6">
@@ -708,6 +729,8 @@ tiên như bảng sau:
                       </mat-form-field>
                   </div>
               </div>
+</div>
+<div *ngIf="numberCareer > 7">
   <p>// Nguyện vọng 8 </p>
               <div class="mdc-layout-grid__inner">
                   <div class="mdc-layout-grid__cell--span-6">
@@ -761,7 +784,8 @@ tiên như bảng sau:
                       </mat-form-field>
                   </div>
               </div>
-
+</div>
+<div *ngIf="numberCareer > 8">
     <p>// Nguyện vọng 9 </p>
                   <div class="mdc-layout-grid__inner">
                       <div class="mdc-layout-grid__cell--span-6">
@@ -815,6 +839,8 @@ tiên như bảng sau:
                           </mat-form-field>
                       </div>
                   </div>
+</div>
+<div *ngIf="numberCareer > 9">
     <p>// Nguyện vọng 10 </p>
                   <div class="mdc-layout-grid__inner">
                       <div class="mdc-layout-grid__cell--span-6">
@@ -868,6 +894,7 @@ tiên như bảng sau:
                           </mat-form-field>
                       </div>
                   </div>
+</div>
           (Thí sinh có thể đăng ký tối đa 10 nguyện vọng nếu có nhu cầu)
           <div class="mdc-layout-grid__inner">
               <div class="mdc-layout-grid__cell--span-12">

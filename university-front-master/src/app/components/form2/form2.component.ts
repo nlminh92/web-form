@@ -17,6 +17,8 @@ export class Form2Component implements OnInit {
     public form: FormGroup;
     public formValidationModel: any;
     submited = false;
+    number_careers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+    numberCareer = 1;
 
   //  areas = [1, 2, 3];
   //  priorities = [1, 2, 3];
