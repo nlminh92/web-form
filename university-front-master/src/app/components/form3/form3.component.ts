@@ -83,7 +83,7 @@ export class Form3Component implements OnInit {
                 }
             });
         } else {
-            this._snackBar.open('Dữ liệu không hợp lệ, lưu thông tin thất bại', "x", {
+            this._snackBar.open('Dữ liệu không hợp lệ, vui lòng kiểm tra lại thông tin', "x", {
                 duration: 2000,
             });
         }
