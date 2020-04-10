@@ -98,26 +98,29 @@
                         Đăng ký dự thi môn: Vẽ mỹ thuật (Nộp kèm ảnh khổ 3x4)
                     </p>
                 </div>
+                <div class="mdc-layout-grid__cell--span-6">
+                  <div class="input-group">
+                    <div class="custom-file">
+                        <form action="/api/upload" method="post" enctype="multipart/form-data">
+                          <input (change)="fileChange($event)"  type="file" class="custom-file-input" id="inputGroupFile01" aria-describedby="inputGroupFileAddon01">
+                        </form>
+                      <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
+                    </div>
+                    <div class="input-group-prepend">
+                      <span class="input-group-text upload" (click)="upload()" id="btnUpload">Upload</span>
+                    </div>
+                  </div>
+                </div>
                 <!-- <div class="mdc-layout-grid__cell--span-6">
                     <form id="frmUploader" enctype="multipart/form-data" action="api/Upload/" method="post">
                         <input type="file" name="imgUploader" multiple />
                         <input type="submit" name="submit" id="btnSubmit" value="Upload" /> </form>
                 </div> -->
               </div>
-              <div class="col-md-4">
-              <div class="input-group">
-                <div class="input-group-prepend">
-                  <span class="input-group-text upload" (click)="upload()" id="btnUpload">Upload</span>
-                </div>
-                <div class="custom-file">
-                    <form action="/api/upload" method="post" enctype="multipart/form-data">
-                      <input (change)="fileChange($event)"  type="file" class="custom-file-input" id="inputGroupFile01" aria-describedby="inputGroupFileAddon01">
-                    </form>
-                  <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
-                </div>
-              </div>
-            </div>
+              <!-- <div class="col-md-4">
 
+            </div> -->
+            <p></p>
             <div class="mdc-layout-grid__inner">
                 <div class="mdc-layout-grid__cell--span-12">
                     <p class="p-custom">
