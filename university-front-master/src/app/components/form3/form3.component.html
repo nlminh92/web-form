@@ -98,21 +98,31 @@
                         Đăng ký dự thi môn: Vẽ mỹ thuật (Nộp kèm ảnh khổ 3x4)
                     </p>
                 </div>
+            </div>
                 <div class="mdc-layout-grid__cell--span-6">
-                  <div class="input-group">
+                  <!-- <div class="input-group">
                     <div class="custom-file">
                         <form action="/api/upload" method="post" enctype="multipart/form-data">
-                          <input (change)="fileChange($event)"  type="file" class="custom-file-input" id="inputGroupFile01" aria-describedby="inputGroupFileAddon01">
-                        </form>
+                          <input (change)="fileChange($event)"  type="file" ng-model="up.file" class="custom-file-input" id="inputGroupFile01" aria-describedby="inputGroupFileAddon01">
+
                       <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
+
+                    </form>
                     </div>
                     <div class="input-group-prepend">
                       <span class="input-group-text upload" (click)="upload()" id="btnUpload">Upload</span>
                     </div>
-                  </div>
+                  </div> -->
+                  <form action="/api/upload" method="post" enctype="multipart/form-data">
+                    <div class="form-group">
+                        <label for="example-input-file"> </label>
+                        <input type="file" name="file" class="form-control-file border">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                  </form>
                 </div>
-                </div>
-            <p></p>
+            <br>
+            <br>
             <div class="mdc-layout-grid__inner">
                 <div class="mdc-layout-grid__cell--span-12">
                     <p class="p-custom">

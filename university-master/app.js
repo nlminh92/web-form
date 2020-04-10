@@ -4,6 +4,7 @@ var app = express();
 var multer = require('multer')
 var constants = require('constants');
 var constant = require('./config/constants');
+var bodyParser = require('body-parser');
 
 var port = process.env.PORT || 8042;
 var mongoose = require('mongoose');
@@ -13,8 +14,7 @@ var bodyParser = require('body-parser');
 var morgan = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
-var bodyParser = require('body-parser');
-var multer = require('multer');
+var path = require("path");
 
 
 /***************Mongodb configuratrion********************/
@@ -49,60 +49,64 @@ console.log('The magic happens on port ' + port);
 
 //upload file
 
-const  multipart  =  require('connect-multiparty');
-const  multipartMiddleware  =  multipart({ uploadDir:  './upload' });
+// const  multipart  =  require('connect-multiparty');
+// const  multipartMiddleware  =  multipart({ uploadDir:  './upload' });
+// app.get('/api/upload', (req, res) => {
+//     res.json({
+//         'message': 'hello'
+//     });
+// });
+// app.post('/api/upload', multipartMiddleware, (req, res) => {
+//     res.json({
+//         'message': 'File uploaded successfully'
+//     });
+// });
+
 app.get('/api/upload', (req, res) => {
-    res.json({
+  // res.sendFile(path.join(`${__dirname}/src/app/components/form3/form3.component.html`));
+  res.json({
         'message': 'hello'
-    });
+      });
 });
-app.post('/api/upload', multipartMiddleware, (req, res) => {
-    res.json({
-        'message': 'File uploaded successfully'
-    });
+
+let diskStorage = multer.diskStorage({
+  destination: (req, file, callback) => {
+    // Định nghĩa nơi file upload sẽ được lưu lại
+    callback(null, "./upload");
+  },
+  filename: (req, file, callback) => {
+    // ở đây các bạn có thể làm bất kỳ điều gì với cái file nhé.
+    // Mình ví dụ chỉ cho phép tải lên các loại ảnh png & jpg
+    let math = ["image/png", "image/jpeg"];
+    if (math.indexOf(file.mimetype) === -1) {
+      let errorMess = `The file <strong>${file.originalname}</strong> is invalid. Only allowed to upload image jpeg or png.`;
+      return callback(errorMess, null);
+    }
+    // Tên của file thì mình nối thêm một cái nhãn thời gian để đảm bảo không bị trùng.
+    let filename = `${Date.now()}-${file.originalname}`;
+    callback(null, filename);
+  }
 });
-app.use(function(req, res, next) { //allow cross origin requests
-       res.setHeader("Access-Control-Allow-Methods", "POST, PUT, OPTIONS, DELETE, GET");
-       res.header("Access-Control-Allow-Origin", "http://localhost");
-       res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
-       next();
-   });
 
-   app.use(express.static('../client'));
-    app.use(bodyParser.json());
+let uploadFile = multer({storage: diskStorage}).single("file");
 
-    var storage = multer.diskStorage({ //multers disk storage settings
-        destination: function (req, file, cb) {
-            cb(null, './uploads/');
-        },
-        filename: function (req, file, cb) {
-            var datetimestamp = Date.now();
-            cb(null, file.fieldname + '-' + datetimestamp + '.' + file.originalname.split('.')[file.originalname.split('.').length -1]);
-        }
-    });
-
-    var upload = multer({ //multer settings
-                    storage: storage
-                }).single('file');
-
-    /** API path that will upload the files */
-    app.post('/upload', function(req, res) {
-        upload(req,res,function(err){
-            if(err){
-                 res.json({error_code:1,err_desc:err});
-                 return;
-            }
-             res.json({error_code:0,err_desc:null});
-        });
-    });
+app.post('/api/upload', (req, res) => {
+  // Thực hiện upload file, truyền vào 2 biến req và res
+  uploadFile(req, res, (error) => {
+    // Nếu có lỗi thì trả về lỗi cho client.
+    // Ví dụ như upload một file không phải file ảnh theo như cấu hình của mình bên trên
+    if (error) {
+      return res.send(`Error when trying to upload: ${error}`);
+    }
+    // Không có lỗi thì lại render cái file ảnh về cho client.
+    // Đồng thời file đã được lưu vào thư mục uploads
+    res.sendFile(path.join(`${__dirname}/uploads/${req.file.filename}`));
+  });
+});
 
 
 
 
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({
-    extended: true
-}));
 //catch 404 and forward to error handler
 app.use(function (req, res, next) {
     res.status(404).render('404', {title: "Sorry, page not found", session: req.sessionbo});
