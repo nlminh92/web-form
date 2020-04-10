@@ -49,6 +49,10 @@
     "tzdata": "^1.0.18",
     "underscore": "latest",
     "winston": "^3.0.0",
-    "word2pdf": "1.0.11"
+    "word2pdf": "1.0.11",
+    "body-parser": "1.14.1",
+    "express": "4.13.3",
+    "fs": "0.0.2",
+    "multer": "1.1.0"
   }
 }
