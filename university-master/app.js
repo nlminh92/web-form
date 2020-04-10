@@ -45,6 +45,28 @@ require('./config/routes.js')(app); // load our routes and pass in our app and f
 app.listen(port);
 console.log('The magic happens on port ' + port);
 
+
+//upload file
+  // const  express  =  require('express')
+  // const  app  =  express()
+  //const  port  =  3000
+  const  multipart  =  require('connect-multiparty');
+const  multipartMiddleware  =  multipart({ uploadDir:  './upload' });
+app.get('/api/upload', (req, res) => {
+    res.json({
+        'message': 'hello'
+    });
+});
+app.post('/api/upload', multipartMiddleware, (req, res) => {
+    res.json({
+        'message': 'File uploaded successfully'
+    });
+});
+//const bodyParser = require("body-parser");
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({
+    extended: true
+}));
 //catch 404 and forward to error handler
 app.use(function (req, res, next) {
     res.status(404).render('404', {title: "Sorry, page not found", session: req.sessionbo});

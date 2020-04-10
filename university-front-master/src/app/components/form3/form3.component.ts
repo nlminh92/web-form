@@ -7,6 +7,7 @@ import { SelectionService } from '@app/core/services/selections.service';
 import { FormService } from '@app/core/services/form.service';
 import { saveAs } from 'file-saver';
 import {MatSnackBar} from '@angular/material/snack-bar';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
     selector: 'app-form3',
@@ -17,6 +18,27 @@ export class Form3Component implements OnInit {
     public form: FormGroup;
     public formValidationModel: any;
     submited = false;
+
+    uploadedFiles: Array < File > ;
+
+    // constructor(private http : HttpClient){
+    //
+    // }
+
+    fileChange(element) {
+      this.uploadedFiles = element.target.files;
+    }
+
+    upload() {
+    let formData = new FormData();
+    for (var i = 0; i < this.uploadedFiles.length; i++) {
+        formData.append("uploads[]", this.uploadedFiles[i], this.uploadedFiles[i].name);
+    }
+    this.http.post('/api/upload', formData)
+    .subscribe((response) => {
+         console.log('response received is ', response);
+    })
+}
 
     genders = [
         {
@@ -41,6 +63,7 @@ export class Form3Component implements OnInit {
     }
 
     constructor(
+        private http : HttpClient,
         private router: Router,
         private selectionService: SelectionService,
         private formService: FormService,
