@@ -48,19 +48,19 @@ console.log('The magic happens on port ' + port);
 
 
 //upload file
-//
-// const  multipart  =  require('connect-multiparty');
-// const  multipartMiddleware  =  multipart({ uploadDir:  './upload' });
-// app.get('/api/upload', (req, res) => {
-//     res.json({
-//         'message': 'hello'
-//     });
-// });
-// app.post('/api/upload', multipartMiddleware, (req, res) => {
-//     res.json({
-//         'message': 'File uploaded successfully'
-//     });
-// });
+
+const  multipart  =  require('connect-multiparty');
+const  multipartMiddleware  =  multipart({ uploadDir:  './upload' });
+app.get('/api/upload', (req, res) => {
+    res.json({
+        'message': 'hello'
+    });
+});
+app.post('/api/upload', multipartMiddleware, (req, res) => {
+    res.json({
+        'message': 'File uploaded successfully'
+    });
+});
 app.use(function(req, res, next) { //allow cross origin requests
        res.setHeader("Access-Control-Allow-Methods", "POST, PUT, OPTIONS, DELETE, GET");
        res.header("Access-Control-Allow-Origin", "http://localhost");

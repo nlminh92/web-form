@@ -98,8 +98,8 @@
                         Đăng ký dự thi môn: Vẽ mỹ thuật (Nộp kèm ảnh khổ 3x4)
                     </p>
                 </div>
-                <div class="mdc-layout-grid__cell--span-6" ng-app="fileUpload">
-                  <!-- <div class="input-group">
+                <div class="mdc-layout-grid__cell--span-6">
+                  <div class="input-group">
                     <div class="custom-file">
                         <form action="/api/upload" method="post" enctype="multipart/form-data">
                           <input (change)="fileChange($event)"  type="file" class="custom-file-input" id="inputGroupFile01" aria-describedby="inputGroupFileAddon01">
@@ -109,18 +109,9 @@
                     <div class="input-group-prepend">
                       <span class="input-group-text upload" (click)="upload()" id="btnUpload">Upload</span>
                     </div>
-                  </div> -->
-            <form>
-            <input type="file" ngf-select ng-model="up.file" name="file" ngf-pattern="'image/*'" accept="image/*" ngf-max-size="20MB" />
-            <!-- Image thumbnail: <img style="width:100px;" ng-show="!!up.file" ngf-thumbnail="up.file || '/thumb.jpg'"/> -->
-            <i ng-show="up.upload_form.file.$error.required">*required</i><br>
-            <i ng-show="up.upload_form.file.$error.maxSize">File too large{{up.file.size / 1000000|number:1}}MB: max 20M</i>
-            <button type="submit" ng-click="up.submit()">submit</button>
-            <p>{{up.progress}}</p>
-            </form>
+                  </div>
                 </div>
-
-              </div>
+                </div>
             <p></p>
             <div class="mdc-layout-grid__inner">
                 <div class="mdc-layout-grid__cell--span-12">
