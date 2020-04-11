@@ -98,16 +98,16 @@ let diskStorage = multer.diskStorage({
 //   }
 // });
 //
-let uploadFile = multer({storage: diskStorage}).single("file");
-//
-app.post('/api/upload', (req, res) => {
-  uploadFile(req, res, (error) => {
-    if (error) {
-      return res.send(`Error when trying to upload: ${error}`);
-    }
-    res.sendFile(path.join(`${__dirname}/uploads/${req.file.filename}`));
+  let uploadFile = multer({storage: diskStorage}).single("file");
+  //
+  app.post('/api/upload', (req, res) => {
+    uploadFile(req, res, (error) => {
+      if (error) {
+        return res.send(`Error when trying to upload: ${error}`);
+      }
+      res.sendFile(path.join(`${__dirname}/uploads/${req.file.filename}`));
+    });
   });
-});
 
 
 
