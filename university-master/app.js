@@ -53,7 +53,7 @@ const  multipart  =  require('connect-multiparty');
 const  multipartMiddleware  =  multipart({ uploadDir:  './upload' });
 app.get('/api/upload', (req, res) => {
     res.json({
-        'message': 'hello'
+      'message': 'hello'
     });
 });
 // app.post('/api/upload', multipartMiddleware, (req, res) => {
@@ -105,7 +105,9 @@ let diskStorage = multer.diskStorage({
       if (error) {
         return res.send(`Error when trying to upload: ${error}`);
       }
-      res.sendFile(path.join(`${__dirname}/uploads/${req.file.filename}`));
+      res.json({
+        'file': `/upload/${req.file.filename}`
+      });
     });
   });
 

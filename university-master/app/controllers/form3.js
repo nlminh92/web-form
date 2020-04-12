@@ -23,7 +23,7 @@ const {errorSystem, handleSuccessResponse, handleErrorResponse} = require('../he
 exports.saveAndCreateDocx = async function (req, res) {
     try {
       // Đây bạn thay bằng các param clien gửi lên
-        let {name, gender, birthday, identity_card, address, mobilephone, email} = req.body;
+        let {name, gender, birthday, identity_card, address, mobilephone, email, file} = req.body;
 // Chỗ này là xóa khoảng cách thừa thôi
         identity_card = identity_card.trim();
         // Check xem quá giờ đăng ký chưa?
@@ -69,7 +69,7 @@ exports.saveAndCreateDocx = async function (req, res) {
 
 // Lưu dữ liệu vào bảng
         let result = await CurriculumVitaeCms.create({name, gender, birthday,
-          identity_card, address, mobilephone, email, code, session_id, typee});
+          identity_card, address, mobilephone, email, code, session_id, typee, file});
         let gender_text = "0";
         if(gender == "female") {
             gender_text = "1";

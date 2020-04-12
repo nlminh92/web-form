@@ -20,23 +20,28 @@ export class Form3Component implements OnInit {
     submited = false;
 
     uploadedFiles: Array < File > ;
+    file: any = null;
 
     // constructor(private http : HttpClient){
     //
     // }
 
     fileChange(element) {
+        console.log(element.target.files);
       this.uploadedFiles = element.target.files;
     }
 
     upload() {
     let formData = new FormData();
     for (var i = 0; i < this.uploadedFiles.length; i++) {
-        formData.append("uploads[]", this.uploadedFiles[i], this.uploadedFiles[i].name);
+        formData.append("file", this.uploadedFiles[i], this.uploadedFiles[i].name);
     }
     this.http.post('/api/upload', formData)
     .subscribe((response) => {
-         console.log('response received is ', response);
+        this._snackBar.open('Upload ảnh thành công', "x", {
+            duration: 2000,
+        });
+        this.file = response['file'];
     })
 }
 
@@ -89,7 +94,9 @@ export class Form3Component implements OnInit {
         if (this.form.valid) {
             this.waiting = true;
             // Hàm này gửi dữ liệu lên server
-            this.formService.saveDataForm3(this.form.getRawValue()).subscribe(res => {
+            let data = this.form.getRawValue();
+            data['file'] = this.file;
+            this.formService.saveDataForm3(data).subscribe(res => {
                 this.submited = false;
                 this.waiting = false;
                 if(res.code == 1) {
