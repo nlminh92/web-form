@@ -169,7 +169,8 @@ export class Form1Component implements OnInit {
     }
 
     exportFile(url) {
-        this.formService.export(url).subscribe(data => saveAs(data, `form1.pdf`));
+        this.formService.export(url).subscribe(data => saveAs(data, filename));
+        let filename = `${Date.now()}-form1.pdf`;
     }
 
 }

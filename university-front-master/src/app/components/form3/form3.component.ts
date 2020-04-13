@@ -41,6 +41,7 @@ export class Form3Component implements OnInit {
         this._snackBar.open('Upload ảnh thành công', "x", {
             duration: 2000,
         });
+        
         this.file = response['file'];
     })
 }
@@ -120,7 +121,8 @@ export class Form3Component implements OnInit {
     }
 
     exportFile(url) {
-        this.formService.export(url).subscribe(data => saveAs(data, `form3.pdf`));
+        this.formService.export(url).subscribe(data => saveAs(data, filename));
+        let filename = `${Date.now()}-form3.pdf`;
     }
 
 }
