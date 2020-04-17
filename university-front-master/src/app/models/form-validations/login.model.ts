@@ -136,6 +136,24 @@ export const form2Validation = {
     'option1': [
         { type: 'required', messageKey: 'form.validation.required' }
     ],
+    'option2': [
+    ],
+    'option3': [
+    ],
+    'option4': [
+    ],
+    'option5': [
+    ],
+    'option6': [
+    ],
+    'option7': [
+    ],
+    'option8': [
+    ],
+    'option9': [
+    ],
+    'option10': [
+    ],
     'birthday': [
         { type: 'required', messageKey: 'form.validation.required' }
     ],
@@ -221,11 +239,35 @@ export const form2Validation = {
     ],
     'diemtb23': [
     ],
+    'diemtb24': [
+    ],
+    'diemtb25': [
+    ],
+    'diemtb26': [
+    ],
+    'diemtb27': [
+    ],
+    'diemtb28': [
+    ],
+    'diemtb29': [
+    ],
     'diemtb31': [
     ],
     'diemtb32': [
     ],
     'diemtb33': [
+    ],
+    'diemtb34': [
+    ],
+    'diemtb35': [
+    ],
+    'diemtb36': [
+    ],
+    'diemtb37': [
+    ],
+    'diemtb38': [
+    ],
+    'diemtb39': [
     ],
     'diemtb41': [
     ],
@@ -233,11 +275,35 @@ export const form2Validation = {
     ],
     'diemtb43': [
     ],
+    'diemtb44': [
+    ],
+    'diemtb45': [
+    ],
+    'diemtb46': [
+    ],
+    'diemtb47': [
+    ],
+    'diemtb48': [
+    ],
+    'diemtb49': [
+    ],
     'diemtb51': [
     ],
     'diemtb52': [
     ],
     'diemtb53': [
+    ],
+    'diemtb54': [
+    ],
+    'diemtb55': [
+    ],
+    'diemtb56': [
+    ],
+    'diemtb57': [
+    ],
+    'diemtb58': [
+    ],
+    'diemtb59': [
     ],
     'diemtb61': [
     ],
@@ -245,11 +311,35 @@ export const form2Validation = {
     ],
     'diemtb63': [
     ],
+    'diemtb64': [
+    ],
+    'diemtb65': [
+    ],
+    'diemtb66': [
+    ],
+    'diemtb67': [
+    ],
+    'diemtb68': [
+    ],
+    'diemtb69': [
+    ],
     'diemtb71': [
     ],
     'diemtb72': [
     ],
     'diemtb73': [
+    ],
+    'diemtb74': [
+    ],
+    'diemtb75': [
+    ],
+    'diemtb76': [
+    ],
+    'diemtb77': [
+    ],
+    'diemtb78': [
+    ],
+    'diemtb79': [
     ],
     'diemtb81': [
     ],
@@ -257,17 +347,53 @@ export const form2Validation = {
     ],
     'diemtb83': [
     ],
+    'diemtb84': [
+    ],
+    'diemtb85': [
+    ],
+    'diemtb86': [
+    ],
+    'diemtb87': [
+    ],
+    'diemtb88': [
+    ],
+    'diemtb89': [
+    ],
     'diemtb91': [
     ],
     'diemtb92': [
     ],
     'diemtb93': [
     ],
+    'diemtb94': [
+    ],
+    'diemtb95': [
+    ],
+    'diemtb96': [
+    ],
+    'diemtb97': [
+    ],
+    'diemtb98': [
+    ],
+    'diemtb99': [
+    ],
     'diemtb101': [
     ],
     'diemtb102': [
     ],
     'diemtb103': [
+    ],
+    'diemtb104': [
+    ],
+    'diemtb105': [
+    ],
+    'diemtb106': [
+    ],
+    'diemtb107': [
+    ],
+    'diemtb108': [
+    ],
+    'diemtb109': [
     ],
     'career_form_1': [
       { type: 'required', messageKey: 'form.validation.required' }

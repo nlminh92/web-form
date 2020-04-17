@@ -346,7 +346,9 @@ tiên như bảng sau:
             </div>
   <!-- <p>// Thông tin đăng ký xét tuyển </p> -->
 <div *ngIf="numberCareer > 0">
-<p>// Nguyện vọng 1 </p>
+  <p class="p-center">
+------------------------- Nguyện vọng 1 -------------------------
+  </p>
             <div class="mdc-layout-grid__inner">
                 <div class="mdc-layout-grid__cell--span-6">
                     <mat-form-field appearance="outline">
@@ -376,7 +378,7 @@ tiên như bảng sau:
                     </mat-form-field>
                 </div>
             </div>
-            <p>Lớp 10</p>
+            <p>+ Lớp 10</p>
             <div class="mdc-layout-grid__inner ">
                 <div class="mdc-layout-grid__cell--span-4">
                     <mat-form-field appearance="outline">
@@ -400,7 +402,7 @@ tiên như bảng sau:
                     </mat-form-field>
                 </div>
             </div>
-            <p>Lớp 11 </p>
+            <p>+ Lớp 11 </p>
             <div class="mdc-layout-grid__inner ">
 
                 <div class="mdc-layout-grid__cell--span-4">
@@ -427,7 +429,7 @@ tiên như bảng sau:
             </div>
             <div class="mdc-layout-grid__inner ">
             <div class="mdc-layout-grid__cell--span-6">
-            <p>Lớp 12</p>
+            <p>+ Lớp 12</p>
             </div>
             <div class="mdc-layout-grid__cell--span-6">
 
@@ -470,499 +472,1138 @@ tiên như bảng sau:
             </div>
 </div>
 <div *ngIf="numberCareer > 1">
-  <p>// Nguyện vọng 2 </p>
-              <div class="mdc-layout-grid__inner">
-                  <div class="mdc-layout-grid__cell--span-6">
-                      <mat-form-field appearance="outline">
-                          <mat-label>2. Ngành/nhóm ngành/Chuyên ngành/Nhóm chuyên ngành xét tuyển (*)</mat-label>
-                          <mat-select formControlName="career_form_2" (selectionChange)="changeCareerForm($event, '2')">
-                              <mat-option *ngFor="let item of careers_form" [value]="item.id">
-                                  {{item.name}}
-                              </mat-option>
-                          </mat-select>
-                      </mat-form-field>
-                  </div>
+  <p class="p-center">
+------------------------- Nguyện vọng 2 -------------------------
+  </p>
+            <div class="mdc-layout-grid__inner">
+                <div class="mdc-layout-grid__cell--span-6">
+                    <mat-form-field appearance="outline">
+                        <mat-label>1. Ngành/nhóm ngành/Chuyên ngành/Nhóm chuyên ngành xét tuyển (*)</mat-label>
+                        <mat-select formControlName="career_form_2" (selectionChange)="changeCareerForm($event, '2')">
+                            <mat-option *ngFor="let item of careers_form" [value]="item.id">
+                                {{item.name}}
+                            </mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                </div>
 
-                  <div class="mdc-layout-grid__cell--span-3">
-                      <mat-form-field appearance="outline">
-                          <mat-label>Mã xét tuyển (*)</mat-label>
-                          <input matInput type="text" [value]="career_form_2_code" placeholder="Mã xét tuyển" aria-label="career_2_code" disabled>
-                      </mat-form-field>
-                  </div>
-                  <div class="mdc-layout-grid__cell--span-3">
-                      <mat-form-field appearance="outline">
-                          <mat-label>Tổ hợp xét tuyển</mat-label>
-                          <mat-select formControlName="combination2">
-                              <mat-option *ngFor="let item of combination" [value]="item.id">
-                                  {{item.name}}
-                              </mat-option>
-                          </mat-select>
-                      </mat-form-field>
-                  </div>
-              </div>
-              <div class="mdc-layout-grid__inner">
-                  <div class="mdc-layout-grid__cell--span-4">
-                      <mat-form-field appearance="outline">
-                          <mat-label>Điểm trung bình 3 năm THPT (Môn 1)</mat-label>
-                          <input matInput (keypress)="numberOnly($event)" type="text" formControlName="diemtb21" placeholder="Môn 1" maxlength="4" aria-label="address">
+                <div class="mdc-layout-grid__cell--span-3">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Mã xét tuyển (*)</mat-label>
+                        <input matInput type="text" [value]="career_form_2_code" placeholder="Mã xét tuyển" aria-label="career_2_code" disabled>
+                    </mat-form-field>
+                </div>
+                <div class="mdc-layout-grid__cell--span-3">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Tổ hợp xét tuyển</mat-label>
+                        <mat-select formControlName="combination2">
+                            <mat-option *ngFor="let item of combination" [value]="item.id">
+                                {{item.name}}
+                            </mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                </div>
+            </div>
+            <p>+ Lớp 10</p>
+            <div class="mdc-layout-grid__inner ">
+                <div class="mdc-layout-grid__cell--span-4">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Điểm trung bình cả năm (Môn 1)</mat-label>
+                        <input matInput (keypress)="numberOnly($event)" type="text" formControlName="diemtb21" placeholder="Môn 1" maxlength="4" aria-label="address">
 
-                      </mat-form-field>
-                  </div>
-                  <div class="mdc-layout-grid__cell--span-4">
-                      <mat-form-field appearance="outline">
-                          <mat-label>Điểm trung bình 3 năm THPT (Môn 2)</mat-label>
-                          <input matInput (keypress)="numberOnly($event)" type="text" formControlName="diemtb22" placeholder="Môn 2" maxlength="4" aria-label="address">
+                    </mat-form-field>
+                </div>
+                <div class="mdc-layout-grid__cell--span-4">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Điểm trung bình cả năm (Môn 2)</mat-label>
+                        <input matInput (keypress)="numberOnly($event)" type="text" formControlName="diemtb22" placeholder="Môn 2" maxlength="4" aria-label="address">
 
-                      </mat-form-field>
-                  </div>
-                  <div class="mdc-layout-grid__cell--span-4">
-                      <mat-form-field appearance="outline">
-                          <mat-label>Điểm trung bình 3 năm THPT (Môn 3)</mat-label>
-                          <input matInput (keypress)="numberOnly($event)" type="text" formControlName="diemtb23" placeholder="Môn 3" maxlength="4" aria-label="address">
+                    </mat-form-field>
+                </div>
+                <div class="mdc-layout-grid__cell--span-4">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Điểm trung bình cả năm (Môn 3)</mat-label>
+                        <input matInput (keypress)="numberOnly($event)" type="text" formControlName="diemtb23" placeholder="Môn 3" maxlength="4" aria-label="address">
 
-                      </mat-form-field>
-                  </div>
-              </div>
+                    </mat-form-field>
+                </div>
+            </div>
+            <p>+ Lớp 11 </p>
+            <div class="mdc-layout-grid__inner ">
+
+                <div class="mdc-layout-grid__cell--span-4">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Điểm trung bình cả năm (Môn 1)</mat-label>
+                        <input matInput (keypress)="numberOnly($event)" type="text" formControlName="diemtb24" placeholder="Môn 1" maxlength="4" aria-label="address">
+
+                    </mat-form-field>
+                </div>
+                <div class="mdc-layout-grid__cell--span-4">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Điểm trung bình cả năm (Môn 2)</mat-label>
+                        <input matInput (keypress)="numberOnly($event)" type="text" formControlName="diemtb25" placeholder="Môn 2" maxlength="4" aria-label="address">
+
+                    </mat-form-field>
+                </div>
+                <div class="mdc-layout-grid__cell--span-4">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Điểm trung bình cả năm (Môn 3)</mat-label>
+                        <input matInput (keypress)="numberOnly($event)" type="text" formControlName="diemtb26" placeholder="Môn 3" maxlength="4" aria-label="address">
+
+                    </mat-form-field>
+                </div>
+            </div>
+            <div class="mdc-layout-grid__inner ">
+            <div class="mdc-layout-grid__cell--span-6">
+            <p>+ Lớp 12</p>
+            </div>
+            <div class="mdc-layout-grid__cell--span-6">
+
+                  <mat-form-field appearance="outline">
+                      <mat-label>Lựa chọn 1 trong 2 </mat-label>
+                      <mat-select formControlName="option2">
+                          <mat-option *ngFor="let item of option2" [value]="item.value">
+                              {{item.name}}
+                          </mat-option>
+                      </mat-select>
+                      <mat-error class="error-message" *ngIf="form.get('option2').invalid && submited">
+                          <span *ngIf="form.get('option2').hasError('required')">Vui lòng lựa chọn</span>
+                      </mat-error>
+                  </mat-form-field>
+
+            </div>
+            </div>
+            <div class="mdc-layout-grid__inner ">
+
+                <div class="mdc-layout-grid__cell--span-4">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Điểm trung bình (Môn 1)</mat-label>
+                        <input matInput (keypress)="numberOnly($event)" type="text" formControlName="diemtb27" placeholder="Môn 1" maxlength="4" aria-label="address">
+
+                    </mat-form-field>
+                </div>
+                <div class="mdc-layout-grid__cell--span-4">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Điểm trung bình (Môn 2)</mat-label>
+                        <input matInput (keypress)="numberOnly($event)" type="text" formControlName="diemtb28" placeholder="Môn 2" maxlength="4" aria-label="address">
+
+                    </mat-form-field>
+                </div>
+                <div class="mdc-layout-grid__cell--span-4">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Điểm trung bình (Môn 3)</mat-label>
+                        <input matInput (keypress)="numberOnly($event)" type="text" formControlName="diemtb29" placeholder="Môn 3" maxlength="4" aria-label="address">
+                    </mat-form-field>
+                </div>
+            </div>
 </div>
 <div *ngIf="numberCareer > 2">
-  <p>// Nguyện vọng 3 </p>
-                  <div class="mdc-layout-grid__inner">
-                    <div class="mdc-layout-grid__cell--span-6">
-                        <mat-form-field appearance="outline">
-                            <mat-label>3. Ngành/nhóm ngành/Chuyên ngành/Nhóm chuyên ngành xét tuyển (*)</mat-label>
-                            <mat-select formControlName="career_form_3" (selectionChange)="changeCareerForm($event, '3')">
-                                <mat-option *ngFor="let item of careers_form" [value]="item.id">
-                                    {{item.name}}
-                                </mat-option>
-                            </mat-select>
-                        </mat-form-field>
-                    </div>
+  <p class="p-center">
+  ------------------------- Nguyện vọng 3 -------------------------
+  </p>
+            <div class="mdc-layout-grid__inner">
+                <div class="mdc-layout-grid__cell--span-6">
+                    <mat-form-field appearance="outline">
+                        <mat-label>1. Ngành/nhóm ngành/Chuyên ngành/Nhóm chuyên ngành xét tuyển (*)</mat-label>
+                        <mat-select formControlName="career_form_3" (selectionChange)="changeCareerForm($event, '3')">
+                            <mat-option *ngFor="let item of careers_form" [value]="item.id">
+                                {{item.name}}
+                            </mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                </div>
 
-                    <div class="mdc-layout-grid__cell--span-3">
-                        <mat-form-field appearance="outline">
-                            <mat-label>Mã xét tuyển (*)</mat-label>
-                            <input matInput type="text" [value]="career_form_3_code" placeholder="Mã xét tuyển" aria-label="career_3_code" disabled>
-                        </mat-form-field>
-                    </div>
-                    <div class="mdc-layout-grid__cell--span-3">
-                        <mat-form-field appearance="outline">
-                            <mat-label>Tổ hợp xét tuyển</mat-label>
-                            <mat-select formControlName="combination3">
-                                <mat-option *ngFor="let item of combination" [value]="item.id">
-                                    {{item.name}}
-                                </mat-option>
-                            </mat-select>
-                        </mat-form-field>
-                    </div>
-                  </div>
-                  <div class="mdc-layout-grid__inner">
-                    <div class="mdc-layout-grid__cell--span-4">
-                        <mat-form-field appearance="outline">
-                            <mat-label>Điểm trung bình 3 năm THPT (Môn 1)</mat-label>
-                            <input matInput (keypress)="numberOnly($event)" type="text" formControlName="diemtb31" placeholder="Môn 1" maxlength="4" aria-label="address">
+                <div class="mdc-layout-grid__cell--span-3">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Mã xét tuyển (*)</mat-label>
+                        <input matInput type="text" [value]="career_form_3_code" placeholder="Mã xét tuyển" aria-label="career_3_code" disabled>
+                    </mat-form-field>
+                </div>
+                <div class="mdc-layout-grid__cell--span-3">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Tổ hợp xét tuyển</mat-label>
+                        <mat-select formControlName="combination3">
+                            <mat-option *ngFor="let item of combination" [value]="item.id">
+                                {{item.name}}
+                            </mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                </div>
+            </div>
+            <p>+ Lớp 10</p>
+            <div class="mdc-layout-grid__inner ">
+                <div class="mdc-layout-grid__cell--span-4">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Điểm trung bình cả năm (Môn 1)</mat-label>
+                        <input matInput (keypress)="numberOnly($event)" type="text" formControlName="diemtb31" placeholder="Môn 1" maxlength="4" aria-label="address">
 
-                        </mat-form-field>
-                    </div>
-                    <div class="mdc-layout-grid__cell--span-4">
-                        <mat-form-field appearance="outline">
-                            <mat-label>Điểm trung bình 3 năm THPT (Môn 2)</mat-label>
-                            <input matInput (keypress)="numberOnly($event)" type="text" formControlName="diemtb32" placeholder="Môn 2" maxlength="4" aria-label="address">
+                    </mat-form-field>
+                </div>
+                <div class="mdc-layout-grid__cell--span-4">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Điểm trung bình cả năm (Môn 2)</mat-label>
+                        <input matInput (keypress)="numberOnly($event)" type="text" formControlName="diemtb32" placeholder="Môn 2" maxlength="4" aria-label="address">
 
-                        </mat-form-field>
-                    </div>
-                    <div class="mdc-layout-grid__cell--span-4">
-                        <mat-form-field appearance="outline">
-                            <mat-label>Điểm trung bình 3 năm THPT (Môn 3)</mat-label>
-                            <input matInput (keypress)="numberOnly($event)" type="text" formControlName="diemtb33" placeholder="Môn 3" maxlength="4" aria-label="address">
+                    </mat-form-field>
+                </div>
+                <div class="mdc-layout-grid__cell--span-4">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Điểm trung bình cả năm (Môn 3)</mat-label>
+                        <input matInput (keypress)="numberOnly($event)" type="text" formControlName="diemtb33" placeholder="Môn 3" maxlength="4" aria-label="address">
 
-                        </mat-form-field>
-                    </div>
-                  </div>
+                    </mat-form-field>
+                </div>
+            </div>
+            <p>+ Lớp 11 </p>
+            <div class="mdc-layout-grid__inner ">
+
+                <div class="mdc-layout-grid__cell--span-4">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Điểm trung bình cả năm (Môn 1)</mat-label>
+                        <input matInput (keypress)="numberOnly($event)" type="text" formControlName="diemtb34" placeholder="Môn 1" maxlength="4" aria-label="address">
+
+                    </mat-form-field>
+                </div>
+                <div class="mdc-layout-grid__cell--span-4">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Điểm trung bình cả năm (Môn 2)</mat-label>
+                        <input matInput (keypress)="numberOnly($event)" type="text" formControlName="diemtb35" placeholder="Môn 2" maxlength="4" aria-label="address">
+
+                    </mat-form-field>
+                </div>
+                <div class="mdc-layout-grid__cell--span-4">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Điểm trung bình cả năm (Môn 3)</mat-label>
+                        <input matInput (keypress)="numberOnly($event)" type="text" formControlName="diemtb36" placeholder="Môn 3" maxlength="4" aria-label="address">
+
+                    </mat-form-field>
+                </div>
+            </div>
+            <div class="mdc-layout-grid__inner ">
+            <div class="mdc-layout-grid__cell--span-6">
+            <p>+ Lớp 12</p>
+            </div>
+            <div class="mdc-layout-grid__cell--span-6">
+
+                  <mat-form-field appearance="outline">
+                      <mat-label>Lựa chọn 1 trong 2 </mat-label>
+                      <mat-select formControlName="option3">
+                          <mat-option *ngFor="let item of option3" [value]="item.value">
+                              {{item.name}}
+                          </mat-option>
+                      </mat-select>
+                      <mat-error class="error-message" *ngIf="form.get('option3').invalid && submited">
+                          <span *ngIf="form.get('option3').hasError('required')">Vui lòng lựa chọn</span>
+                      </mat-error>
+                  </mat-form-field>
+
+            </div>
+            </div>
+            <div class="mdc-layout-grid__inner ">
+
+                <div class="mdc-layout-grid__cell--span-4">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Điểm trung bình (Môn 1)</mat-label>
+                        <input matInput (keypress)="numberOnly($event)" type="text" formControlName="diemtb37" placeholder="Môn 1" maxlength="4" aria-label="address">
+
+                    </mat-form-field>
+                </div>
+                <div class="mdc-layout-grid__cell--span-4">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Điểm trung bình (Môn 2)</mat-label>
+                        <input matInput (keypress)="numberOnly($event)" type="text" formControlName="diemtb38" placeholder="Môn 2" maxlength="4" aria-label="address">
+
+                    </mat-form-field>
+                </div>
+                <div class="mdc-layout-grid__cell--span-4">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Điểm trung bình (Môn 3)</mat-label>
+                        <input matInput (keypress)="numberOnly($event)" type="text" formControlName="diemtb39" placeholder="Môn 3" maxlength="4" aria-label="address">
+                    </mat-form-field>
+                </div>
+            </div>
 </div>
 <div *ngIf="numberCareer > 3">
-    <p>// Nguyện vọng 4 </p>
-                  <div class="mdc-layout-grid__inner">
-                      <div class="mdc-layout-grid__cell--span-6">
-                          <mat-form-field appearance="outline">
-                              <mat-label>4. Ngành/nhóm ngành/Chuyên ngành/Nhóm chuyên ngành xét tuyển (*)</mat-label>
-                              <mat-select formControlName="career_form_4" (selectionChange)="changeCareerForm($event, '4')">
-                                  <mat-option *ngFor="let item of careers_form" [value]="item.id">
-                                      {{item.name}}
-                                  </mat-option>
-                              </mat-select>
-                          </mat-form-field>
-                      </div>
+  <p class="p-center">
+------------------------- Nguyện vọng 4 -------------------------
+  </p>
+            <div class="mdc-layout-grid__inner">
+                <div class="mdc-layout-grid__cell--span-6">
+                    <mat-form-field appearance="outline">
+                        <mat-label>1. Ngành/nhóm ngành/Chuyên ngành/Nhóm chuyên ngành xét tuyển (*)</mat-label>
+                        <mat-select formControlName="career_form_4" (selectionChange)="changeCareerForm($event, '4')">
+                            <mat-option *ngFor="let item of careers_form" [value]="item.id">
+                                {{item.name}}
+                            </mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                </div>
 
-                      <div class="mdc-layout-grid__cell--span-3">
-                          <mat-form-field appearance="outline">
-                              <mat-label>Mã xét tuyển (*)</mat-label>
-                              <input matInput type="text" [value]="career_form_4_code" placeholder="Mã xét tuyển" aria-label="career_4_code" disabled>
-                          </mat-form-field>
-                      </div>
-                      <div class="mdc-layout-grid__cell--span-3">
-                          <mat-form-field appearance="outline">
-                              <mat-label>Tổ hợp xét tuyển</mat-label>
-                              <mat-select formControlName="combination4">
-                                  <mat-option *ngFor="let item of combination" [value]="item.id">
-                                      {{item.name}}
-                                  </mat-option>
-                              </mat-select>
-                          </mat-form-field>
-                      </div>
-                  </div>
-                  <div class="mdc-layout-grid__inner">
-                      <div class="mdc-layout-grid__cell--span-4">
-                          <mat-form-field appearance="outline">
-                              <mat-label>Điểm trung bình 3 năm THPT (Môn 1)</mat-label>
-                              <input matInput (keypress)="numberOnly($event)" type="text" formControlName="diemtb41" placeholder="Môn 1" maxlength="4" aria-label="address">
+                <div class="mdc-layout-grid__cell--span-3">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Mã xét tuyển (*)</mat-label>
+                        <input matInput type="text" [value]="career_form_4_code" placeholder="Mã xét tuyển" aria-label="career_4_code" disabled>
+                    </mat-form-field>
+                </div>
+                <div class="mdc-layout-grid__cell--span-3">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Tổ hợp xét tuyển</mat-label>
+                        <mat-select formControlName="combination4">
+                            <mat-option *ngFor="let item of combination" [value]="item.id">
+                                {{item.name}}
+                            </mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                </div>
+            </div>
+            <p>+ Lớp 10</p>
+            <div class="mdc-layout-grid__inner ">
+                <div class="mdc-layout-grid__cell--span-4">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Điểm trung bình cả năm (Môn 1)</mat-label>
+                        <input matInput (keypress)="numberOnly($event)" type="text" formControlName="diemtb41" placeholder="Môn 1" maxlength="4" aria-label="address">
 
-                          </mat-form-field>
-                      </div>
-                      <div class="mdc-layout-grid__cell--span-4">
-                          <mat-form-field appearance="outline">
-                              <mat-label>Điểm trung bình 3 năm THPT (Môn 2)</mat-label>
-                              <input matInput (keypress)="numberOnly($event)" type="text" formControlName="diemtb42" placeholder="Môn 2" maxlength="4" aria-label="address">
+                    </mat-form-field>
+                </div>
+                <div class="mdc-layout-grid__cell--span-4">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Điểm trung bình cả năm (Môn 2)</mat-label>
+                        <input matInput (keypress)="numberOnly($event)" type="text" formControlName="diemtb42" placeholder="Môn 2" maxlength="4" aria-label="address">
 
-                          </mat-form-field>
-                      </div>
-                      <div class="mdc-layout-grid__cell--span-4">
-                          <mat-form-field appearance="outline">
-                              <mat-label>Điểm trung bình 3 năm THPT (Môn 3)</mat-label>
-                              <input matInput (keypress)="numberOnly($event)" type="text" formControlName="diemtb43" placeholder="Môn 3" maxlength="4" aria-label="address">
+                    </mat-form-field>
+                </div>
+                <div class="mdc-layout-grid__cell--span-4">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Điểm trung bình cả năm (Môn 3)</mat-label>
+                        <input matInput (keypress)="numberOnly($event)" type="text" formControlName="diemtb43" placeholder="Môn 3" maxlength="4" aria-label="address">
 
-                          </mat-form-field>
-                      </div>
-                  </div>
+                    </mat-form-field>
+                </div>
+            </div>
+            <p>+ Lớp 11 </p>
+            <div class="mdc-layout-grid__inner ">
+
+                <div class="mdc-layout-grid__cell--span-4">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Điểm trung bình cả năm (Môn 1)</mat-label>
+                        <input matInput (keypress)="numberOnly($event)" type="text" formControlName="diemtb44" placeholder="Môn 1" maxlength="4" aria-label="address">
+
+                    </mat-form-field>
+                </div>
+                <div class="mdc-layout-grid__cell--span-4">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Điểm trung bình cả năm (Môn 2)</mat-label>
+                        <input matInput (keypress)="numberOnly($event)" type="text" formControlName="diemtb45" placeholder="Môn 2" maxlength="4" aria-label="address">
+
+                    </mat-form-field>
+                </div>
+                <div class="mdc-layout-grid__cell--span-4">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Điểm trung bình cả năm (Môn 3)</mat-label>
+                        <input matInput (keypress)="numberOnly($event)" type="text" formControlName="diemtb46" placeholder="Môn 3" maxlength="4" aria-label="address">
+
+                    </mat-form-field>
+                </div>
+            </div>
+            <div class="mdc-layout-grid__inner ">
+            <div class="mdc-layout-grid__cell--span-6">
+            <p>+ Lớp 12</p>
+            </div>
+            <div class="mdc-layout-grid__cell--span-6">
+
+                  <mat-form-field appearance="outline">
+                      <mat-label>Lựa chọn 1 trong 2 </mat-label>
+                      <mat-select formControlName="option4">
+                          <mat-option *ngFor="let item of option4" [value]="item.value">
+                              {{item.name}}
+                          </mat-option>
+                      </mat-select>
+                      <mat-error class="error-message" *ngIf="form.get('option4').invalid && submited">
+                          <span *ngIf="form.get('option4').hasError('required')">Vui lòng lựa chọn</span>
+                      </mat-error>
+                  </mat-form-field>
+
+            </div>
+            </div>
+            <div class="mdc-layout-grid__inner ">
+
+                <div class="mdc-layout-grid__cell--span-4">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Điểm trung bình (Môn 1)</mat-label>
+                        <input matInput (keypress)="numberOnly($event)" type="text" formControlName="diemtb47" placeholder="Môn 1" maxlength="4" aria-label="address">
+
+                    </mat-form-field>
+                </div>
+                <div class="mdc-layout-grid__cell--span-4">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Điểm trung bình (Môn 2)</mat-label>
+                        <input matInput (keypress)="numberOnly($event)" type="text" formControlName="diemtb48" placeholder="Môn 2" maxlength="4" aria-label="address">
+
+                    </mat-form-field>
+                </div>
+                <div class="mdc-layout-grid__cell--span-4">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Điểm trung bình (Môn 3)</mat-label>
+                        <input matInput (keypress)="numberOnly($event)" type="text" formControlName="diemtb49" placeholder="Môn 3" maxlength="4" aria-label="address">
+                    </mat-form-field>
+                </div>
+            </div>
 </div>
 <div *ngIf="numberCareer > 4">
-    <p>// Nguyện vọng 5 </p>
-                  <div class="mdc-layout-grid__inner">
-                      <div class="mdc-layout-grid__cell--span-6">
-                          <mat-form-field appearance="outline">
-                              <mat-label>5. Ngành/nhóm ngành/Chuyên ngành/Nhóm chuyên ngành xét tuyển (*)</mat-label>
-                              <mat-select formControlName="career_form_5" (selectionChange)="changeCareerForm($event, '5')">
-                                  <mat-option *ngFor="let item of careers_form" [value]="item.id">
-                                      {{item.name}}
-                                  </mat-option>
-                              </mat-select>
-                          </mat-form-field>
-                      </div>
+  <p class="p-center">
+------------------------- Nguyện vọng 5 -------------------------
+  </p>
+            <div class="mdc-layout-grid__inner">
+                <div class="mdc-layout-grid__cell--span-6">
+                    <mat-form-field appearance="outline">
+                        <mat-label>1. Ngành/nhóm ngành/Chuyên ngành/Nhóm chuyên ngành xét tuyển (*)</mat-label>
+                        <mat-select formControlName="career_form_5" (selectionChange)="changeCareerForm($event, '5')">
+                            <mat-option *ngFor="let item of careers_form" [value]="item.id">
+                                {{item.name}}
+                            </mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                </div>
 
-                      <div class="mdc-layout-grid__cell--span-3">
-                          <mat-form-field appearance="outline">
-                              <mat-label>Mã xét tuyển (*)</mat-label>
-                              <input matInput type="text" [value]="career_form_5_code" placeholder="Mã xét tuyển" aria-label="career_5_code" disabled>
-                          </mat-form-field>
-                      </div>
-                      <div class="mdc-layout-grid__cell--span-3">
-                          <mat-form-field appearance="outline">
-                              <mat-label>Tổ hợp xét tuyển</mat-label>
-                              <mat-select formControlName="combination5">
-                                  <mat-option *ngFor="let item of combination" [value]="item.id">
-                                      {{item.name}}
-                                  </mat-option>
-                              </mat-select>
-                          </mat-form-field>
-                      </div>
-                  </div>
-                  <div class="mdc-layout-grid__inner">
-                      <div class="mdc-layout-grid__cell--span-4">
-                          <mat-form-field appearance="outline">
-                              <mat-label>Điểm trung bình 3 năm THPT (Môn 1)</mat-label>
-                              <input matInput (keypress)="numberOnly($event)" type="text" formControlName="diemtb51" placeholder="Môn 1" maxlength="4" aria-label="address">
+                <div class="mdc-layout-grid__cell--span-3">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Mã xét tuyển (*)</mat-label>
+                        <input matInput type="text" [value]="career_form_5_code" placeholder="Mã xét tuyển" aria-label="career_5_code" disabled>
+                    </mat-form-field>
+                </div>
+                <div class="mdc-layout-grid__cell--span-3">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Tổ hợp xét tuyển</mat-label>
+                        <mat-select formControlName="combination5">
+                            <mat-option *ngFor="let item of combination" [value]="item.id">
+                                {{item.name}}
+                            </mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                </div>
+            </div>
+            <p>+ Lớp 10</p>
+            <div class="mdc-layout-grid__inner ">
+                <div class="mdc-layout-grid__cell--span-4">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Điểm trung bình cả năm (Môn 1)</mat-label>
+                        <input matInput (keypress)="numberOnly($event)" type="text" formControlName="diemtb51" placeholder="Môn 1" maxlength="4" aria-label="address">
 
-                          </mat-form-field>
-                      </div>
-                      <div class="mdc-layout-grid__cell--span-4">
-                          <mat-form-field appearance="outline">
-                              <mat-label>Điểm trung bình 3 năm THPT (Môn 2)</mat-label>
-                              <input matInput (keypress)="numberOnly($event)" type="text" formControlName="diemtb52" placeholder="Môn 2" maxlength="4" aria-label="address">
+                    </mat-form-field>
+                </div>
+                <div class="mdc-layout-grid__cell--span-4">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Điểm trung bình cả năm (Môn 2)</mat-label>
+                        <input matInput (keypress)="numberOnly($event)" type="text" formControlName="diemtb52" placeholder="Môn 2" maxlength="4" aria-label="address">
 
-                          </mat-form-field>
-                      </div>
-                      <div class="mdc-layout-grid__cell--span-4">
-                          <mat-form-field appearance="outline">
-                              <mat-label>Điểm trung bình 3 năm THPT (Môn 3)</mat-label>
-                              <input matInput (keypress)="numberOnly($event)" type="text" formControlName="diemtb53" placeholder="Môn 3" maxlength="4" aria-label="address">
+                    </mat-form-field>
+                </div>
+                <div class="mdc-layout-grid__cell--span-4">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Điểm trung bình cả năm (Môn 3)</mat-label>
+                        <input matInput (keypress)="numberOnly($event)" type="text" formControlName="diemtb53" placeholder="Môn 3" maxlength="4" aria-label="address">
 
-                          </mat-form-field>
-                      </div>
-                  </div>
+                    </mat-form-field>
+                </div>
+            </div>
+            <p>+ Lớp 11 </p>
+            <div class="mdc-layout-grid__inner ">
+
+                <div class="mdc-layout-grid__cell--span-4">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Điểm trung bình cả năm (Môn 1)</mat-label>
+                        <input matInput (keypress)="numberOnly($event)" type="text" formControlName="diemtb54" placeholder="Môn 1" maxlength="4" aria-label="address">
+
+                    </mat-form-field>
+                </div>
+                <div class="mdc-layout-grid__cell--span-4">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Điểm trung bình cả năm (Môn 2)</mat-label>
+                        <input matInput (keypress)="numberOnly($event)" type="text" formControlName="diemtb55" placeholder="Môn 2" maxlength="4" aria-label="address">
+
+                    </mat-form-field>
+                </div>
+                <div class="mdc-layout-grid__cell--span-4">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Điểm trung bình cả năm (Môn 3)</mat-label>
+                        <input matInput (keypress)="numberOnly($event)" type="text" formControlName="diemtb56" placeholder="Môn 3" maxlength="4" aria-label="address">
+
+                    </mat-form-field>
+                </div>
+            </div>
+            <div class="mdc-layout-grid__inner ">
+            <div class="mdc-layout-grid__cell--span-6">
+            <p>+ Lớp 12</p>
+            </div>
+            <div class="mdc-layout-grid__cell--span-6">
+
+                  <mat-form-field appearance="outline">
+                      <mat-label>Lựa chọn 1 trong 2 </mat-label>
+                      <mat-select formControlName="option5">
+                          <mat-option *ngFor="let item of option5" [value]="item.value">
+                              {{item.name}}
+                          </mat-option>
+                      </mat-select>
+                      <mat-error class="error-message" *ngIf="form.get('option5').invalid && submited">
+                          <span *ngIf="form.get('option5').hasError('required')">Vui lòng lựa chọn</span>
+                      </mat-error>
+                  </mat-form-field>
+
+            </div>
+            </div>
+            <div class="mdc-layout-grid__inner ">
+
+                <div class="mdc-layout-grid__cell--span-4">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Điểm trung bình (Môn 1)</mat-label>
+                        <input matInput (keypress)="numberOnly($event)" type="text" formControlName="diemtb57" placeholder="Môn 1" maxlength="4" aria-label="address">
+
+                    </mat-form-field>
+                </div>
+                <div class="mdc-layout-grid__cell--span-4">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Điểm trung bình (Môn 2)</mat-label>
+                        <input matInput (keypress)="numberOnly($event)" type="text" formControlName="diemtb58" placeholder="Môn 2" maxlength="4" aria-label="address">
+
+                    </mat-form-field>
+                </div>
+                <div class="mdc-layout-grid__cell--span-4">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Điểm trung bình (Môn 3)</mat-label>
+                        <input matInput (keypress)="numberOnly($event)" type="text" formControlName="diemtb59" placeholder="Môn 3" maxlength="4" aria-label="address">
+                    </mat-form-field>
+                </div>
+            </div>
 </div>
 <div *ngIf="numberCareer > 5">
-  <p>// Nguyện vọng 6 </p>
-              <div class="mdc-layout-grid__inner">
-                  <div class="mdc-layout-grid__cell--span-6">
-                      <mat-form-field appearance="outline">
-                          <mat-label>6. Ngành/nhóm ngành/Chuyên ngành/Nhóm chuyên ngành xét tuyển (*)</mat-label>
-                          <mat-select formControlName="career_form_6" (selectionChange)="changeCareerForm($event, '6')">
-                              <mat-option *ngFor="let item of careers_form" [value]="item.id">
-                                  {{item.name}}
-                              </mat-option>
-                          </mat-select>
-                      </mat-form-field>
-                  </div>
+  <p class="p-center">
+------------------------- Nguyện vọng 6 -------------------------
+  </p>
+            <div class="mdc-layout-grid__inner">
+                <div class="mdc-layout-grid__cell--span-6">
+                    <mat-form-field appearance="outline">
+                        <mat-label>1. Ngành/nhóm ngành/Chuyên ngành/Nhóm chuyên ngành xét tuyển (*)</mat-label>
+                        <mat-select formControlName="career_form_6" (selectionChange)="changeCareerForm($event, '6')">
+                            <mat-option *ngFor="let item of careers_form" [value]="item.id">
+                                {{item.name}}
+                            </mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                </div>
 
-                  <div class="mdc-layout-grid__cell--span-3">
-                      <mat-form-field appearance="outline">
-                          <mat-label>Mã xét tuyển (*)</mat-label>
-                          <input matInput type="text" [value]="career_form_6_code" placeholder="Mã xét tuyển" aria-label="career_6_code" disabled>
-                      </mat-form-field>
-                  </div>
-                  <div class="mdc-layout-grid__cell--span-3">
-                      <mat-form-field appearance="outline">
-                          <mat-label>Tổ hợp xét tuyển</mat-label>
-                          <mat-select formControlName="combination6">
-                              <mat-option *ngFor="let item of combination" [value]="item.id">
-                                  {{item.name}}
-                              </mat-option>
-                          </mat-select>
-                      </mat-form-field>
-                  </div>
-              </div>
-              <div class="mdc-layout-grid__inner">
-                  <div class="mdc-layout-grid__cell--span-4">
-                      <mat-form-field appearance="outline">
-                          <mat-label>Điểm trung bình 3 năm THPT (Môn 1)</mat-label>
-                          <input matInput (keypress)="numberOnly($event)" type="text" formControlName="diemtb61" placeholder="Môn 1" maxlength="4" aria-label="address">
+                <div class="mdc-layout-grid__cell--span-3">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Mã xét tuyển (*)</mat-label>
+                        <input matInput type="text" [value]="career_form_6_code" placeholder="Mã xét tuyển" aria-label="career_6_code" disabled>
+                    </mat-form-field>
+                </div>
+                <div class="mdc-layout-grid__cell--span-3">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Tổ hợp xét tuyển</mat-label>
+                        <mat-select formControlName="combination6">
+                            <mat-option *ngFor="let item of combination" [value]="item.id">
+                                {{item.name}}
+                            </mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                </div>
+            </div>
+            <p>+ Lớp 10</p>
+            <div class="mdc-layout-grid__inner ">
+                <div class="mdc-layout-grid__cell--span-4">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Điểm trung bình cả năm (Môn 1)</mat-label>
+                        <input matInput (keypress)="numberOnly($event)" type="text" formControlName="diemtb61" placeholder="Môn 1" maxlength="4" aria-label="address">
 
-                      </mat-form-field>
-                  </div>
-                  <div class="mdc-layout-grid__cell--span-4">
-                      <mat-form-field appearance="outline">
-                          <mat-label>Điểm trung bình 3 năm THPT (Môn 2)</mat-label>
-                          <input matInput (keypress)="numberOnly($event)" type="text" formControlName="diemtb62" placeholder="Môn 2" maxlength="4" aria-label="address">
+                    </mat-form-field>
+                </div>
+                <div class="mdc-layout-grid__cell--span-4">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Điểm trung bình cả năm (Môn 2)</mat-label>
+                        <input matInput (keypress)="numberOnly($event)" type="text" formControlName="diemtb62" placeholder="Môn 2" maxlength="4" aria-label="address">
 
-                      </mat-form-field>
-                  </div>
-                  <div class="mdc-layout-grid__cell--span-4">
-                      <mat-form-field appearance="outline">
-                          <mat-label>Điểm trung bình 3 năm THPT (Môn 3)</mat-label>
-                          <input matInput (keypress)="numberOnly($event)" type="text" formControlName="diemtb63" placeholder="Môn 3" maxlength="4" aria-label="address">
+                    </mat-form-field>
+                </div>
+                <div class="mdc-layout-grid__cell--span-4">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Điểm trung bình cả năm (Môn 3)</mat-label>
+                        <input matInput (keypress)="numberOnly($event)" type="text" formControlName="diemtb63" placeholder="Môn 3" maxlength="4" aria-label="address">
 
-                      </mat-form-field>
-                  </div>
-              </div>
+                    </mat-form-field>
+                </div>
+            </div>
+            <p>+ Lớp 11 </p>
+            <div class="mdc-layout-grid__inner ">
+
+                <div class="mdc-layout-grid__cell--span-4">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Điểm trung bình cả năm (Môn 1)</mat-label>
+                        <input matInput (keypress)="numberOnly($event)" type="text" formControlName="diemtb64" placeholder="Môn 1" maxlength="4" aria-label="address">
+
+                    </mat-form-field>
+                </div>
+                <div class="mdc-layout-grid__cell--span-4">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Điểm trung bình cả năm (Môn 2)</mat-label>
+                        <input matInput (keypress)="numberOnly($event)" type="text" formControlName="diemtb65" placeholder="Môn 2" maxlength="4" aria-label="address">
+
+                    </mat-form-field>
+                </div>
+                <div class="mdc-layout-grid__cell--span-4">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Điểm trung bình cả năm (Môn 3)</mat-label>
+                        <input matInput (keypress)="numberOnly($event)" type="text" formControlName="diemtb66" placeholder="Môn 3" maxlength="4" aria-label="address">
+
+                    </mat-form-field>
+                </div>
+            </div>
+            <div class="mdc-layout-grid__inner ">
+            <div class="mdc-layout-grid__cell--span-6">
+            <p>+ Lớp 12</p>
+            </div>
+            <div class="mdc-layout-grid__cell--span-6">
+
+                  <mat-form-field appearance="outline">
+                      <mat-label>Lựa chọn 1 trong 2 </mat-label>
+                      <mat-select formControlName="option6">
+                          <mat-option *ngFor="let item of option6" [value]="item.value">
+                              {{item.name}}
+                          </mat-option>
+                      </mat-select>
+                      <mat-error class="error-message" *ngIf="form.get('option6').invalid && submited">
+                          <span *ngIf="form.get('option6').hasError('required')">Vui lòng lựa chọn</span>
+                      </mat-error>
+                  </mat-form-field>
+
+            </div>
+            </div>
+            <div class="mdc-layout-grid__inner ">
+
+                <div class="mdc-layout-grid__cell--span-4">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Điểm trung bình (Môn 1)</mat-label>
+                        <input matInput (keypress)="numberOnly($event)" type="text" formControlName="diemtb67" placeholder="Môn 1" maxlength="4" aria-label="address">
+
+                    </mat-form-field>
+                </div>
+                <div class="mdc-layout-grid__cell--span-4">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Điểm trung bình (Môn 2)</mat-label>
+                        <input matInput (keypress)="numberOnly($event)" type="text" formControlName="diemtb68" placeholder="Môn 2" maxlength="4" aria-label="address">
+
+                    </mat-form-field>
+                </div>
+                <div class="mdc-layout-grid__cell--span-4">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Điểm trung bình (Môn 3)</mat-label>
+                        <input matInput (keypress)="numberOnly($event)" type="text" formControlName="diemtb69" placeholder="Môn 3" maxlength="4" aria-label="address">
+                    </mat-form-field>
+                </div>
+            </div>
 </div>
 <div *ngIf="numberCareer > 6">
-  <p>// Nguyện vọng 7 </p>
-              <div class="mdc-layout-grid__inner">
-                  <div class="mdc-layout-grid__cell--span-6">
-                      <mat-form-field appearance="outline">
-                          <mat-label>7. Ngành/nhóm ngành/Chuyên ngành/Nhóm chuyên ngành xét tuyển (*)</mat-label>
-                          <mat-select formControlName="career_form_7" (selectionChange)="changeCareerForm($event, '7')">
-                              <mat-option *ngFor="let item of careers_form" [value]="item.id">
-                                  {{item.name}}
-                              </mat-option>
-                          </mat-select>
-                      </mat-form-field>
-                  </div>
+  <p class="p-center">
+------------------------- Nguyện vọng 7 -------------------------
+  </p>
+            <div class="mdc-layout-grid__inner">
+                <div class="mdc-layout-grid__cell--span-6">
+                    <mat-form-field appearance="outline">
+                        <mat-label>1. Ngành/nhóm ngành/Chuyên ngành/Nhóm chuyên ngành xét tuyển (*)</mat-label>
+                        <mat-select formControlName="career_form_7" (selectionChange)="changeCareerForm($event, '7')">
+                            <mat-option *ngFor="let item of careers_form" [value]="item.id">
+                                {{item.name}}
+                            </mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                </div>
 
-                  <div class="mdc-layout-grid__cell--span-3">
-                      <mat-form-field appearance="outline">
-                          <mat-label>Mã xét tuyển (*)</mat-label>
-                          <input matInput type="text" [value]="career_form_7_code" placeholder="Mã xét tuyển" aria-label="career_7_code" disabled>
-                      </mat-form-field>
-                  </div>
-                  <div class="mdc-layout-grid__cell--span-3">
-                      <mat-form-field appearance="outline">
-                          <mat-label>Tổ hợp xét tuyển</mat-label>
-                          <mat-select formControlName="combination7">
-                              <mat-option *ngFor="let item of combination" [value]="item.id">
-                                  {{item.name}}
-                              </mat-option>
-                          </mat-select>
-                      </mat-form-field>
-                  </div>
-              </div>
-              <div class="mdc-layout-grid__inner">
-                  <div class="mdc-layout-grid__cell--span-4">
-                      <mat-form-field appearance="outline">
-                          <mat-label>Điểm trung bình 3 năm THPT (Môn 1)</mat-label>
-                          <input matInput (keypress)="numberOnly($event)" type="text" formControlName="diemtb71" placeholder="Môn 1" maxlength="4" aria-label="address">
+                <div class="mdc-layout-grid__cell--span-3">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Mã xét tuyển (*)</mat-label>
+                        <input matInput type="text" [value]="career_form_7_code" placeholder="Mã xét tuyển" aria-label="career_7_code" disabled>
+                    </mat-form-field>
+                </div>
+                <div class="mdc-layout-grid__cell--span-3">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Tổ hợp xét tuyển</mat-label>
+                        <mat-select formControlName="combination7">
+                            <mat-option *ngFor="let item of combination" [value]="item.id">
+                                {{item.name}}
+                            </mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                </div>
+            </div>
+            <p>+ Lớp 10</p>
+            <div class="mdc-layout-grid__inner ">
+                <div class="mdc-layout-grid__cell--span-4">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Điểm trung bình cả năm (Môn 1)</mat-label>
+                        <input matInput (keypress)="numberOnly($event)" type="text" formControlName="diemtb71" placeholder="Môn 1" maxlength="4" aria-label="address">
 
-                      </mat-form-field>
-                  </div>
-                  <div class="mdc-layout-grid__cell--span-4">
-                      <mat-form-field appearance="outline">
-                          <mat-label>Điểm trung bình 3 năm THPT (Môn 2)</mat-label>
-                          <input matInput (keypress)="numberOnly($event)" type="text" formControlName="diemtb72" placeholder="Môn 2" maxlength="4" aria-label="address">
+                    </mat-form-field>
+                </div>
+                <div class="mdc-layout-grid__cell--span-4">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Điểm trung bình cả năm (Môn 2)</mat-label>
+                        <input matInput (keypress)="numberOnly($event)" type="text" formControlName="diemtb72" placeholder="Môn 2" maxlength="4" aria-label="address">
 
-                      </mat-form-field>
-                  </div>
-                  <div class="mdc-layout-grid__cell--span-4">
-                      <mat-form-field appearance="outline">
-                          <mat-label>Điểm trung bình 3 năm THPT (Môn 3)</mat-label>
-                          <input matInput (keypress)="numberOnly($event)" type="text" formControlName="diemtb73" placeholder="Môn 3" maxlength="4" aria-label="address">
+                    </mat-form-field>
+                </div>
+                <div class="mdc-layout-grid__cell--span-4">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Điểm trung bình cả năm (Môn 3)</mat-label>
+                        <input matInput (keypress)="numberOnly($event)" type="text" formControlName="diemtb73" placeholder="Môn 3" maxlength="4" aria-label="address">
 
-                      </mat-form-field>
-                  </div>
-              </div>
+                    </mat-form-field>
+                </div>
+            </div>
+            <p>+ Lớp 11 </p>
+            <div class="mdc-layout-grid__inner ">
+
+                <div class="mdc-layout-grid__cell--span-4">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Điểm trung bình cả năm (Môn 1)</mat-label>
+                        <input matInput (keypress)="numberOnly($event)" type="text" formControlName="diemtb74" placeholder="Môn 1" maxlength="4" aria-label="address">
+
+                    </mat-form-field>
+                </div>
+                <div class="mdc-layout-grid__cell--span-4">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Điểm trung bình cả năm (Môn 2)</mat-label>
+                        <input matInput (keypress)="numberOnly($event)" type="text" formControlName="diemtb75" placeholder="Môn 2" maxlength="4" aria-label="address">
+
+                    </mat-form-field>
+                </div>
+                <div class="mdc-layout-grid__cell--span-4">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Điểm trung bình cả năm (Môn 3)</mat-label>
+                        <input matInput (keypress)="numberOnly($event)" type="text" formControlName="diemtb76" placeholder="Môn 3" maxlength="4" aria-label="address">
+
+                    </mat-form-field>
+                </div>
+            </div>
+            <div class="mdc-layout-grid__inner ">
+            <div class="mdc-layout-grid__cell--span-6">
+            <p>+ Lớp 12</p>
+            </div>
+            <div class="mdc-layout-grid__cell--span-6">
+
+                  <mat-form-field appearance="outline">
+                      <mat-label>Lựa chọn 1 trong 2 </mat-label>
+                      <mat-select formControlName="option7">
+                          <mat-option *ngFor="let item of option7" [value]="item.value">
+                              {{item.name}}
+                          </mat-option>
+                      </mat-select>
+                      <mat-error class="error-message" *ngIf="form.get('option7').invalid && submited">
+                          <span *ngIf="form.get('option7').hasError('required')">Vui lòng lựa chọn</span>
+                      </mat-error>
+                  </mat-form-field>
+
+            </div>
+            </div>
+            <div class="mdc-layout-grid__inner ">
+
+                <div class="mdc-layout-grid__cell--span-4">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Điểm trung bình (Môn 1)</mat-label>
+                        <input matInput (keypress)="numberOnly($event)" type="text" formControlName="diemtb77" placeholder="Môn 1" maxlength="4" aria-label="address">
+
+                    </mat-form-field>
+                </div>
+                <div class="mdc-layout-grid__cell--span-4">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Điểm trung bình (Môn 2)</mat-label>
+                        <input matInput (keypress)="numberOnly($event)" type="text" formControlName="diemtb78" placeholder="Môn 2" maxlength="4" aria-label="address">
+
+                    </mat-form-field>
+                </div>
+                <div class="mdc-layout-grid__cell--span-4">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Điểm trung bình (Môn 3)</mat-label>
+                        <input matInput (keypress)="numberOnly($event)" type="text" formControlName="diemtb79" placeholder="Môn 3" maxlength="4" aria-label="address">
+                    </mat-form-field>
+                </div>
+            </div>
 </div>
 <div *ngIf="numberCareer > 7">
-  <p>// Nguyện vọng 8 </p>
-              <div class="mdc-layout-grid__inner">
-                  <div class="mdc-layout-grid__cell--span-6">
-                      <mat-form-field appearance="outline">
-                          <mat-label>8. Ngành/nhóm ngành/Chuyên ngành/Nhóm chuyên ngành xét tuyển (*)</mat-label>
-                          <mat-select formControlName="career_form_8" (selectionChange)="changeCareerForm($event, '8')">
-                              <mat-option *ngFor="let item of careers_form" [value]="item.id">
-                                  {{item.name}}
-                              </mat-option>
-                          </mat-select>
-                      </mat-form-field>
-                  </div>
+  <p class="p-center">
+------------------------- Nguyện vọng 8 -------------------------
+  </p>
+            <div class="mdc-layout-grid__inner">
+                <div class="mdc-layout-grid__cell--span-6">
+                    <mat-form-field appearance="outline">
+                        <mat-label>1. Ngành/nhóm ngành/Chuyên ngành/Nhóm chuyên ngành xét tuyển (*)</mat-label>
+                        <mat-select formControlName="career_form_8" (selectionChange)="changeCareerForm($event, '8')">
+                            <mat-option *ngFor="let item of careers_form" [value]="item.id">
+                                {{item.name}}
+                            </mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                </div>
 
-                  <div class="mdc-layout-grid__cell--span-3">
-                      <mat-form-field appearance="outline">
-                          <mat-label>Mã xét tuyển (*)</mat-label>
-                          <input matInput type="text" [value]="career_form_8_code" placeholder="Mã xét tuyển" aria-label="career_8_code" disabled>
-                      </mat-form-field>
-                  </div>
-                  <div class="mdc-layout-grid__cell--span-3">
-                      <mat-form-field appearance="outline">
-                          <mat-label>Tổ hợp xét tuyển</mat-label>
-                          <mat-select formControlName="combination8">
-                              <mat-option *ngFor="let item of combination" [value]="item.id">
-                                  {{item.name}}
-                              </mat-option>
-                          </mat-select>
-                      </mat-form-field>
-                  </div>
-              </div>
-              <div class="mdc-layout-grid__inner">
-                  <div class="mdc-layout-grid__cell--span-4">
-                      <mat-form-field appearance="outline">
-                          <mat-label>Điểm trung bình 3 năm THPT (Môn 1)</mat-label>
-                          <input matInput (keypress)="numberOnly($event)" type="text" formControlName="diemtb81" placeholder="Môn 1" maxlength="4" aria-label="address">
+                <div class="mdc-layout-grid__cell--span-3">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Mã xét tuyển (*)</mat-label>
+                        <input matInput type="text" [value]="career_form_8_code" placeholder="Mã xét tuyển" aria-label="career_8_code" disabled>
+                    </mat-form-field>
+                </div>
+                <div class="mdc-layout-grid__cell--span-3">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Tổ hợp xét tuyển</mat-label>
+                        <mat-select formControlName="combination8">
+                            <mat-option *ngFor="let item of combination" [value]="item.id">
+                                {{item.name}}
+                            </mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                </div>
+            </div>
+            <p>+ Lớp 10</p>
+            <div class="mdc-layout-grid__inner ">
+                <div class="mdc-layout-grid__cell--span-4">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Điểm trung bình cả năm (Môn 1)</mat-label>
+                        <input matInput (keypress)="numberOnly($event)" type="text" formControlName="diemtb81" placeholder="Môn 1" maxlength="4" aria-label="address">
 
-                      </mat-form-field>
-                  </div>
-                  <div class="mdc-layout-grid__cell--span-4">
-                      <mat-form-field appearance="outline">
-                          <mat-label>Điểm trung bình 3 năm THPT (Môn 2)</mat-label>
-                          <input matInput (keypress)="numberOnly($event)" type="text" formControlName="diemtb82" placeholder="Môn 2" maxlength="4" aria-label="address">
+                    </mat-form-field>
+                </div>
+                <div class="mdc-layout-grid__cell--span-4">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Điểm trung bình cả năm (Môn 2)</mat-label>
+                        <input matInput (keypress)="numberOnly($event)" type="text" formControlName="diemtb82" placeholder="Môn 2" maxlength="4" aria-label="address">
 
-                      </mat-form-field>
-                  </div>
-                  <div class="mdc-layout-grid__cell--span-4">
-                      <mat-form-field appearance="outline">
-                          <mat-label>Điểm trung bình 3 năm THPT (Môn 3)</mat-label>
-                          <input matInput (keypress)="numberOnly($event)" type="text" formControlName="diemtb83" placeholder="Môn 3" maxlength="4" aria-label="address">
+                    </mat-form-field>
+                </div>
+                <div class="mdc-layout-grid__cell--span-4">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Điểm trung bình cả năm (Môn 3)</mat-label>
+                        <input matInput (keypress)="numberOnly($event)" type="text" formControlName="diemtb83" placeholder="Môn 3" maxlength="4" aria-label="address">
 
-                      </mat-form-field>
-                  </div>
-              </div>
+                    </mat-form-field>
+                </div>
+            </div>
+            <p>+ Lớp 11 </p>
+            <div class="mdc-layout-grid__inner ">
+
+                <div class="mdc-layout-grid__cell--span-4">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Điểm trung bình cả năm (Môn 1)</mat-label>
+                        <input matInput (keypress)="numberOnly($event)" type="text" formControlName="diemtb84" placeholder="Môn 1" maxlength="4" aria-label="address">
+
+                    </mat-form-field>
+                </div>
+                <div class="mdc-layout-grid__cell--span-4">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Điểm trung bình cả năm (Môn 2)</mat-label>
+                        <input matInput (keypress)="numberOnly($event)" type="text" formControlName="diemtb85" placeholder="Môn 2" maxlength="4" aria-label="address">
+
+                    </mat-form-field>
+                </div>
+                <div class="mdc-layout-grid__cell--span-4">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Điểm trung bình cả năm (Môn 3)</mat-label>
+                        <input matInput (keypress)="numberOnly($event)" type="text" formControlName="diemtb86" placeholder="Môn 3" maxlength="4" aria-label="address">
+
+                    </mat-form-field>
+                </div>
+            </div>
+            <div class="mdc-layout-grid__inner ">
+            <div class="mdc-layout-grid__cell--span-6">
+            <p>+ Lớp 12</p>
+            </div>
+            <div class="mdc-layout-grid__cell--span-6">
+
+                  <mat-form-field appearance="outline">
+                      <mat-label>Lựa chọn 1 trong 2 </mat-label>
+                      <mat-select formControlName="option8">
+                          <mat-option *ngFor="let item of option8" [value]="item.value">
+                              {{item.name}}
+                          </mat-option>
+                      </mat-select>
+                      <mat-error class="error-message" *ngIf="form.get('option8').invalid && submited">
+                          <span *ngIf="form.get('option8').hasError('required')">Vui lòng lựa chọn</span>
+                      </mat-error>
+                  </mat-form-field>
+
+            </div>
+            </div>
+            <div class="mdc-layout-grid__inner ">
+
+                <div class="mdc-layout-grid__cell--span-4">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Điểm trung bình (Môn 1)</mat-label>
+                        <input matInput (keypress)="numberOnly($event)" type="text" formControlName="diemtb87" placeholder="Môn 1" maxlength="4" aria-label="address">
+
+                    </mat-form-field>
+                </div>
+                <div class="mdc-layout-grid__cell--span-4">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Điểm trung bình (Môn 2)</mat-label>
+                        <input matInput (keypress)="numberOnly($event)" type="text" formControlName="diemtb88" placeholder="Môn 2" maxlength="4" aria-label="address">
+
+                    </mat-form-field>
+                </div>
+                <div class="mdc-layout-grid__cell--span-4">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Điểm trung bình (Môn 3)</mat-label>
+                        <input matInput (keypress)="numberOnly($event)" type="text" formControlName="diemtb89" placeholder="Môn 3" maxlength="4" aria-label="address">
+                    </mat-form-field>
+                </div>
+            </div>
 </div>
 <div *ngIf="numberCareer > 8">
-    <p>// Nguyện vọng 9 </p>
-                  <div class="mdc-layout-grid__inner">
-                      <div class="mdc-layout-grid__cell--span-6">
-                          <mat-form-field appearance="outline">
-                              <mat-label>9. Ngành/nhóm ngành/Chuyên ngành/Nhóm chuyên ngành xét tuyển (*)</mat-label>
-                              <mat-select formControlName="career_form_9" (selectionChange)="changeCareerForm($event, '9')">
-                                  <mat-option *ngFor="let item of careers_form" [value]="item.id">
-                                      {{item.name}}
-                                  </mat-option>
-                              </mat-select>
-                          </mat-form-field>
-                      </div>
+  <p class="p-center">
+------------------------- Nguyện vọng 9 -------------------------
+  </p>
+            <div class="mdc-layout-grid__inner">
+                <div class="mdc-layout-grid__cell--span-6">
+                    <mat-form-field appearance="outline">
+                        <mat-label>1. Ngành/nhóm ngành/Chuyên ngành/Nhóm chuyên ngành xét tuyển (*)</mat-label>
+                        <mat-select formControlName="career_form_9" (selectionChange)="changeCareerForm($event, '9')">
+                            <mat-option *ngFor="let item of careers_form" [value]="item.id">
+                                {{item.name}}
+                            </mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                </div>
 
-                      <div class="mdc-layout-grid__cell--span-3">
-                          <mat-form-field appearance="outline">
-                              <mat-label>Mã xét tuyển (*)</mat-label>
-                              <input matInput type="text" [value]="career_form_9_code" placeholder="Mã xét tuyển" aria-label="career_9_code" disabled>
-                          </mat-form-field>
-                      </div>
-                      <div class="mdc-layout-grid__cell--span-3">
-                          <mat-form-field appearance="outline">
-                              <mat-label>Tổ hợp xét tuyển</mat-label>
-                              <mat-select formControlName="combination9">
-                                  <mat-option *ngFor="let item of combination" [value]="item.id">
-                                      {{item.name}}
-                                  </mat-option>
-                              </mat-select>
-                          </mat-form-field>
-                      </div>
-                  </div>
-                  <div class="mdc-layout-grid__inner">
-                      <div class="mdc-layout-grid__cell--span-4">
-                          <mat-form-field appearance="outline">
-                              <mat-label>Điểm trung bình 3 năm THPT (Môn 1)</mat-label>
-                              <input matInput (keypress)="numberOnly($event)" type="text" formControlName="diemtb91" placeholder="Môn 1" maxlength="4" aria-label="address">
+                <div class="mdc-layout-grid__cell--span-3">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Mã xét tuyển (*)</mat-label>
+                        <input matInput type="text" [value]="career_form_9_code" placeholder="Mã xét tuyển" aria-label="career_9_code" disabled>
+                    </mat-form-field>
+                </div>
+                <div class="mdc-layout-grid__cell--span-3">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Tổ hợp xét tuyển</mat-label>
+                        <mat-select formControlName="combination9">
+                            <mat-option *ngFor="let item of combination" [value]="item.id">
+                                {{item.name}}
+                            </mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                </div>
+            </div>
+            <p>+ Lớp 10</p>
+            <div class="mdc-layout-grid__inner ">
+                <div class="mdc-layout-grid__cell--span-4">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Điểm trung bình cả năm (Môn 1)</mat-label>
+                        <input matInput (keypress)="numberOnly($event)" type="text" formControlName="diemtb91" placeholder="Môn 1" maxlength="4" aria-label="address">
 
-                          </mat-form-field>
-                      </div>
-                      <div class="mdc-layout-grid__cell--span-4">
-                          <mat-form-field appearance="outline">
-                              <mat-label>Điểm trung bình 3 năm THPT (Môn 2)</mat-label>
-                              <input matInput (keypress)="numberOnly($event)" type="text" formControlName="diemtb92" placeholder="Môn 2" maxlength="4" aria-label="address">
+                    </mat-form-field>
+                </div>
+                <div class="mdc-layout-grid__cell--span-4">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Điểm trung bình cả năm (Môn 2)</mat-label>
+                        <input matInput (keypress)="numberOnly($event)" type="text" formControlName="diemtb92" placeholder="Môn 2" maxlength="4" aria-label="address">
 
-                          </mat-form-field>
-                      </div>
-                      <div class="mdc-layout-grid__cell--span-4">
-                          <mat-form-field appearance="outline">
-                              <mat-label>Điểm trung bình 3 năm THPT (Môn 3)</mat-label>
-                              <input matInput (keypress)="numberOnly($event)" type="text" formControlName="diemtb93" placeholder="Môn 3" maxlength="4" aria-label="address">
+                    </mat-form-field>
+                </div>
+                <div class="mdc-layout-grid__cell--span-4">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Điểm trung bình cả năm (Môn 3)</mat-label>
+                        <input matInput (keypress)="numberOnly($event)" type="text" formControlName="diemtb93" placeholder="Môn 3" maxlength="4" aria-label="address">
 
-                          </mat-form-field>
-                      </div>
-                  </div>
+                    </mat-form-field>
+                </div>
+            </div>
+            <p>+ Lớp 11 </p>
+            <div class="mdc-layout-grid__inner ">
+
+                <div class="mdc-layout-grid__cell--span-4">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Điểm trung bình cả năm (Môn 1)</mat-label>
+                        <input matInput (keypress)="numberOnly($event)" type="text" formControlName="diemtb94" placeholder="Môn 1" maxlength="4" aria-label="address">
+
+                    </mat-form-field>
+                </div>
+                <div class="mdc-layout-grid__cell--span-4">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Điểm trung bình cả năm (Môn 2)</mat-label>
+                        <input matInput (keypress)="numberOnly($event)" type="text" formControlName="diemtb95" placeholder="Môn 2" maxlength="4" aria-label="address">
+
+                    </mat-form-field>
+                </div>
+                <div class="mdc-layout-grid__cell--span-4">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Điểm trung bình cả năm (Môn 3)</mat-label>
+                        <input matInput (keypress)="numberOnly($event)" type="text" formControlName="diemtb96" placeholder="Môn 3" maxlength="4" aria-label="address">
+
+                    </mat-form-field>
+                </div>
+            </div>
+            <div class="mdc-layout-grid__inner ">
+            <div class="mdc-layout-grid__cell--span-6">
+            <p>+ Lớp 12</p>
+            </div>
+            <div class="mdc-layout-grid__cell--span-6">
+
+                  <mat-form-field appearance="outline">
+                      <mat-label>Lựa chọn 1 trong 2 </mat-label>
+                      <mat-select formControlName="option9">
+                          <mat-option *ngFor="let item of option9" [value]="item.value">
+                              {{item.name}}
+                          </mat-option>
+                      </mat-select>
+                      <mat-error class="error-message" *ngIf="form.get('option9').invalid && submited">
+                          <span *ngIf="form.get('option9').hasError('required')">Vui lòng lựa chọn</span>
+                      </mat-error>
+                  </mat-form-field>
+
+            </div>
+            </div>
+            <div class="mdc-layout-grid__inner ">
+
+                <div class="mdc-layout-grid__cell--span-4">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Điểm trung bình (Môn 1)</mat-label>
+                        <input matInput (keypress)="numberOnly($event)" type="text" formControlName="diemtb97" placeholder="Môn 1" maxlength="4" aria-label="address">
+
+                    </mat-form-field>
+                </div>
+                <div class="mdc-layout-grid__cell--span-4">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Điểm trung bình (Môn 2)</mat-label>
+                        <input matInput (keypress)="numberOnly($event)" type="text" formControlName="diemtb98" placeholder="Môn 2" maxlength="4" aria-label="address">
+
+                    </mat-form-field>
+                </div>
+                <div class="mdc-layout-grid__cell--span-4">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Điểm trung bình (Môn 3)</mat-label>
+                        <input matInput (keypress)="numberOnly($event)" type="text" formControlName="diemtb99" placeholder="Môn 3" maxlength="4" aria-label="address">
+                    </mat-form-field>
+                </div>
+            </div>
 </div>
 <div *ngIf="numberCareer > 9">
-    <p>// Nguyện vọng 10 </p>
-                  <div class="mdc-layout-grid__inner">
-                      <div class="mdc-layout-grid__cell--span-6">
-                          <mat-form-field appearance="outline">
-                              <mat-label>10. Ngành/nhóm ngành/Chuyên ngành/Nhóm chuyên ngành xét tuyển (*)</mat-label>
-                              <mat-select formControlName="career_form_10" (selectionChange)="changeCareerForm($event, '10')">
-                                  <mat-option *ngFor="let item of careers_form" [value]="item.id">
-                                      {{item.name}}
-                                  </mat-option>
-                              </mat-select>
-                          </mat-form-field>
-                      </div>
+  <p class="p-center">
+------------------------- Nguyện vọng 10 -------------------------
+  </p>
+            <div class="mdc-layout-grid__inner">
+                <div class="mdc-layout-grid__cell--span-6">
+                    <mat-form-field appearance="outline">
+                        <mat-label>1. Ngành/nhóm ngành/Chuyên ngành/Nhóm chuyên ngành xét tuyển (*)</mat-label>
+                        <mat-select formControlName="career_form_10" (selectionChange)="changeCareerForm($event, '10')">
+                            <mat-option *ngFor="let item of careers_form" [value]="item.id">
+                                {{item.name}}
+                            </mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                </div>
 
-                      <div class="mdc-layout-grid__cell--span-3">
-                          <mat-form-field appearance="outline">
-                              <mat-label>Mã xét tuyển (*)</mat-label>
-                              <input matInput type="text" [value]="career_form_10_code" placeholder="Mã xét tuyển" aria-label="career_10_code" disabled>
-                          </mat-form-field>
-                      </div>
-                      <div class="mdc-layout-grid__cell--span-3">
-                          <mat-form-field appearance="outline">
-                              <mat-label>Tổ hợp xét tuyển</mat-label>
-                              <mat-select formControlName="combination10">
-                                  <mat-option *ngFor="let item of combination" [value]="item.id">
-                                      {{item.name}}
-                                  </mat-option>
-                              </mat-select>
-                          </mat-form-field>
-                      </div>
-                  </div>
-                  <div class="mdc-layout-grid__inner">
-                      <div class="mdc-layout-grid__cell--span-4">
-                          <mat-form-field appearance="outline">
-                              <mat-label>Điểm trung bình 3 năm THPT (Môn 1)</mat-label>
-                              <input matInput (keypress)="numberOnly($event)" type="text" formControlName="diemtb101" placeholder="Môn 1" maxlength="4" aria-label="address">
+                <div class="mdc-layout-grid__cell--span-3">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Mã xét tuyển (*)</mat-label>
+                        <input matInput type="text" [value]="career_form_10_code" placeholder="Mã xét tuyển" aria-label="career_10_code" disabled>
+                    </mat-form-field>
+                </div>
+                <div class="mdc-layout-grid__cell--span-3">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Tổ hợp xét tuyển</mat-label>
+                        <mat-select formControlName="combination10">
+                            <mat-option *ngFor="let item of combination" [value]="item.id">
+                                {{item.name}}
+                            </mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                </div>
+            </div>
+            <p>+ Lớp 10</p>
+            <div class="mdc-layout-grid__inner ">
+                <div class="mdc-layout-grid__cell--span-4">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Điểm trung bình cả năm (Môn 1)</mat-label>
+                        <input matInput (keypress)="numberOnly($event)" type="text" formControlName="diemtb101" placeholder="Môn 1" maxlength="4" aria-label="address">
 
-                          </mat-form-field>
-                      </div>
-                      <div class="mdc-layout-grid__cell--span-4">
-                          <mat-form-field appearance="outline">
-                              <mat-label>Điểm trung bình 3 năm THPT (Môn 2)</mat-label>
-                              <input matInput (keypress)="numberOnly($event)" type="text" formControlName="diemtb102" placeholder="Môn 2" maxlength="4" aria-label="address">
+                    </mat-form-field>
+                </div>
+                <div class="mdc-layout-grid__cell--span-4">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Điểm trung bình cả năm (Môn 2)</mat-label>
+                        <input matInput (keypress)="numberOnly($event)" type="text" formControlName="diemtb102" placeholder="Môn 2" maxlength="4" aria-label="address">
 
-                          </mat-form-field>
-                      </div>
-                      <div class="mdc-layout-grid__cell--span-4">
-                          <mat-form-field appearance="outline">
-                              <mat-label>Điểm trung bình 3 năm THPT (Môn 3)</mat-label>
-                              <input matInput (keypress)="numberOnly($event)" type="text" formControlName="diemtb103" placeholder="Môn 3" maxlength="4" aria-label="address">
+                    </mat-form-field>
+                </div>
+                <div class="mdc-layout-grid__cell--span-4">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Điểm trung bình cả năm (Môn 3)</mat-label>
+                        <input matInput (keypress)="numberOnly($event)" type="text" formControlName="diemtb103" placeholder="Môn 3" maxlength="4" aria-label="address">
 
-                          </mat-form-field>
-                      </div>
-                  </div>
+                    </mat-form-field>
+                </div>
+            </div>
+            <p>+ Lớp 11 </p>
+            <div class="mdc-layout-grid__inner ">
+
+                <div class="mdc-layout-grid__cell--span-4">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Điểm trung bình cả năm (Môn 1)</mat-label>
+                        <input matInput (keypress)="numberOnly($event)" type="text" formControlName="diemtb104" placeholder="Môn 1" maxlength="4" aria-label="address">
+
+                    </mat-form-field>
+                </div>
+                <div class="mdc-layout-grid__cell--span-4">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Điểm trung bình cả năm (Môn 2)</mat-label>
+                        <input matInput (keypress)="numberOnly($event)" type="text" formControlName="diemtb105" placeholder="Môn 2" maxlength="4" aria-label="address">
+
+                    </mat-form-field>
+                </div>
+                <div class="mdc-layout-grid__cell--span-4">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Điểm trung bình cả năm (Môn 3)</mat-label>
+                        <input matInput (keypress)="numberOnly($event)" type="text" formControlName="diemtb106" placeholder="Môn 3" maxlength="4" aria-label="address">
+
+                    </mat-form-field>
+                </div>
+            </div>
+            <div class="mdc-layout-grid__inner ">
+            <div class="mdc-layout-grid__cell--span-6">
+            <p>+ Lớp 12</p>
+            </div>
+            <div class="mdc-layout-grid__cell--span-6">
+
+                  <mat-form-field appearance="outline">
+                      <mat-label>Lựa chọn 1 trong 2 </mat-label>
+                      <mat-select formControlName="option10">
+                          <mat-option *ngFor="let item of option10" [value]="item.value">
+                              {{item.name}}
+                          </mat-option>
+                      </mat-select>
+                      <mat-error class="error-message" *ngIf="form.get('option10').invalid && submited">
+                          <span *ngIf="form.get('option10').hasError('required')">Vui lòng lựa chọn</span>
+                      </mat-error>
+                  </mat-form-field>
+
+            </div>
+            </div>
+            <div class="mdc-layout-grid__inner ">
+
+                <div class="mdc-layout-grid__cell--span-4">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Điểm trung bình (Môn 1)</mat-label>
+                        <input matInput (keypress)="numberOnly($event)" type="text" formControlName="diemtb107" placeholder="Môn 1" maxlength="4" aria-label="address">
+
+                    </mat-form-field>
+                </div>
+                <div class="mdc-layout-grid__cell--span-4">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Điểm trung bình (Môn 2)</mat-label>
+                        <input matInput (keypress)="numberOnly($event)" type="text" formControlName="diemtb108" placeholder="Môn 2" maxlength="4" aria-label="address">
+
+                    </mat-form-field>
+                </div>
+                <div class="mdc-layout-grid__cell--span-4">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Điểm trung bình (Môn 3)</mat-label>
+                        <input matInput (keypress)="numberOnly($event)" type="text" formControlName="diemtb109" placeholder="Môn 3" maxlength="4" aria-label="address">
+                    </mat-form-field>
+                </div>
+            </div>
 </div>
           <!-- (Thí sinh có thể đăng ký tối đa 10 nguyện vọng nếu có nhu cầu) -->
           <div class="mdc-layout-grid__inner">

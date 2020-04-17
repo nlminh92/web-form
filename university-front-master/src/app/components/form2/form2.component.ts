@@ -47,6 +47,105 @@ export class Form2Component implements OnInit {
         }
     ];
 
+    option2 = [
+        {
+            value: "ky 1",
+            name: "Học kỳ 1 năm lớp 12"
+        },
+        {
+            value: "ca nam",
+            name: "Cả năm học lớp 12"
+        }
+    ];
+
+    option3 = [
+        {
+            value: "ky 1",
+            name: "Học kỳ 1 năm lớp 12"
+        },
+        {
+            value: "ca nam",
+            name: "Cả năm học lớp 12"
+        }
+    ];
+
+    option4 = [
+        {
+            value: "ky 1",
+            name: "Học kỳ 1 năm lớp 12"
+        },
+        {
+            value: "ca nam",
+            name: "Cả năm học lớp 12"
+        }
+    ];
+
+    option5 = [
+        {
+            value: "ky 1",
+            name: "Học kỳ 1 năm lớp 12"
+        },
+        {
+            value: "ca nam",
+            name: "Cả năm học lớp 12"
+        }
+    ];
+
+    option6 = [
+        {
+            value: "ky 1",
+            name: "Học kỳ 1 năm lớp 12"
+        },
+        {
+            value: "ca nam",
+            name: "Cả năm học lớp 12"
+        }
+    ];
+
+    option7 = [
+        {
+            value: "ky 1",
+            name: "Học kỳ 1 năm lớp 12"
+        },
+        {
+            value: "ca nam",
+            name: "Cả năm học lớp 12"
+        }
+    ];
+
+    option8 = [
+        {
+            value: "ky 1",
+            name: "Học kỳ 1 năm lớp 12"
+        },
+        {
+            value: "ca nam",
+            name: "Cả năm học lớp 12"
+        }
+    ];
+
+    option9 = [
+        {
+            value: "ky 1",
+            name: "Học kỳ 1 năm lớp 12"
+        },
+        {
+            value: "ca nam",
+            name: "Cả năm học lớp 12"
+        }
+    ];
+
+    option10 = [
+        {
+            value: "ky 1",
+            name: "Học kỳ 1 năm lớp 12"
+        },
+        {
+            value: "ca nam",
+            name: "Cả năm học lớp 12"
+        }
+    ];
+
   //  diploma_numbers = [1, 2, 3, 4, 5, 6];
     waiting = false;
 

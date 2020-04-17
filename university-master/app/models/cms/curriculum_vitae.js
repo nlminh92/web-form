@@ -19,6 +19,46 @@ module.exports = (sequelize, DataTypes) => {
             type: DataTypes.STRING,
             allowNull: true,
         },
+        option1: {
+            type: DataTypes.STRING,
+            allowNull: true,
+        },
+        option2: {
+            type: DataTypes.STRING,
+            allowNull: true,
+        },
+        option3: {
+            type: DataTypes.STRING,
+            allowNull: true,
+        },
+        option4: {
+            type: DataTypes.STRING,
+            allowNull: true,
+        },
+        option5: {
+            type: DataTypes.STRING,
+            allowNull: true,
+        },
+        option6: {
+            type: DataTypes.STRING,
+            allowNull: true,
+        },
+        option7: {
+            type: DataTypes.STRING,
+            allowNull: true,
+        },
+        option8: {
+            type: DataTypes.STRING,
+            allowNull: true,
+        },
+        option9: {
+            type: DataTypes.STRING,
+            allowNull: true,
+        },
+        option10: {
+            type: DataTypes.STRING,
+            allowNull: true,
+        },
         birthday: {
             type: DataTypes.DATE,
             allowNull: true,
@@ -243,6 +283,30 @@ module.exports = (sequelize, DataTypes) => {
             type: DataTypes.STRING,
             allowNull: true,
         },
+        diemtb24: {
+            type: DataTypes.STRING,
+            allowNull: true,
+        },
+        diemtb25: {
+            type: DataTypes.STRING,
+            allowNull: true,
+        },
+        diemtb26: {
+            type: DataTypes.STRING,
+            allowNull: true,
+        },
+        diemtb27: {
+            type: DataTypes.STRING,
+            allowNull: true,
+        },
+        diemtb28: {
+            type: DataTypes.STRING,
+            allowNull: true,
+        },
+        diemtb29: {
+            type: DataTypes.STRING,
+            allowNull: true,
+        },
         diemtb31: {
             type: DataTypes.STRING,
             allowNull: true,
@@ -252,6 +316,30 @@ module.exports = (sequelize, DataTypes) => {
             allowNull: true,
         },
         diemtb33: {
+            type: DataTypes.STRING,
+            allowNull: true,
+        },
+        diemtb34: {
+            type: DataTypes.STRING,
+            allowNull: true,
+        },
+        diemtb35: {
+            type: DataTypes.STRING,
+            allowNull: true,
+        },
+        diemtb36: {
+            type: DataTypes.STRING,
+            allowNull: true,
+        },
+        diemtb37: {
+            type: DataTypes.STRING,
+            allowNull: true,
+        },
+        diemtb38: {
+            type: DataTypes.STRING,
+            allowNull: true,
+        },
+        diemtb39: {
             type: DataTypes.STRING,
             allowNull: true,
         },
@@ -267,6 +355,30 @@ module.exports = (sequelize, DataTypes) => {
             type: DataTypes.STRING,
             allowNull: true,
         },
+        diemtb44: {
+            type: DataTypes.STRING,
+            allowNull: true,
+        },
+        diemtb45: {
+            type: DataTypes.STRING,
+            allowNull: true,
+        },
+        diemtb46: {
+            type: DataTypes.STRING,
+            allowNull: true,
+        },
+        diemtb47: {
+            type: DataTypes.STRING,
+            allowNull: true,
+        },
+        diemtb48: {
+            type: DataTypes.STRING,
+            allowNull: true,
+        },
+        diemtb49: {
+            type: DataTypes.STRING,
+            allowNull: true,
+        },
         diemtb51: {
             type: DataTypes.STRING,
             allowNull: true,
@@ -276,6 +388,30 @@ module.exports = (sequelize, DataTypes) => {
             allowNull: true,
         },
         diemtb53: {
+            type: DataTypes.STRING,
+            allowNull: true,
+        },
+        diemtb54: {
+            type: DataTypes.STRING,
+            allowNull: true,
+        },
+        diemtb55: {
+            type: DataTypes.STRING,
+            allowNull: true,
+        },
+        diemtb56: {
+            type: DataTypes.STRING,
+            allowNull: true,
+        },
+        diemtb57: {
+            type: DataTypes.STRING,
+            allowNull: true,
+        },
+        diemtb58: {
+            type: DataTypes.STRING,
+            allowNull: true,
+        },
+        diemtb59: {
             type: DataTypes.STRING,
             allowNull: true,
         },
@@ -291,6 +427,30 @@ module.exports = (sequelize, DataTypes) => {
             type: DataTypes.STRING,
             allowNull: true,
         },
+        diemtb64: {
+            type: DataTypes.STRING,
+            allowNull: true,
+        },
+        diemtb65: {
+            type: DataTypes.STRING,
+            allowNull: true,
+        },
+        diemtb66: {
+            type: DataTypes.STRING,
+            allowNull: true,
+        },
+        diemtb67: {
+            type: DataTypes.STRING,
+            allowNull: true,
+        },
+        diemtb68: {
+            type: DataTypes.STRING,
+            allowNull: true,
+        },
+        diemtb69: {
+            type: DataTypes.STRING,
+            allowNull: true,
+        },
         diemtb71: {
             type: DataTypes.STRING,
             allowNull: true,
@@ -300,6 +460,30 @@ module.exports = (sequelize, DataTypes) => {
             allowNull: true,
         },
         diemtb73: {
+            type: DataTypes.STRING,
+            allowNull: true,
+        },
+        diemtb74: {
+            type: DataTypes.STRING,
+            allowNull: true,
+        },
+        diemtb75: {
+            type: DataTypes.STRING,
+            allowNull: true,
+        },
+        diemtb76: {
+            type: DataTypes.STRING,
+            allowNull: true,
+        },
+        diemtb77: {
+            type: DataTypes.STRING,
+            allowNull: true,
+        },
+        diemtb78: {
+            type: DataTypes.STRING,
+            allowNull: true,
+        },
+        diemtb79: {
             type: DataTypes.STRING,
             allowNull: true,
         },
@@ -315,6 +499,30 @@ module.exports = (sequelize, DataTypes) => {
             type: DataTypes.STRING,
             allowNull: true,
         },
+        diemtb84: {
+            type: DataTypes.STRING,
+            allowNull: true,
+        },
+        diemtb85: {
+            type: DataTypes.STRING,
+            allowNull: true,
+        },
+        diemtb86: {
+            type: DataTypes.STRING,
+            allowNull: true,
+        },
+        diemtb87: {
+            type: DataTypes.STRING,
+            allowNull: true,
+        },
+        diemtb88: {
+            type: DataTypes.STRING,
+            allowNull: true,
+        },
+        diemtb89: {
+            type: DataTypes.STRING,
+            allowNull: true,
+        },
         diemtb91: {
             type: DataTypes.STRING,
             allowNull: true,
@@ -327,6 +535,30 @@ module.exports = (sequelize, DataTypes) => {
             type: DataTypes.STRING,
             allowNull: true,
         },
+        diemtb94: {
+            type: DataTypes.STRING,
+            allowNull: true,
+        },
+        diemtb95: {
+            type: DataTypes.STRING,
+            allowNull: true,
+        },
+        diemtb96: {
+            type: DataTypes.STRING,
+            allowNull: true,
+        },
+        diemtb97: {
+            type: DataTypes.STRING,
+            allowNull: true,
+        },
+        diemtb98: {
+            type: DataTypes.STRING,
+            allowNull: true,
+        },
+        diemtb99: {
+            type: DataTypes.STRING,
+            allowNull: true,
+        },
         diemtb101: {
             type: DataTypes.STRING,
             allowNull: true,
@@ -336,6 +568,30 @@ module.exports = (sequelize, DataTypes) => {
             allowNull: true,
         },
         diemtb103: {
+            type: DataTypes.STRING,
+            allowNull: true,
+        },
+        diemtb104: {
+            type: DataTypes.STRING,
+            allowNull: true,
+        },
+        diemtb105: {
+            type: DataTypes.STRING,
+            allowNull: true,
+        },
+        diemtb106: {
+            type: DataTypes.STRING,
+            allowNull: true,
+        },
+        diemtb107: {
+            type: DataTypes.STRING,
+            allowNull: true,
+        },
+        diemtb108: {
+            type: DataTypes.STRING,
+            allowNull: true,
+        },
+        diemtb109: {
             type: DataTypes.STRING,
             allowNull: true,
         },
