@@ -55,7 +55,7 @@
                             <span *ngIf="form.get('place_of_birth').hasError('required')">Vui lòng nhập dữ liệu</span>
                         </mat-error> -->
                         <mat-label>Nơi sinh (*)</mat-label>
-                        <input matInput type="text" formControlName="place_of_birth2" placeholder="Nơi sinh" aria-label="place_of_birth2">
+                        <input matInput type="text" formControlName="place_of_birth2" placeholder="Tỉnh/Thành phố theo giấy khai sinh" aria-label="place_of_birth2">
                         <mat-error class="error-message" *ngIf="form.get('place_of_birth2').invalid && submited">
                             <span *ngIf="form.get('place_of_birth2').hasError('required')">Vui lòng nhập dữ liệu</span>
                         </mat-error>
@@ -76,7 +76,7 @@
                 <div class="mdc-layout-grid__cell--span-6">
                     <mat-form-field appearance="outline">
                         <mat-label>Số Chứng minh nhân dân / Thẻ căn cước công dân (*)</mat-label>
-                        <input matInput (keypress)="numberOnly($event)" type="text" formControlName="identity_card" placeholder="Số Chứng minh nhân dân / Thẻ căn cước công dân" aria-label="identity_card">
+                        <input matInput (keypress)="numberOnly($event)" type="text" formControlName="identity_card" placeholder="Số Chứng minh / Thẻ căn cước" maxlength="12" aria-label="identity_card">
                         <mat-error class="error-message" *ngIf="form.get('identity_card').invalid && submited">
                             <span *ngIf="form.get('identity_card').hasError('required')">Vui lòng nhập dữ liệu</span>
                         </mat-error>
@@ -121,7 +121,7 @@
                 <div class="mdc-layout-grid__cell--span-2">
                     <mat-form-field appearance="outline">
                         <mat-label>Mã tỉnh (tp) (*)</mat-label>
-                        <input matInput (keypress)="numberOnly($event)" type="text" formControlName="province_code" placeholder="Mã tỉnh" aria-label="address">
+                        <input matInput (keypress)="numberOnly($event)" type="text" formControlName="province_code" placeholder="Mã tỉnh" maxlength="2" aria-label="address">
                         <mat-error class="error-message" *ngIf="form.get('province_code').invalid && submited">
                             <span *ngIf="form.get('province_code').hasError('required')">Vui lòng nhập dữ liệu</span>
                         </mat-error>
@@ -130,7 +130,7 @@
                 <div class="mdc-layout-grid__cell--span-2">
                     <mat-form-field appearance="outline">
                         <mat-label>Mã huyện (quận) (*)</mat-label>
-                        <input matInput (keypress)="numberOnly($event)" type="text" formControlName="district_code" placeholder="Mã huyện" aria-label="address">
+                        <input matInput (keypress)="numberOnly($event)" type="text" formControlName="district_code" placeholder="Mã huyện" maxlength="2" aria-label="address">
                         <mat-error class="error-message" *ngIf="form.get('district_code').invalid && submited">
                             <span *ngIf="form.get('district_code').hasError('required')">Vui lòng nhập dữ liệu</span>
                         </mat-error>
@@ -139,7 +139,7 @@
                 <div class="mdc-layout-grid__cell--span-2">
                     <mat-form-field appearance="outline">
                         <mat-label>Mã xã (phường) (*)</mat-label>
-                        <input matInput (keypress)="numberOnly($event)" type="text" formControlName="village_code" placeholder="Mã xã" aria-label="address">
+                        <input matInput (keypress)="numberOnly($event)" type="text" formControlName="village_code" placeholder="Mã xã" maxlength="2" aria-label="address">
                         <mat-error class="error-message" *ngIf="form.get('village_code').invalid && submited">
                             <span *ngIf="form.get('village_code').hasError('required')">Vui lòng nhập dữ liệu</span>
                         </mat-error>
@@ -240,7 +240,7 @@
                 <div class="mdc-layout-grid__cell--span-3">
                     <mat-form-field appearance="outline">
                         <mat-label>Mã tỉnh (*)</mat-label>
-                        <input matInput (keypress)="numberOnly($event)" type="text" formControlName="grade_ten_province_code" placeholder="Mã tỉnh" aria-label="grade_ten_province_code">
+                        <input matInput (keypress)="numberOnly($event)" type="text" formControlName="grade_ten_province_code" placeholder="Mã tỉnh" maxlength="2" aria-label="grade_ten_province_code">
                         <mat-error class="error-message" *ngIf="form.get('grade_ten_province_code').invalid && submited">
                             <span *ngIf="form.get('grade_ten_province_code').hasError('required')">Vui lòng nhập dữ liệu</span>
                         </mat-error>
@@ -250,7 +250,7 @@
                 <div class="mdc-layout-grid__cell--span-3">
                     <mat-form-field appearance="outline">
                         <mat-label>Mã trường (*)</mat-label>
-                        <input matInput (keypress)="numberOnly($event)" type="text" formControlName="grade_ten_school_code" placeholder="Mã trường" aria-label="grade_ten_school_code">
+                        <input matInput (keypress)="numberOnly($event)" type="text" formControlName="grade_ten_school_code" placeholder="Mã trường" maxlength="3" aria-label="grade_ten_school_code">
                         <mat-error class="error-message" *ngIf="form.get('grade_ten_school_code').invalid && submited">
                             <span *ngIf="form.get('grade_ten_school_code').hasError('required')">Vui lòng nhập dữ liệu</span>
                         </mat-error>
@@ -272,7 +272,7 @@
                 <div class="mdc-layout-grid__cell--span-3">
                     <mat-form-field appearance="outline">
                         <mat-label>Mã tỉnh (*)</mat-label>
-                        <input matInput (keypress)="numberOnly($event)" type="text" formControlName="grade_eleven_province_code" placeholder="Mã tỉnh" aria-label="grade_eleven_province_code">
+                        <input matInput (keypress)="numberOnly($event)" type="text" formControlName="grade_eleven_province_code" placeholder="Mã tỉnh" maxlength="2" aria-label="grade_eleven_province_code">
                         <mat-error class="error-message" *ngIf="form.get('grade_eleven_province_code').invalid && submited">
                             <span *ngIf="form.get('grade_eleven_province_code').hasError('required')">Vui lòng nhập dữ liệu</span>
                         </mat-error>
@@ -282,7 +282,7 @@
                 <div class="mdc-layout-grid__cell--span-3">
                     <mat-form-field appearance="outline">
                         <mat-label>Mã trường (*)</mat-label>
-                        <input matInput (keypress)="numberOnly($event)" type="text" formControlName="grade_eleven_school_code" placeholder="Mã trường" aria-label="grade_eleven_school_code">
+                        <input matInput (keypress)="numberOnly($event)" type="text" formControlName="grade_eleven_school_code" placeholder="Mã trường" maxlength="3" aria-label="grade_eleven_school_code">
                         <mat-error class="error-message" *ngIf="form.get('grade_eleven_school_code').invalid && submited">
                             <span *ngIf="form.get('grade_eleven_school_code').hasError('required')">Vui lòng nhập dữ liệu</span>
                         </mat-error>
@@ -304,7 +304,7 @@
                 <div class="mdc-layout-grid__cell--span-3">
                     <mat-form-field appearance="outline">
                         <mat-label>Mã tỉnh (*)</mat-label>
-                        <input matInput (keypress)="numberOnly($event)" type="text" formControlName="grade_twelve_province_code" placeholder="Mã tỉnh" aria-label="grade_twelve_province_code">
+                        <input matInput (keypress)="numberOnly($event)" type="text" formControlName="grade_twelve_province_code" placeholder="Mã tỉnh" maxlength="2" aria-label="grade_twelve_province_code">
                         <mat-error class="error-message" *ngIf="form.get('grade_twelve_province_code').invalid && submited">
                             <span *ngIf="form.get('grade_twelve_province_code').hasError('required')">Vui lòng nhập dữ liệu</span>
                         </mat-error>
@@ -314,7 +314,7 @@
                 <div class="mdc-layout-grid__cell--span-3">
                     <mat-form-field appearance="outline">
                         <mat-label>Mã trường (*)</mat-label>
-                        <input matInput (keypress)="numberOnly($event)" type="text" formControlName="grade_twelve_school_code" placeholder="Mã trường" aria-label="grade_twelve_school_code">
+                        <input matInput (keypress)="numberOnly($event)" type="text" formControlName="grade_twelve_school_code" placeholder="Mã trường" maxlength="3" aria-label="grade_twelve_school_code">
                         <mat-error class="error-message" *ngIf="form.get('grade_twelve_school_code').invalid && submited">
                             <span *ngIf="form.get('grade_twelve_school_code').hasError('required')">Vui lòng nhập dữ liệu</span>
                         </mat-error>
@@ -376,26 +376,95 @@ tiên như bảng sau:
                     </mat-form-field>
                 </div>
             </div>
+            <p>Lớp 10</p>
             <div class="mdc-layout-grid__inner ">
                 <div class="mdc-layout-grid__cell--span-4">
                     <mat-form-field appearance="outline">
-                        <mat-label>Điểm trung bình 3 năm THPT (Môn 1)</mat-label>
-                        <input matInput (keypress)="numberOnly($event)" type="text" formControlName="diemtb11" placeholder="Môn 1" aria-label="address">
+                        <mat-label>Điểm trung bình cả năm (Môn 1)</mat-label>
+                        <input matInput (keypress)="numberOnly($event)" type="text" formControlName="diemtb11" placeholder="Môn 1" maxlength="4" aria-label="address">
 
                     </mat-form-field>
                 </div>
                 <div class="mdc-layout-grid__cell--span-4">
                     <mat-form-field appearance="outline">
-                        <mat-label>Điểm trung bình 3 năm THPT (Môn 2)</mat-label>
-                        <input matInput (keypress)="numberOnly($event)" type="text" formControlName="diemtb12" placeholder="Môn 2" aria-label="address">
+                        <mat-label>Điểm trung bình cả năm (Môn 2)</mat-label>
+                        <input matInput (keypress)="numberOnly($event)" type="text" formControlName="diemtb12" placeholder="Môn 2" maxlength="4" aria-label="address">
 
                     </mat-form-field>
                 </div>
                 <div class="mdc-layout-grid__cell--span-4">
                     <mat-form-field appearance="outline">
-                        <mat-label>Điểm trung bình 3 năm THPT (Môn 3)</mat-label>
-                        <input matInput (keypress)="numberOnly($event)" type="text" formControlName="diemtb13" placeholder="Môn 3" aria-label="address">
+                        <mat-label>Điểm trung bình cả năm (Môn 3)</mat-label>
+                        <input matInput (keypress)="numberOnly($event)" type="text" formControlName="diemtb13" placeholder="Môn 3" maxlength="4" aria-label="address">
 
+                    </mat-form-field>
+                </div>
+            </div>
+            <p>Lớp 11 </p>
+            <div class="mdc-layout-grid__inner ">
+
+                <div class="mdc-layout-grid__cell--span-4">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Điểm trung bình cả năm (Môn 1)</mat-label>
+                        <input matInput (keypress)="numberOnly($event)" type="text" formControlName="diemtb14" placeholder="Môn 1" maxlength="4" aria-label="address">
+
+                    </mat-form-field>
+                </div>
+                <div class="mdc-layout-grid__cell--span-4">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Điểm trung bình cả năm (Môn 2)</mat-label>
+                        <input matInput (keypress)="numberOnly($event)" type="text" formControlName="diemtb15" placeholder="Môn 2" maxlength="4" aria-label="address">
+
+                    </mat-form-field>
+                </div>
+                <div class="mdc-layout-grid__cell--span-4">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Điểm trung bình cả năm (Môn 3)</mat-label>
+                        <input matInput (keypress)="numberOnly($event)" type="text" formControlName="diemtb16" placeholder="Môn 3" maxlength="4" aria-label="address">
+
+                    </mat-form-field>
+                </div>
+            </div>
+            <div class="mdc-layout-grid__inner ">
+            <div class="mdc-layout-grid__cell--span-6">
+            <p>Lớp 12</p>
+            </div>
+            <div class="mdc-layout-grid__cell--span-6">
+
+                  <mat-form-field appearance="outline">
+                      <mat-label>Lựa chọn 1 trong 2 </mat-label>
+                      <mat-select formControlName="option1">
+                          <mat-option *ngFor="let item of option1" [value]="item.value">
+                              {{item.name}}
+                          </mat-option>
+                      </mat-select>
+                      <mat-error class="error-message" *ngIf="form.get('option1').invalid && submited">
+                          <span *ngIf="form.get('option1').hasError('required')">Vui lòng lựa chọn</span>
+                      </mat-error>
+                  </mat-form-field>
+
+            </div>
+            </div>
+            <div class="mdc-layout-grid__inner ">
+
+                <div class="mdc-layout-grid__cell--span-4">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Điểm trung bình (Môn 1)</mat-label>
+                        <input matInput (keypress)="numberOnly($event)" type="text" formControlName="diemtb17" placeholder="Môn 1" maxlength="4" aria-label="address">
+
+                    </mat-form-field>
+                </div>
+                <div class="mdc-layout-grid__cell--span-4">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Điểm trung bình (Môn 2)</mat-label>
+                        <input matInput (keypress)="numberOnly($event)" type="text" formControlName="diemtb18" placeholder="Môn 2" maxlength="4" aria-label="address">
+
+                    </mat-form-field>
+                </div>
+                <div class="mdc-layout-grid__cell--span-4">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Điểm trung bình (Môn 3)</mat-label>
+                        <input matInput (keypress)="numberOnly($event)" type="text" formControlName="diemtb19" placeholder="Môn 3" maxlength="4" aria-label="address">
                     </mat-form-field>
                 </div>
             </div>
@@ -435,21 +504,21 @@ tiên như bảng sau:
                   <div class="mdc-layout-grid__cell--span-4">
                       <mat-form-field appearance="outline">
                           <mat-label>Điểm trung bình 3 năm THPT (Môn 1)</mat-label>
-                          <input matInput (keypress)="numberOnly($event)" type="text" formControlName="diemtb21" placeholder="Môn 1" aria-label="address">
+                          <input matInput (keypress)="numberOnly($event)" type="text" formControlName="diemtb21" placeholder="Môn 1" maxlength="4" aria-label="address">
 
                       </mat-form-field>
                   </div>
                   <div class="mdc-layout-grid__cell--span-4">
                       <mat-form-field appearance="outline">
                           <mat-label>Điểm trung bình 3 năm THPT (Môn 2)</mat-label>
-                          <input matInput (keypress)="numberOnly($event)" type="text" formControlName="diemtb22" placeholder="Môn 2" aria-label="address">
+                          <input matInput (keypress)="numberOnly($event)" type="text" formControlName="diemtb22" placeholder="Môn 2" maxlength="4" aria-label="address">
 
                       </mat-form-field>
                   </div>
                   <div class="mdc-layout-grid__cell--span-4">
                       <mat-form-field appearance="outline">
                           <mat-label>Điểm trung bình 3 năm THPT (Môn 3)</mat-label>
-                          <input matInput (keypress)="numberOnly($event)" type="text" formControlName="diemtb23" placeholder="Môn 3" aria-label="address">
+                          <input matInput (keypress)="numberOnly($event)" type="text" formControlName="diemtb23" placeholder="Môn 3" maxlength="4" aria-label="address">
 
                       </mat-form-field>
                   </div>
@@ -490,21 +559,21 @@ tiên như bảng sau:
                     <div class="mdc-layout-grid__cell--span-4">
                         <mat-form-field appearance="outline">
                             <mat-label>Điểm trung bình 3 năm THPT (Môn 1)</mat-label>
-                            <input matInput (keypress)="numberOnly($event)" type="text" formControlName="diemtb31" placeholder="Môn 1" aria-label="address">
+                            <input matInput (keypress)="numberOnly($event)" type="text" formControlName="diemtb31" placeholder="Môn 1" maxlength="4" aria-label="address">
 
                         </mat-form-field>
                     </div>
                     <div class="mdc-layout-grid__cell--span-4">
                         <mat-form-field appearance="outline">
                             <mat-label>Điểm trung bình 3 năm THPT (Môn 2)</mat-label>
-                            <input matInput (keypress)="numberOnly($event)" type="text" formControlName="diemtb32" placeholder="Môn 2" aria-label="address">
+                            <input matInput (keypress)="numberOnly($event)" type="text" formControlName="diemtb32" placeholder="Môn 2" maxlength="4" aria-label="address">
 
                         </mat-form-field>
                     </div>
                     <div class="mdc-layout-grid__cell--span-4">
                         <mat-form-field appearance="outline">
                             <mat-label>Điểm trung bình 3 năm THPT (Môn 3)</mat-label>
-                            <input matInput (keypress)="numberOnly($event)" type="text" formControlName="diemtb33" placeholder="Môn 3" aria-label="address">
+                            <input matInput (keypress)="numberOnly($event)" type="text" formControlName="diemtb33" placeholder="Môn 3" maxlength="4" aria-label="address">
 
                         </mat-form-field>
                     </div>
@@ -545,21 +614,21 @@ tiên như bảng sau:
                       <div class="mdc-layout-grid__cell--span-4">
                           <mat-form-field appearance="outline">
                               <mat-label>Điểm trung bình 3 năm THPT (Môn 1)</mat-label>
-                              <input matInput (keypress)="numberOnly($event)" type="text" formControlName="diemtb41" placeholder="Môn 1" aria-label="address">
+                              <input matInput (keypress)="numberOnly($event)" type="text" formControlName="diemtb41" placeholder="Môn 1" maxlength="4" aria-label="address">
 
                           </mat-form-field>
                       </div>
                       <div class="mdc-layout-grid__cell--span-4">
                           <mat-form-field appearance="outline">
                               <mat-label>Điểm trung bình 3 năm THPT (Môn 2)</mat-label>
-                              <input matInput (keypress)="numberOnly($event)" type="text" formControlName="diemtb42" placeholder="Môn 2" aria-label="address">
+                              <input matInput (keypress)="numberOnly($event)" type="text" formControlName="diemtb42" placeholder="Môn 2" maxlength="4" aria-label="address">
 
                           </mat-form-field>
                       </div>
                       <div class="mdc-layout-grid__cell--span-4">
                           <mat-form-field appearance="outline">
                               <mat-label>Điểm trung bình 3 năm THPT (Môn 3)</mat-label>
-                              <input matInput (keypress)="numberOnly($event)" type="text" formControlName="diemtb43" placeholder="Môn 3" aria-label="address">
+                              <input matInput (keypress)="numberOnly($event)" type="text" formControlName="diemtb43" placeholder="Môn 3" maxlength="4" aria-label="address">
 
                           </mat-form-field>
                       </div>
@@ -600,21 +669,21 @@ tiên như bảng sau:
                       <div class="mdc-layout-grid__cell--span-4">
                           <mat-form-field appearance="outline">
                               <mat-label>Điểm trung bình 3 năm THPT (Môn 1)</mat-label>
-                              <input matInput (keypress)="numberOnly($event)" type="text" formControlName="diemtb51" placeholder="Môn 1" aria-label="address">
+                              <input matInput (keypress)="numberOnly($event)" type="text" formControlName="diemtb51" placeholder="Môn 1" maxlength="4" aria-label="address">
 
                           </mat-form-field>
                       </div>
                       <div class="mdc-layout-grid__cell--span-4">
                           <mat-form-field appearance="outline">
                               <mat-label>Điểm trung bình 3 năm THPT (Môn 2)</mat-label>
-                              <input matInput (keypress)="numberOnly($event)" type="text" formControlName="diemtb52" placeholder="Môn 2" aria-label="address">
+                              <input matInput (keypress)="numberOnly($event)" type="text" formControlName="diemtb52" placeholder="Môn 2" maxlength="4" aria-label="address">
 
                           </mat-form-field>
                       </div>
                       <div class="mdc-layout-grid__cell--span-4">
                           <mat-form-field appearance="outline">
                               <mat-label>Điểm trung bình 3 năm THPT (Môn 3)</mat-label>
-                              <input matInput (keypress)="numberOnly($event)" type="text" formControlName="diemtb53" placeholder="Môn 3" aria-label="address">
+                              <input matInput (keypress)="numberOnly($event)" type="text" formControlName="diemtb53" placeholder="Môn 3" maxlength="4" aria-label="address">
 
                           </mat-form-field>
                       </div>
@@ -655,21 +724,21 @@ tiên như bảng sau:
                   <div class="mdc-layout-grid__cell--span-4">
                       <mat-form-field appearance="outline">
                           <mat-label>Điểm trung bình 3 năm THPT (Môn 1)</mat-label>
-                          <input matInput (keypress)="numberOnly($event)" type="text" formControlName="diemtb61" placeholder="Môn 1" aria-label="address">
+                          <input matInput (keypress)="numberOnly($event)" type="text" formControlName="diemtb61" placeholder="Môn 1" maxlength="4" aria-label="address">
 
                       </mat-form-field>
                   </div>
                   <div class="mdc-layout-grid__cell--span-4">
                       <mat-form-field appearance="outline">
                           <mat-label>Điểm trung bình 3 năm THPT (Môn 2)</mat-label>
-                          <input matInput (keypress)="numberOnly($event)" type="text" formControlName="diemtb62" placeholder="Môn 2" aria-label="address">
+                          <input matInput (keypress)="numberOnly($event)" type="text" formControlName="diemtb62" placeholder="Môn 2" maxlength="4" aria-label="address">
 
                       </mat-form-field>
                   </div>
                   <div class="mdc-layout-grid__cell--span-4">
                       <mat-form-field appearance="outline">
                           <mat-label>Điểm trung bình 3 năm THPT (Môn 3)</mat-label>
-                          <input matInput (keypress)="numberOnly($event)" type="text" formControlName="diemtb63" placeholder="Môn 3" aria-label="address">
+                          <input matInput (keypress)="numberOnly($event)" type="text" formControlName="diemtb63" placeholder="Môn 3" maxlength="4" aria-label="address">
 
                       </mat-form-field>
                   </div>
@@ -710,21 +779,21 @@ tiên như bảng sau:
                   <div class="mdc-layout-grid__cell--span-4">
                       <mat-form-field appearance="outline">
                           <mat-label>Điểm trung bình 3 năm THPT (Môn 1)</mat-label>
-                          <input matInput (keypress)="numberOnly($event)" type="text" formControlName="diemtb71" placeholder="Môn 1" aria-label="address">
+                          <input matInput (keypress)="numberOnly($event)" type="text" formControlName="diemtb71" placeholder="Môn 1" maxlength="4" aria-label="address">
 
                       </mat-form-field>
                   </div>
                   <div class="mdc-layout-grid__cell--span-4">
                       <mat-form-field appearance="outline">
                           <mat-label>Điểm trung bình 3 năm THPT (Môn 2)</mat-label>
-                          <input matInput (keypress)="numberOnly($event)" type="text" formControlName="diemtb72" placeholder="Môn 2" aria-label="address">
+                          <input matInput (keypress)="numberOnly($event)" type="text" formControlName="diemtb72" placeholder="Môn 2" maxlength="4" aria-label="address">
 
                       </mat-form-field>
                   </div>
                   <div class="mdc-layout-grid__cell--span-4">
                       <mat-form-field appearance="outline">
                           <mat-label>Điểm trung bình 3 năm THPT (Môn 3)</mat-label>
-                          <input matInput (keypress)="numberOnly($event)" type="text" formControlName="diemtb73" placeholder="Môn 3" aria-label="address">
+                          <input matInput (keypress)="numberOnly($event)" type="text" formControlName="diemtb73" placeholder="Môn 3" maxlength="4" aria-label="address">
 
                       </mat-form-field>
                   </div>
@@ -765,21 +834,21 @@ tiên như bảng sau:
                   <div class="mdc-layout-grid__cell--span-4">
                       <mat-form-field appearance="outline">
                           <mat-label>Điểm trung bình 3 năm THPT (Môn 1)</mat-label>
-                          <input matInput (keypress)="numberOnly($event)" type="text" formControlName="diemtb81" placeholder="Môn 1" aria-label="address">
+                          <input matInput (keypress)="numberOnly($event)" type="text" formControlName="diemtb81" placeholder="Môn 1" maxlength="4" aria-label="address">
 
                       </mat-form-field>
                   </div>
                   <div class="mdc-layout-grid__cell--span-4">
                       <mat-form-field appearance="outline">
                           <mat-label>Điểm trung bình 3 năm THPT (Môn 2)</mat-label>
-                          <input matInput (keypress)="numberOnly($event)" type="text" formControlName="diemtb82" placeholder="Môn 2" aria-label="address">
+                          <input matInput (keypress)="numberOnly($event)" type="text" formControlName="diemtb82" placeholder="Môn 2" maxlength="4" aria-label="address">
 
                       </mat-form-field>
                   </div>
                   <div class="mdc-layout-grid__cell--span-4">
                       <mat-form-field appearance="outline">
                           <mat-label>Điểm trung bình 3 năm THPT (Môn 3)</mat-label>
-                          <input matInput (keypress)="numberOnly($event)" type="text" formControlName="diemtb83" placeholder="Môn 3" aria-label="address">
+                          <input matInput (keypress)="numberOnly($event)" type="text" formControlName="diemtb83" placeholder="Môn 3" maxlength="4" aria-label="address">
 
                       </mat-form-field>
                   </div>
@@ -820,21 +889,21 @@ tiên như bảng sau:
                       <div class="mdc-layout-grid__cell--span-4">
                           <mat-form-field appearance="outline">
                               <mat-label>Điểm trung bình 3 năm THPT (Môn 1)</mat-label>
-                              <input matInput (keypress)="numberOnly($event)" type="text" formControlName="diemtb91" placeholder="Môn 1" aria-label="address">
+                              <input matInput (keypress)="numberOnly($event)" type="text" formControlName="diemtb91" placeholder="Môn 1" maxlength="4" aria-label="address">
 
                           </mat-form-field>
                       </div>
                       <div class="mdc-layout-grid__cell--span-4">
                           <mat-form-field appearance="outline">
                               <mat-label>Điểm trung bình 3 năm THPT (Môn 2)</mat-label>
-                              <input matInput (keypress)="numberOnly($event)" type="text" formControlName="diemtb92" placeholder="Môn 2" aria-label="address">
+                              <input matInput (keypress)="numberOnly($event)" type="text" formControlName="diemtb92" placeholder="Môn 2" maxlength="4" aria-label="address">
 
                           </mat-form-field>
                       </div>
                       <div class="mdc-layout-grid__cell--span-4">
                           <mat-form-field appearance="outline">
                               <mat-label>Điểm trung bình 3 năm THPT (Môn 3)</mat-label>
-                              <input matInput (keypress)="numberOnly($event)" type="text" formControlName="diemtb93" placeholder="Môn 3" aria-label="address">
+                              <input matInput (keypress)="numberOnly($event)" type="text" formControlName="diemtb93" placeholder="Môn 3" maxlength="4" aria-label="address">
 
                           </mat-form-field>
                       </div>
@@ -875,27 +944,27 @@ tiên như bảng sau:
                       <div class="mdc-layout-grid__cell--span-4">
                           <mat-form-field appearance="outline">
                               <mat-label>Điểm trung bình 3 năm THPT (Môn 1)</mat-label>
-                              <input matInput (keypress)="numberOnly($event)" type="text" formControlName="diemtb101" placeholder="Môn 1" aria-label="address">
+                              <input matInput (keypress)="numberOnly($event)" type="text" formControlName="diemtb101" placeholder="Môn 1" maxlength="4" aria-label="address">
 
                           </mat-form-field>
                       </div>
                       <div class="mdc-layout-grid__cell--span-4">
                           <mat-form-field appearance="outline">
                               <mat-label>Điểm trung bình 3 năm THPT (Môn 2)</mat-label>
-                              <input matInput (keypress)="numberOnly($event)" type="text" formControlName="diemtb102" placeholder="Môn 2" aria-label="address">
+                              <input matInput (keypress)="numberOnly($event)" type="text" formControlName="diemtb102" placeholder="Môn 2" maxlength="4" aria-label="address">
 
                           </mat-form-field>
                       </div>
                       <div class="mdc-layout-grid__cell--span-4">
                           <mat-form-field appearance="outline">
                               <mat-label>Điểm trung bình 3 năm THPT (Môn 3)</mat-label>
-                              <input matInput (keypress)="numberOnly($event)" type="text" formControlName="diemtb103" placeholder="Môn 3" aria-label="address">
+                              <input matInput (keypress)="numberOnly($event)" type="text" formControlName="diemtb103" placeholder="Môn 3" maxlength="4" aria-label="address">
 
                           </mat-form-field>
                       </div>
                   </div>
 </div>
-          (Thí sinh có thể đăng ký tối đa 10 nguyện vọng nếu có nhu cầu)
+          <!-- (Thí sinh có thể đăng ký tối đa 10 nguyện vọng nếu có nhu cầu) -->
           <div class="mdc-layout-grid__inner">
               <div class="mdc-layout-grid__cell--span-12">
                   <p class="p-custom">

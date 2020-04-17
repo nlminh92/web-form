@@ -15,6 +15,10 @@ module.exports = (sequelize, DataTypes) => {
             type: DataTypes.STRING,
             allowNull: true,
         },
+        option1: {
+            type: DataTypes.STRING,
+            allowNull: true,
+        },
         birthday: {
             type: DataTypes.DATE,
             allowNull: true,
@@ -200,6 +204,30 @@ module.exports = (sequelize, DataTypes) => {
             allowNull: true,
         },
         diemtb13: {
+            type: DataTypes.STRING,
+            allowNull: true,
+        },
+        diemtb14: {
+            type: DataTypes.STRING,
+            allowNull: true,
+        },
+        diemtb15: {
+            type: DataTypes.STRING,
+            allowNull: true,
+        },
+        diemtb16: {
+            type: DataTypes.STRING,
+            allowNull: true,
+        },
+        diemtb17: {
+            type: DataTypes.STRING,
+            allowNull: true,
+        },
+        diemtb18: {
+            type: DataTypes.STRING,
+            allowNull: true,
+        },
+        diemtb19: {
             type: DataTypes.STRING,
             allowNull: true,
         },

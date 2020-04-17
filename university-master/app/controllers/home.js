@@ -194,7 +194,7 @@ exports.saveAndCreateDocx = async function (req, res) {
 
         let length = 5 - code.length;
         code = "0".repeat(length) + code;
-        let typee = 1;
+        let typee = "DGNL";
 
         let data = await CurriculumVitaeCms.findOne({
             where: {
@@ -359,7 +359,7 @@ exports.saveAndCreateDocx = async function (req, res) {
             if (err) {
               console.log(`Error converting file: ${err}`);
             }
-            
+
             // Here in done you have pdf file which you can save or transfer in another stream
             console.log(done);
             fs.writeFileSync(`public/files/${file_name}.pdf`, done);

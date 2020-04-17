@@ -57,7 +57,7 @@ export class ListCurriculumsComponent implements OnInit {
   exportExcel() {
       const format = 'dd/MM/yyyy';
       const locale = 'en-US';
-      const title = 'Danh sách đăng ký';
+      const title = 'Danh sach dang ky';
       const header = ['STT', 'Loại form', 'Mã hồ sơ', 'Họ tên', 'Giới tính', 'Ngày sinh', 'Nơi sinh', 'Số CMND / Thẻ CCCD',
           'Địa chỉ liên hệ', 'Điện thoại liên hệ', 'Email', "Năm lớp 10", "Mã tỉnh lớp 10", "Mã trường lớp 10", "Năm lớp 11", "Mã tỉnh lớp 11", "Mã trường lớp 11", "Năm lớp 12", "Mã tỉnh lớp 12", "Mã trường lớp 12",
           'Năm tốt nghiệp', 'Khu vực', 'Ưu tiên', 'Ngày thi đánh giá năng lực', 'Số báo danh', 'Điểm thi', 'Ngành 1 (Form1)', 'Ngành 2 (Form2)', 'Ngành 3 (Form1)', 'Ngành 4 (Form1)',

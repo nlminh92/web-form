@@ -41,9 +41,10 @@ export class Form3Component implements OnInit {
         this._snackBar.open('Upload ảnh thành công', "x", {
             duration: 2000,
         });
-        
+
         this.file = response['file'];
-    })
+
+  })
 }
 
     genders = [
@@ -107,7 +108,8 @@ export class Form3Component implements OnInit {
                         duration: 2000,
                     });
                     // location.reload();
-                } else {
+                }
+                else {
                     this._snackBar.open(res.message, "x", {
                         duration: 2000,
                     });

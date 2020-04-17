@@ -23,7 +23,7 @@ export class Form2Component implements OnInit {
   //  areas = [1, 2, 3];
   //  priorities = [1, 2, 3];
   areas = ['1', '2', '3', '2NT']; // areas co them 1 truong nua la 2NT
-  priorities = ['0', '1', '2', '3', '4', '5', '6', '7'];
+  priorities = ['1', '2', '3', '4', '5', '6', '7'];
 
     genders = [
         {
@@ -36,6 +36,16 @@ export class Form2Component implements OnInit {
         }
     ];
 
+    option1 = [
+        {
+            value: "ky 1",
+            name: "Học kỳ 1 năm lớp 12"
+        },
+        {
+            value: "ca nam",
+            name: "Cả năm học lớp 12"
+        }
+    ];
 
   //  diploma_numbers = [1, 2, 3, 4, 5, 6];
     waiting = false;

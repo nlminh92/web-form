@@ -133,6 +133,9 @@ export const form2Validation = {
     'gender': [
         { type: 'required', messageKey: 'form.validation.required' }
     ],
+    'option1': [
+        { type: 'required', messageKey: 'form.validation.required' }
+    ],
     'birthday': [
         { type: 'required', messageKey: 'form.validation.required' }
     ],
@@ -192,6 +195,24 @@ export const form2Validation = {
       { type: 'required', messageKey: 'form.validation.required' }
     ],
     'diemtb13': [
+      { type: 'required', messageKey: 'form.validation.required' }
+    ],
+    'diemtb14': [
+      { type: 'required', messageKey: 'form.validation.required' }
+    ],
+    'diemtb15': [
+      { type: 'required', messageKey: 'form.validation.required' }
+    ],
+    'diemtb16': [
+      { type: 'required', messageKey: 'form.validation.required' }
+    ],
+    'diemtb17': [
+      { type: 'required', messageKey: 'form.validation.required' }
+    ],
+    'diemtb18': [
+      { type: 'required', messageKey: 'form.validation.required' }
+    ],
+    'diemtb19': [
       { type: 'required', messageKey: 'form.validation.required' }
     ],
     'diemtb21': [

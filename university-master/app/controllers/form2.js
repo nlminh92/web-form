@@ -52,6 +52,7 @@ exports.saveAndCreateDocx = async function (req, res) {
             career_form_2, career_form_3, career_form_4, career_form_5, career_form_6, career_form_7, career_form_8, career_form_9, career_form_10, career_form_1,
             combination1, combination2, combination3, combination4, combination5, combination6, combination7, combination8, combination9, combination10,
             diemtb11, diemtb12, diemtb13, diemtb21, diemtb22, diemtb23, diemtb31, diemtb32, diemtb33,
+            diemtb14, diemtb15, diemtb16, diemtb17, diemtb18, diemtb19, option1,
             diemtb41, diemtb42, diemtb43, diemtb51, diemtb52, diemtb53, diemtb61, diemtb62, diemtb63,
             diemtb71, diemtb72, diemtb73, diemtb81, diemtb82, diemtb83, diemtb91, diemtb92, diemtb93,
             diemtb101, diemtb102, diemtb103} = req.body;
@@ -238,7 +239,7 @@ exports.saveAndCreateDocx = async function (req, res) {
         let length = 5 - code.length;
         code = "0".repeat(length) + code;
 
-        let typee = 2;
+        let typee = "DGNL";
 
         let data = await CurriculumVitaeCms.findOne({
             where: {
@@ -363,6 +364,7 @@ exports.saveAndCreateDocx = async function (req, res) {
             career_form_2, career_form_3, career_form_4, career_form_5, career_form_6, career_form_7, career_form_8, career_form_9, career_form_10,
             combination1, combination2, combination3, combination4, combination5, combination6, combination7, combination8, combination9, combination10,
             diemtb11, diemtb12, diemtb13, diemtb21, diemtb22, diemtb23, diemtb31, diemtb32, diemtb33,
+            diemtb14, diemtb15, diemtb16, diemtb17, diemtb18, diemtb19, option1,
             diemtb41, diemtb42, diemtb43, diemtb51, diemtb52, diemtb53, diemtb61, diemtb62, diemtb63,
             diemtb71, diemtb72, diemtb73, diemtb81, diemtb82, diemtb83, diemtb91, diemtb92, diemtb93,
             diemtb101, diemtb102, diemtb103, code, typee, session_id});
@@ -487,6 +489,12 @@ exports.saveAndCreateDocx = async function (req, res) {
             diemtb11: diemtb11,
             diemtb12: diemtb12,
             diemtb13: diemtb13,
+            diemtb14: diemtb14,
+            diemtb15: diemtb15,
+            diemtb16: diemtb16,
+            diemtb17: diemtb17,
+            diemtb18: diemtb18,
+            diemtb19: diemtb19,
             diemtb21: diemtb21 ? diemtb21: "",
             diemtb22: diemtb22 ? diemtb22: "",
             diemtb23: diemtb23 ? diemtb23: "",
@@ -533,7 +541,7 @@ exports.saveAndCreateDocx = async function (req, res) {
           if (err) {
             console.log(`Error converting file: ${err}`);
           }
-          
+
           // Here in done you have pdf file which you can save or transfer in another stream
           console.log(done);
           fs.writeFileSync(`public/files/${file_name}.pdf`, done);
