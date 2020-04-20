@@ -21,6 +21,7 @@ module.exports = function (app) {
   app.post('/sign_in', user.create);
 
   app.get('/sessions', session.index);
+  app.post('/session_destroy', session.delete);
   app.post('/sessions', session.create);
   app.get('/curriculumns', curriculumn.index);
   app.get('/report-careers', curriculumn.reportCareer);

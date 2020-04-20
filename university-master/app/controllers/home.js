@@ -123,7 +123,8 @@ exports.saveAndCreateDocx = async function (req, res) {
                },
                to_time: {
                    [Op.gte]: new Date()
-               }
+               },
+               type: 1
            },
             raw: true
         });

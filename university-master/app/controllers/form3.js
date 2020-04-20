@@ -34,7 +34,8 @@ exports.saveAndCreateDocx = async function (req, res) {
                },
                to_time: {
                    [Op.gte]: new Date()
-               }
+               },
+               type: 3
            },
             raw: true
         });
@@ -42,6 +43,16 @@ exports.saveAndCreateDocx = async function (req, res) {
         if(!session) {
             return handleErrorResponse(res, "Quá thời gian hoặc chưa đến thời gian đăng ký");
         }
+
+        // rename file
+        var extension = path.extname(file);
+        var fileName = path.basename(file,extension);
+        var newFileName = `${__dirname}/../../upload/${identity_card}-${fileName}${extension}`;
+        await fs.rename(`${__dirname}/../..${file}`, newFileName, function(err) {
+            if ( err ) console.log('ERROR: ' + err);
+        });
+        file = newFileName;
+        console.log(file);
 
 // Lấy thông tin ngành đăng ký
         let count = await CurriculumVitaeCms.count({});
@@ -66,8 +77,7 @@ exports.saveAndCreateDocx = async function (req, res) {
         //let session_id = 3;
          let session_id = session.id;
 
-
-// Lưu dữ liệu vào bảng
+        // Lưu dữ liệu vào bảng
         let result = await CurriculumVitaeCms.create({name, gender, birthday,
           identity_card, address, mobilephone, email, code, session_id, typee, file});
         let gender_text = "0";
@@ -79,7 +89,7 @@ exports.saveAndCreateDocx = async function (req, res) {
 
         let tmp_2 = "";
 
-// Từ đây
+        // Từ đây
         var content = fs
             .readFileSync(path.resolve('templates/template_3.docx'), 'binary');
 

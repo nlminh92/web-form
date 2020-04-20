@@ -31,15 +31,19 @@
         </ng-container>
 
         <!-- Symbol Column -->
-<!--        <ng-container matColumnDef="edit">-->
-<!--            <mat-header-cell *matHeaderCellDef mat-sort-header> Sửa </mat-header-cell>-->
-<!--            <mat-cell *matCellDef="let item"> </mat-cell>-->
-<!--        </ng-container>-->
+       <ng-container matColumnDef="type">
+           <mat-header-cell *matHeaderCellDef mat-sort-header> Loại </mat-header-cell>
+           <mat-cell *matCellDef="let item"> Form {{item.type}} </mat-cell>
+       </ng-container>
 
-<!--        <ng-container matColumnDef="delete">-->
-<!--            <mat-header-cell *matHeaderCellDef mat-sort-header> Xóa </mat-header-cell>-->
-<!--            <mat-cell *matCellDef="let item"> </mat-cell>-->
-<!--        </ng-container>-->
+       <ng-container matColumnDef="delete">
+           <mat-header-cell *matHeaderCellDef mat-sort-header> Xóa </mat-header-cell>
+           <mat-cell *matCellDef="let item">
+                <button mat-icon-button color="primary" (click)="destroy(item.id)">
+                    <mat-icon>delete</mat-icon>
+                </button>
+           </mat-cell>
+       </ng-container>
 
         <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
         <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>

@@ -17,9 +17,18 @@ module.exports = (sequelize, DataTypes) => {
         to_time: {
             type: DataTypes.DATE(3),
             allowNull: false
+        },
+        type: {
+            type: DataTypes.INTEGER,
+            allowNull: false
         }
     }, {
         tableName: 'sessions'
     });
     return Session;
 };
+
+// type
+// form1: 1
+// form2: 2
+// form3: 3
