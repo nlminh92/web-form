@@ -15,15 +15,15 @@ export class SessionFormComponent implements OnInit {
     types = [
         {
             value: 1,
-            name: "Form 1"
+            name: "ĐGNL"
         },
         {
             value: 2,
-            name: "Form 2"
+            name: "HB"
         },
         {
             value: 3,
-            name: "Form 3"
+            name: "NK"
         }
     ]
     formValidation = {

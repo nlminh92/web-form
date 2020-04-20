@@ -24,6 +24,7 @@ export class SessionsComponent implements OnInit {
         this.getData();
     }
 
+
     getData() {
         this.sessionService.index().subscribe(res => {
             this.dataSource = new MatTableDataSource<any>(res.data);
