@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, OnInit, ViewChild, ElementRef} from '@angular/core';
 import {Router} from '@angular/router';
 import {FormGroup} from '@angular/forms';
 import { form3Validation } from '@app/models/form-validations/index';
@@ -25,6 +25,12 @@ export class Form3Component implements OnInit {
     // constructor(private http : HttpClient){
     //
     // }
+
+    @ViewChild('inputFile') myInputVariable: ElementRef;
+
+    reset() {
+        this.myInputVariable.nativeElement.value = '';
+    }
 
     fileChange(element) {
         console.log(element.target.files);
@@ -99,6 +105,8 @@ export class Form3Component implements OnInit {
                 this._snackBar.open("Vui lòng chọn ảnh", "x", {
                     duration: 2000,
                 });
+                this.submited = false;
+                this.waiting = false;
             } else {
                 this.formService.saveDataForm3(data).subscribe(res => {
                     this.submited = false;
@@ -109,12 +117,16 @@ export class Form3Component implements OnInit {
                         this._snackBar.open('Lưu thông tin thành công', "x", {
                             duration: 2000,
                         });
+                        this.file = null;
+                        this.reset();
                         // location.reload();
                     }
                     else {
                         this._snackBar.open(res.message, "x", {
                             duration: 2000,
                         });
+                        this.file = null;
+                        this.reset();
                     }
                 });
             }
