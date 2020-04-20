@@ -97,7 +97,7 @@ exports.saveAndCreateDocx = async function (req, res) {
          let arr = [career_form_2, career_form_3, career_form_4, career_form_5, career_form_6, 
           career_form_7, career_form_8, career_form_9, career_form_10, career_form_1];
         
-        var filtered = array.filter(function (el) {
+        var filtered = arr.filter(function (el) {
           return el != null;
         });
 
