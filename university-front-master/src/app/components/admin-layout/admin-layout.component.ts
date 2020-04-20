@@ -16,8 +16,9 @@ export class AdminLayoutComponent implements OnInit {
   }
 
     logOut() {
+      console.log("ádfsf");
       localStorage.clear();
-        this.router.navigate(['/login'])
+      this.router.navigate(['/login'])
     }
 
 }

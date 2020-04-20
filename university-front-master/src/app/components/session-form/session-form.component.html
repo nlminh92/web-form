@@ -22,6 +22,14 @@
                 <span *ngIf="form.get('to_time').hasError('required')">Vui lòng nhập dữ liệu</span>
             </mat-error>
         </mat-form-field>
+        <mat-form-field>
+            <mat-label>Loại</mat-label>
+            <mat-select formControlName="type">
+                <mat-option *ngFor="let type of types" [value]="type.value">
+                  {{type.name}}
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
     </form>
 </div>
 <div mat-dialog-actions>

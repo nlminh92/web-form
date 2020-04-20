@@ -12,6 +12,20 @@ import { SessionService } from '@app/core/services/session.service';
 export class SessionFormComponent implements OnInit {
     public form: FormGroup;
     submited = false;
+    types = [
+        {
+            value: 1,
+            name: "Form 1"
+        },
+        {
+            value: 2,
+            name: "Form 2"
+        },
+        {
+            value: 3,
+            name: "Form 3"
+        }
+    ]
     formValidation = {
         'id': [],
         'name': [
@@ -22,6 +36,9 @@ export class SessionFormComponent implements OnInit {
         ],
         'to_time': [
             { type: 'required', messageKey: 'form.validation.required' }
+        ],
+        'type': [
+            {type: 'required', messageKey: 'form.validation.required'}
         ]
     };
     constructor(

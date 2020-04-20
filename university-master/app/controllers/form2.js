@@ -68,6 +68,7 @@ exports.saveAndCreateDocx = async function (req, res) {
             diemtb101, diemtb102, diemtb103} = req.body;
 // Chỗ này là xóa khoảng cách thừa thôi
         identity_card = identity_card.trim();
+
         // Check xem quá giờ đăng ký chưa?
         let session = await SessionCms.findOne({
             where: {
@@ -76,7 +77,8 @@ exports.saveAndCreateDocx = async function (req, res) {
                 },
                 to_time: {
                     [Op.gte]: new Date()
-                }
+                },
+                type: 2
             },
             raw: true
         });
@@ -91,6 +93,18 @@ exports.saveAndCreateDocx = async function (req, res) {
              },
              raw: true
          });
+
+         let arr = [career_form_2, career_form_3, career_form_4, career_form_5, career_form_6, 
+          career_form_7, career_form_8, career_form_9, career_form_10, career_form_1];
+        
+        var filtered = array.filter(function (el) {
+          return el != null;
+        });
+
+        var unique = filtered.filter((v, i, a) => a.indexOf(v) === i);
+        if(unique.length != filtered.length) {
+          return handleErrorResponse(res, "Các nguyện vọng đăng ký không được trùng nhau");
+        }
 
          // chỗ này bạn phải khai báo biến trước khi dùng
          let career_form_1_code = "";

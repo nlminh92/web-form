@@ -31,4 +31,12 @@ export class SessionService extends HttpService {
             })
         );
     }
+
+    destroy(id) {
+        return this.POST('/session_destroy', {id: id}).pipe(
+            map(response => {
+                return response;
+            })
+        );
+    }
 }
