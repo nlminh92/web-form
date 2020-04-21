@@ -398,6 +398,7 @@ exports.saveAndCreateDocx = async function (req, res) {
             diemtb84, diemtb85, diemtb86, diemtb87, diemtb88, diemtb89,
             diemtb94, diemtb95, diemtb96, diemtb97, diemtb98, diemtb99,
             diemtb104, diemtb105, diemtb106, diemtb107, diemtb108, diemtb109,
+            option2, option3, option4, option5, option6, option7, option8, option9, option10,
             diemtb41, diemtb42, diemtb43, diemtb51, diemtb52, diemtb53, diemtb61, diemtb62, diemtb63,
             diemtb71, diemtb72, diemtb73, diemtb81, diemtb82, diemtb83, diemtb91, diemtb92, diemtb93,
             diemtb101, diemtb102, diemtb103, code, typee, session_id});
