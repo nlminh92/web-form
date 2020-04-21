@@ -60,7 +60,7 @@ export class ListCurriculumsComponent implements OnInit {
       const title = 'Danh sach dang ky';
       const header = ['STT', 'Loại form', 'Mã hồ sơ', 'Họ tên', 'Giới tính', 'Ngày sinh', 'Nơi sinh', 'Số CMND / Thẻ CCCD',
           'Địa chỉ liên hệ', 'Điện thoại liên hệ', 'Email', "Năm lớp 10", "Mã tỉnh lớp 10", "Mã trường lớp 10", "Năm lớp 11", "Mã tỉnh lớp 11", "Mã trường lớp 11", "Năm lớp 12", "Mã tỉnh lớp 12", "Mã trường lớp 12",
-          'Năm tốt nghiệp', 'Khu vực', 'Ưu tiên', 'Ngày thi đánh giá năng lực', 'Số báo danh', 'Điểm thi', 'Ngành 1 (Form1)', 'Ngành 2 (Form2)', 'Ngành 3 (Form1)', 'Ngành 4 (Form1)',
+          'Năm tốt nghiệp', 'Khu vực', 'Ưu tiên', 'Ngày thi đánh giá năng lực', 'Số báo danh', 'Điểm thi', 'Ngành 1 (Form1)', 'Ngành 2 (Form1)', 'Ngành 3 (Form1)', 'Ngành 4 (Form1)',
           'Dân tộc', 'Ngày cấp CMND', 'Nơi cấp CMND', 'Hộ khẩu thường trú', 'Mã tỉnh (Hộ khẩu)', 'Mã huyện (Hộ khẩu)', 'Mã xã(Hộ khẩu)',
           'Ngành 1(form2)', 'Tổ hợp ngành 1', 'Điểm tb 1 (Lớp 10)', 'Điểm tb 2 (Lớp 10)', 'Điểm tb 3 (Lớp 10)', 'Điểm tb 1 (Lớp 11)', 'Điểm tb 2 (Lớp 11)', 'Điểm tb 3 (Lớp 11)', 'Lựa chọn', 'Điểm tb 1 (Lớp 12)', 'Điểm tb 2 (Lớp 12)', 'Điểm tb 3 (Lớp 12)',
           'Ngành 2(form2)', 'Tổ hợp ngành 2', 'Điểm tb 1 (Lớp 10)', 'Điểm tb 2 (Lớp 10)', 'Điểm tb 3 (Lớp 10)', 'Điểm tb 1 (Lớp 11)', 'Điểm tb 2 (Lớp 11)', 'Điểm tb 3 (Lớp 11)', 'Lựa chọn', 'Điểm tb 1 (Lớp 12)', 'Điểm tb 2 (Lớp 12)', 'Điểm tb 3 (Lớp 12)',

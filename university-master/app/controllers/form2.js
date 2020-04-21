@@ -263,7 +263,7 @@ exports.saveAndCreateDocx = async function (req, res) {
         let length = 5 - code.length;
         code = "0".repeat(length) + code;
 
-        let typee = "DGNL";
+        let typee = "HB";
 
         let data = await CurriculumVitaeCms.findOne({
             where: {
