@@ -106,9 +106,9 @@ exports.saveAndCreateDocx = async function (req, res) {
             grade_twelve, grade_twelve_province_code, grade_twelve_school_code, graduate_year, area, priority, fixture,
             registration_number, point, career_1, career_2, career_3, career_4} = req.body;
         identity_card = identity_card.trim();
-        
+
         let arr = [career_1, career_2, career_3, career_4];
-        
+
         var filtered = arr.filter(function (el) {
         return el != null;
         });
@@ -165,7 +165,7 @@ exports.saveAndCreateDocx = async function (req, res) {
         });
 
         if(career_2_obj) {
-            career_2_code = career_1_obj.code;
+            career_2_code = career_2_obj.code;
             career_2_name = career_2_obj.name;
         }
 

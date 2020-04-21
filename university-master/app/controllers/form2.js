@@ -94,9 +94,9 @@ exports.saveAndCreateDocx = async function (req, res) {
              raw: true
          });
 
-         let arr = [career_form_2, career_form_3, career_form_4, career_form_5, career_form_6, 
+         let arr = [career_form_2, career_form_3, career_form_4, career_form_5, career_form_6,
           career_form_7, career_form_8, career_form_9, career_form_10, career_form_1];
-        
+
         var filtered = arr.filter(function (el) {
           return el != null;
         });
@@ -531,30 +531,93 @@ exports.saveAndCreateDocx = async function (req, res) {
             diemtb21: diemtb21 ? diemtb21: "",
             diemtb22: diemtb22 ? diemtb22: "",
             diemtb23: diemtb23 ? diemtb23: "",
+            diemtb24: diemtb24 ? diemtb24: "",
+            diemtb25: diemtb25 ? diemtb25: "",
+            diemtb26: diemtb26 ? diemtb26: "",
+            diemtb27: diemtb27 ? diemtb27: "",
+            diemtb28: diemtb28 ? diemtb28: "",
+            diemtb29: diemtb29 ? diemtb29: "",
+
             diemtb31: diemtb31 ? diemtb31: "",
             diemtb32: diemtb32 ? diemtb32: "",
             diemtb33: diemtb33 ? diemtb33: "",
+            diemtb34: diemtb34 ? diemtb34: "",
+            diemtb35: diemtb35 ? diemtb35: "",
+            diemtb36: diemtb36 ? diemtb36: "",
+            diemtb37: diemtb37 ? diemtb37: "",
+            diemtb38: diemtb38 ? diemtb38: "",
+            diemtb39: diemtb39 ? diemtb39: "",
+
             diemtb41: diemtb41 ? diemtb41: "",
             diemtb42: diemtb42 ? diemtb42: "",
             diemtb43: diemtb43 ? diemtb43: "",
+            diemtb44: diemtb44 ? diemtb44: "",
+            diemtb45: diemtb45 ? diemtb45: "",
+            diemtb46: diemtb46 ? diemtb46: "",
+            diemtb47: diemtb47 ? diemtb47: "",
+            diemtb48: diemtb48 ? diemtb48: "",
+            diemtb49: diemtb49 ? diemtb49: "",
+
             diemtb51: diemtb51 ? diemtb51: "",
             diemtb52: diemtb52 ? diemtb52: "",
             diemtb53: diemtb53 ? diemtb53: "",
+            diemtb54: diemtb54 ? diemtb54: "",
+            diemtb55: diemtb55 ? diemtb55: "",
+            diemtb56: diemtb56 ? diemtb56: "",
+            diemtb57: diemtb57 ? diemtb57: "",
+            diemtb58: diemtb58 ? diemtb58: "",
+            diemtb59: diemtb59 ? diemtb59: "",
+
             diemtb61: diemtb61 ? diemtb61: "",
             diemtb62: diemtb62 ? diemtb62: "",
             diemtb63: diemtb63 ? diemtb63: "",
+            diemtb64: diemtb64 ? diemtb64: "",
+            diemtb65: diemtb65 ? diemtb65: "",
+            diemtb66: diemtb66 ? diemtb66: "",
+            diemtb67: diemtb67 ? diemtb67: "",
+            diemtb68: diemtb68 ? diemtb68: "",
+            diemtb69: diemtb69 ? diemtb69: "",
+
             diemtb71: diemtb71 ? diemtb71: "",
             diemtb72: diemtb72 ? diemtb72: "",
             diemtb73: diemtb73 ? diemtb73: "",
+            diemtb74: diemtb74 ? diemtb74: "",
+            diemtb75: diemtb75 ? diemtb75: "",
+            diemtb76: diemtb76 ? diemtb76: "",
+            diemtb77: diemtb77 ? diemtb77: "",
+            diemtb78: diemtb78 ? diemtb78: "",
+            diemtb79: diemtb79 ? diemtb79: "",
+
             diemtb81: diemtb81 ? diemtb81: "",
             diemtb82: diemtb82 ? diemtb82: "",
             diemtb83: diemtb83 ? diemtb83: "",
+            diemtb84: diemtb84 ? diemtb84: "",
+            diemtb85: diemtb85 ? diemtb85: "",
+            diemtb86: diemtb86 ? diemtb86: "",
+            diemtb87: diemtb87 ? diemtb87: "",
+            diemtb88: diemtb88 ? diemtb88: "",
+            diemtb89: diemtb89 ? diemtb89: "",
+
             diemtb91: diemtb91 ? diemtb91: "",
             diemtb92: diemtb92 ? diemtb92: "",
             diemtb93: diemtb93 ? diemtb93: "",
+            diemtb94: diemtb94 ? diemtb94: "",
+            diemtb95: diemtb95 ? diemtb95: "",
+            diemtb96: diemtb96 ? diemtb96: "",
+            diemtb97: diemtb97 ? diemtb97: "",
+            diemtb98: diemtb98 ? diemtb98: "",
+            diemtb99: diemtb99 ? diemtb99: "",
+
             diemtb101: diemtb101 ? diemtb101: "",
             diemtb102: diemtb102 ? diemtb102: "",
             diemtb103: diemtb103 ? diemtb103: "",
+            diemtb104: diemtb104 ? diemtb104: "",
+            diemtb105: diemtb105 ? diemtb105: "",
+            diemtb106: diemtb106 ? diemtb106: "",
+            diemtb107: diemtb107 ? diemtb107: "",
+            diemtb108: diemtb108 ? diemtb108: "",
+            diemtb109: diemtb109 ? diemtb109: "",
+
             d1: new Date().getDate(),
             m1: new Date().getMonth() + 1
         });
