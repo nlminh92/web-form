@@ -46,9 +46,8 @@ export class Form3Component implements OnInit {
         this.http.post('/api/upload', formData)
         .subscribe((response) => {
             this.file = response['file'];
-
-  })
-}
+          })
+        }
 
     genders = [
         {

@@ -36,10 +36,19 @@
            <mat-cell *matCellDef="let item"> Form {{item.type}} </mat-cell>
        </ng-container>
 
+       <ng-container matColumnDef="edit">
+           <mat-header-cell *matHeaderCellDef mat-sort-header> Sửa </mat-header-cell>
+           <mat-cell *matCellDef="let item">
+                <button mat-icon-button color="primary" (click)="edit(item.from_time)">
+                    <mat-icon>edit</mat-icon>
+                </button>
+           </mat-cell>
+       </ng-container>
+
        <ng-container matColumnDef="delete">
            <mat-header-cell *matHeaderCellDef mat-sort-header> Xóa </mat-header-cell>
            <mat-cell *matCellDef="let item">
-                <button mat-icon-button color="primary" (click)="destroy(item.id)">
+                <button mat-icon-button color="primary" (click)="openDialog({})">
                     <mat-icon>delete</mat-icon>
                 </button>
            </mat-cell>

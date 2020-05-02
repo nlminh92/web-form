@@ -504,8 +504,8 @@ exports.saveAndCreateDocx = async function (req, res) {
             l8: grade_twelve_school_code[1] ? grade_twelve_school_code[1] : '',
             l9: grade_twelve_school_code[2] ? grade_twelve_school_code[2] : '',
 
-            m1: province_code[0] ? province_code[0] : '',
-            m2: province_code[1] ? province_code[1] : '',
+            u1: province_code[0] ? province_code[0] : '',
+            u2: province_code[1] ? province_code[1] : '',
             n1: district_code[0] ? district_code[0] : '',
             n2: district_code[1] ? district_code[1] : '',
             o1: village_code[0] ? village_code[0] : '',

@@ -12,7 +12,7 @@ import {MatSnackBar} from '@angular/material/snack-bar';
 })
 export class SessionsComponent implements OnInit {
     // displayedColumns = ['stt', 'name', 'from', 'to', 'edit', 'delete'];
-    displayedColumns = ['stt', 'name', 'from', 'to', 'type', 'delete'];
+    displayedColumns = ['stt', 'name', 'from', 'to', 'type','edit', 'delete'];
     dataSource = new MatTableDataSource([]);
     constructor(
         private sessionService: SessionService,
