@@ -15,46 +15,46 @@ module.exports = (sequelize, DataTypes) => {
             type: DataTypes.STRING,
             allowNull: true,
         },
-        option1: {
-            type: DataTypes.STRING,
-            allowNull: true,
-        },
-        option2: {
-            type: DataTypes.STRING,
-            allowNull: true,
-        },
-        option3: {
-            type: DataTypes.STRING,
-            allowNull: true,
-        },
-        option4: {
-            type: DataTypes.STRING,
-            allowNull: true,
-        },
-        option5: {
-            type: DataTypes.STRING,
-            allowNull: true,
-        },
-        option6: {
-            type: DataTypes.STRING,
-            allowNull: true,
-        },
-        option7: {
-            type: DataTypes.STRING,
-            allowNull: true,
-        },
-        option8: {
-            type: DataTypes.STRING,
-            allowNull: true,
-        },
-        option9: {
-            type: DataTypes.STRING,
-            allowNull: true,
-        },
-        option10: {
-            type: DataTypes.STRING,
-            allowNull: true,
-        },
+        // option1: {
+        //     type: DataTypes.STRING,
+        //     allowNull: true,
+        // },
+        // option2: {
+        //     type: DataTypes.STRING,
+        //     allowNull: true,
+        // },
+        // option3: {
+        //     type: DataTypes.STRING,
+        //     allowNull: true,
+        // },
+        // option4: {
+        //     type: DataTypes.STRING,
+        //     allowNull: true,
+        // },
+        // option5: {
+        //     type: DataTypes.STRING,
+        //     allowNull: true,
+        // },
+        // option6: {
+        //     type: DataTypes.STRING,
+        //     allowNull: true,
+        // },
+        // option7: {
+        //     type: DataTypes.STRING,
+        //     allowNull: true,
+        // },
+        // option8: {
+        //     type: DataTypes.STRING,
+        //     allowNull: true,
+        // },
+        // option9: {
+        //     type: DataTypes.STRING,
+        //     allowNull: true,
+        // },
+        // option10: {
+        //     type: DataTypes.STRING,
+        //     allowNull: true,
+        // },
         birthday: {
             type: DataTypes.DATE,
             allowNull: true,

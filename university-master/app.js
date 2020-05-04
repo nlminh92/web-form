@@ -62,6 +62,23 @@ app.get('/api/upload', (req, res) => {
 //     });
 // });
 
+app.get('/api/upload1', (req, res) => {
+    res.json({
+      'message': 'hello'
+    });
+});
+
+app.post('/api/upload1', (req, res) => {
+  uploadFile(req, res, (error) => {
+    if (error) {
+      return res.send(`Error when trying to upload: ${error}`);
+    }
+    res.json({
+      'file': `/upload/${req.file.filename}`
+    });
+  });
+});
+
 let diskStorage = multer.diskStorage({
   destination: (req, file, callback) => {
     callback(null, "./upload");

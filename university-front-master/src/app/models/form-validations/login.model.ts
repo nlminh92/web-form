@@ -134,7 +134,6 @@ export const form2Validation = {
         { type: 'required', messageKey: 'form.validation.required' }
     ],
     'option1': [
-        { type: 'required', messageKey: 'form.validation.required' }
     ],
     'option2': [
     ],

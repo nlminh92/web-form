@@ -52,7 +52,7 @@ exports.saveAndCreateDocx = async function (req, res) {
             career_form_2, career_form_3, career_form_4, career_form_5, career_form_6, career_form_7, career_form_8, career_form_9, career_form_10, career_form_1,
             combination1, combination2, combination3, combination4, combination5, combination6, combination7, combination8, combination9, combination10,
             diemtb11, diemtb12, diemtb13, diemtb21, diemtb22, diemtb23, diemtb31, diemtb32, diemtb33,
-            diemtb14, diemtb15, diemtb16, diemtb17, diemtb18, diemtb19, option1,
+            diemtb14, diemtb15, diemtb16, diemtb17, diemtb18, diemtb19,
             diemtb24, diemtb25, diemtb26, diemtb27, diemtb28, diemtb29,
             diemtb34, diemtb35, diemtb36, diemtb37, diemtb38, diemtb39,
             diemtb44, diemtb45, diemtb46, diemtb47, diemtb48, diemtb49,
@@ -62,7 +62,7 @@ exports.saveAndCreateDocx = async function (req, res) {
             diemtb84, diemtb85, diemtb86, diemtb87, diemtb88, diemtb89,
             diemtb94, diemtb95, diemtb96, diemtb97, diemtb98, diemtb99,
             diemtb104, diemtb105, diemtb106, diemtb107, diemtb108, diemtb109,
-            option2, option3, option4, option5, option6, option7, option8, option9, option10,
+            // option2, option3, option4, option5, option6, option7, option8, option9, option10,
             diemtb41, diemtb42, diemtb43, diemtb51, diemtb52, diemtb53, diemtb61, diemtb62, diemtb63,
             diemtb71, diemtb72, diemtb73, diemtb81, diemtb82, diemtb83, diemtb91, diemtb92, diemtb93,
             diemtb101, diemtb102, diemtb103} = req.body;
@@ -94,15 +94,25 @@ exports.saveAndCreateDocx = async function (req, res) {
              raw: true
          });
 
-         let arr = [career_form_2, career_form_3, career_form_4, career_form_5, career_form_6,
+        let arr = [career_form_2, career_form_3, career_form_4, career_form_5, career_form_6,
           career_form_7, career_form_8, career_form_9, career_form_10, career_form_1];
+
+        let comb = [combination1, combination2, combination3, combination4, combination5,
+                    combination6, combination7, combination8, combination9, combination10]
 
         var filtered = arr.filter(function (el) {
           return el != null;
         });
 
         var unique = filtered.filter((v, i, a) => a.indexOf(v) === i);
-        if(unique.length != filtered.length) {
+
+        var filtereda = comb.filter(function (ela) {
+          return ela != null;
+        });
+
+        var uniquea = filtereda.filter((v, i, a) => a.indexOf(v) === i);
+
+        if(unique.length != filtered.length && uniquea.length != filtereda.length) {
           return handleErrorResponse(res, "Các nguyện vọng đăng ký không được trùng nhau");
         }
 
@@ -249,7 +259,15 @@ exports.saveAndCreateDocx = async function (req, res) {
             career_form_10_code = career_form_10_obj.code;
             career_form_10_name = career_form_10_obj.name;
         }
-
+//
+    // var extension = path.extname(file);
+    // var fileName = path.basename(file,extension);
+    // var newFileName = `${__dirname}/../../upload1/${identity_card}-${name}${extension}`;
+    // await fs.rename(`${__dirname}/../..${file}`, newFileName, function(err) {
+    //   if ( err ) console.log('ERROR: ' + err);
+    //   });
+    //     file = newFileName;
+    //     console.log(file);
 // combination
 
         // Lay thong tin noi SINH
@@ -388,7 +406,7 @@ exports.saveAndCreateDocx = async function (req, res) {
             career_form_2, career_form_3, career_form_4, career_form_5, career_form_6, career_form_7, career_form_8, career_form_9, career_form_10,
             combination1, combination2, combination3, combination4, combination5, combination6, combination7, combination8, combination9, combination10,
             diemtb11, diemtb12, diemtb13, diemtb21, diemtb22, diemtb23, diemtb31, diemtb32, diemtb33,
-            diemtb14, diemtb15, diemtb16, diemtb17, diemtb18, diemtb19, option1,
+            diemtb14, diemtb15, diemtb16, diemtb17, diemtb18, diemtb19,
             diemtb24, diemtb25, diemtb26, diemtb27, diemtb28, diemtb29,
             diemtb34, diemtb35, diemtb36, diemtb37, diemtb38, diemtb39,
             diemtb44, diemtb45, diemtb46, diemtb47, diemtb48, diemtb49,
@@ -398,7 +416,7 @@ exports.saveAndCreateDocx = async function (req, res) {
             diemtb84, diemtb85, diemtb86, diemtb87, diemtb88, diemtb89,
             diemtb94, diemtb95, diemtb96, diemtb97, diemtb98, diemtb99,
             diemtb104, diemtb105, diemtb106, diemtb107, diemtb108, diemtb109,
-            option2, option3, option4, option5, option6, option7, option8, option9, option10,
+            // option2, option3, option4, option5, option6, option7, option8, option9, option10,
             diemtb41, diemtb42, diemtb43, diemtb51, diemtb52, diemtb53, diemtb61, diemtb62, diemtb63,
             diemtb71, diemtb72, diemtb73, diemtb81, diemtb82, diemtb83, diemtb91, diemtb92, diemtb93,
             diemtb101, diemtb102, diemtb103, code, typee, session_id});

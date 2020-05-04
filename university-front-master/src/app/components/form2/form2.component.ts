@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, OnInit, ViewChild, ElementRef} from '@angular/core';
 import {Router} from '@angular/router';
 import {FormGroup} from '@angular/forms';
 import { form2Validation } from '@app/models/form-validations/index';
@@ -7,6 +7,7 @@ import { SelectionService } from '@app/core/services/selections.service';
 import { FormService } from '@app/core/services/form.service';
 import { saveAs } from 'file-saver';
 import {MatSnackBar} from '@angular/material/snack-bar';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
     selector: 'app-form2',
@@ -36,115 +37,35 @@ export class Form2Component implements OnInit {
         }
     ];
 
-    option1 = [
-        {
-            value: "Học kỳ 1",
-            name: "Học kỳ 1 năm lớp 12"
-        },
-        {
-            value: "Cả năm học",
-            name: "Cả năm học lớp 12"
-        }
-    ];
+    uploadedFiles: Array < File > ;
+    file: any = null;
 
-    option2 = [
-        {
-            value: "Học kỳ 1",
-            name: "Học kỳ 1 năm lớp 12"
-        },
-        {
-            value: "Cả năm học",
-            name: "Cả năm học lớp 12"
-        }
-    ];
+    // constructor(private http : HttpClient){
+    //
+    // }
 
-    option3 = [
-        {
-            value: "Học kỳ 1",
-            name: "Học kỳ 1 năm lớp 12"
-        },
-        {
-            value: "Cả năm học",
-            name: "Cả năm học lớp 12"
-        }
-    ];
-
-    option4 = [
-        {
-            value: "Học kỳ 1",
-            name: "Học kỳ 1 năm lớp 12"
-        },
-        {
-            value: "Cả năm học",
-            name: "Cả năm học lớp 12"
-        }
-    ];
-
-    option5 = [
-        {
-            value: "Học kỳ 1",
-            name: "Học kỳ 1 năm lớp 12"
-        },
-        {
-            value: "Cả năm học",
-            name: "Cả năm học lớp 12"
-        }
-    ];
-
-    option6 = [
-        {
-            value: "Học kỳ 1",
-            name: "Học kỳ 1 năm lớp 12"
-        },
-        {
-            value: "Cả năm học",
-            name: "Cả năm học lớp 12"
-        }
-    ];
-
-    option7 = [
-        {
-            value: "Học kỳ 1",
-            name: "Học kỳ 1 năm lớp 12"
-        },
-        {
-            value: "Cả năm học",
-            name: "Cả năm học lớp 12"
-        }
-    ];
-
-    option8 = [
-        {
-            value: "Học kỳ 1",
-            name: "Học kỳ 1 năm lớp 12"
-        },
-        {
-            value: "Cả năm học",
-            name: "Cả năm học lớp 12"
-        }
-    ];
-
-    option9 = [
-        {
-            value: "Học kỳ 1",
-            name: "Học kỳ 1 năm lớp 12"
-        },
-        {
-            value: "Cả năm học",
-            name: "Cả năm học lớp 12"
-        }
-    ];
-
-    option10 = [
-        {
-            value: "Học kỳ 1",
-            name: "Học kỳ 1 năm lớp 12"
-        },
-        {
-            value: "Cả năm học",
-            name: "Cả năm học lớp 12"
-        }
-    ];
+    // @ViewChild('inputFile') myInputVariable: ElementRef;
+    //
+    // reset() {
+    //     this.myInputVariable.nativeElement.value = '';
+    // }
+    //
+    // fileChange(element) {
+    //     console.log(element.target.files);
+    //     this.uploadedFiles = element.target.files;
+    //     this.upload();
+    // }
+    //
+    // upload() {
+    //     let formData = new FormData();
+    //     for (var i = 0; i < this.uploadedFiles.length; i++) {
+    //         formData.append("file", this.uploadedFiles[i], this.uploadedFiles[i].name);
+    //     }
+    //     this.http.post('/api/upload1', formData)
+    //     .subscribe((response) => {
+    //         this.file = response['file'];
+    //       })
+    //     }
 
   //  diploma_numbers = [1, 2, 3, 4, 5, 6];
     waiting = false;
@@ -173,6 +94,7 @@ export class Form2Component implements OnInit {
     diemtb51 = "";
 
     constructor(
+        private http : HttpClient,
         private router: Router,
         private selectionService: SelectionService,
         private formService: FormService,
@@ -272,36 +194,36 @@ export class Form2Component implements OnInit {
 
     onSubmit() {
 
-        console.log(this.form);
-        console.log(this.form.value);
-        this.submited = true;
-        if (this.form.valid) {
-          this._snackBar.open("Thành công", "Đang chờ lưu thông tin", {
-              duration: 2000,
-          });
-            this.waiting = true;
-            this.formService.saveDataForm2(this.form.getRawValue()).subscribe(res => {
-                this.submited = false;
-                this.waiting = false;
-                if(res.code == 1) {
-                    this.exportFile(res.data);
-                    // this.form.reset();
-                    this._snackBar.open('Lưu thông tin thành công', "x", {
-                        duration: 2000,
-                    });
-                    // location.reload();
-                } else {
-                    this._snackBar.open(res.message, "x", {
-                        duration: 2000,
-                    });
-                }
-            });
-        } else {
-            this._snackBar.open('Dữ liệu không hợp lệ, vui lòng kiểm tra lại thông tin', "x", {
-                duration: 2000,
-            });
-        }
-    }
+       console.log(this.form);
+       console.log(this.form.value);
+       this.submited = true;
+       if (this.form.valid) {
+         this._snackBar.open("Thành công", "Đang chờ lưu thông tin", {
+             duration: 2000,
+         });
+           this.waiting = true;
+           this.formService.saveDataForm2(this.form.getRawValue()).subscribe(res => {
+               this.submited = false;
+               this.waiting = false;
+               if(res.code == 1) {
+                   this.exportFile(res.data);
+                   // this.form.reset();
+                   this._snackBar.open('Lưu thông tin thành công', "x", {
+                       duration: 2000,
+                   });
+                   // location.reload();
+               } else {
+                   this._snackBar.open(res.message, "x", {
+                       duration: 2000,
+                   });
+               }
+           });
+       } else {
+           this._snackBar.open('Dữ liệu không hợp lệ, vui lòng kiểm tra lại thông tin', "x", {
+               duration: 2000,
+           });
+       }
+   }
 
     exportFile(url) {
       this.formService.export(url).subscribe(data => saveAs(data, filename));
