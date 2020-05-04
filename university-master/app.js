@@ -84,7 +84,7 @@ let diskStorage = multer.diskStorage({
     callback(null, "./upload");
   },
   filename: (req, file, callback) => {
-    let math = ["image/png", "image/jpeg", "image/jpg"];
+    let math = ["image/png", "image/jpeg", "image/jpg", "application/pdf"];
     if (math.indexOf(file.mimetype) === -1) {
       let errorMess = `The file <strong>${file.originalname}</strong> is invalid. Only allowed to upload image jpeg or png.`;
       return callback(errorMess, null);
