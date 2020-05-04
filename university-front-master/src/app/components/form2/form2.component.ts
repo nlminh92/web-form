@@ -44,28 +44,28 @@ export class Form2Component implements OnInit {
     //
     // }
 
-    // @ViewChild('inputFile') myInputVariable: ElementRef;
-    //
-    // reset() {
-    //     this.myInputVariable.nativeElement.value = '';
-    // }
-    //
-    // fileChange(element) {
-    //     console.log(element.target.files);
-    //     this.uploadedFiles = element.target.files;
-    //     this.upload();
-    // }
-    //
-    // upload() {
-    //     let formData = new FormData();
-    //     for (var i = 0; i < this.uploadedFiles.length; i++) {
-    //         formData.append("file", this.uploadedFiles[i], this.uploadedFiles[i].name);
-    //     }
-    //     this.http.post('/api/upload1', formData)
-    //     .subscribe((response) => {
-    //         this.file = response['file'];
-    //       })
-    //     }
+    @ViewChild('inputFile') myInputVariable: ElementRef;
+
+    reset() {
+        this.myInputVariable.nativeElement.value = '';
+    }
+
+    fileChange(element) {
+        console.log(element.target.files);
+        this.uploadedFiles = element.target.files;
+        this.upload();
+    }
+
+    upload() {
+        let formData = new FormData();
+        for (var i = 0; i < this.uploadedFiles.length; i++) {
+            formData.append("file", this.uploadedFiles[i], this.uploadedFiles[i].name);
+        }
+        this.http.post('/api/uploadfile', formData)
+        .subscribe((response) => {
+            this.file = response['file'];
+          })
+        }
 
   //  diploma_numbers = [1, 2, 3, 4, 5, 6];
     waiting = false;
@@ -193,37 +193,52 @@ export class Form2Component implements OnInit {
     //}
 
     onSubmit() {
-
-       console.log(this.form);
-       console.log(this.form.value);
-       this.submited = true;
-       if (this.form.valid) {
-         this._snackBar.open("Thành công", "Đang chờ lưu thông tin", {
-             duration: 2000,
-         });
-           this.waiting = true;
-           this.formService.saveDataForm2(this.form.getRawValue()).subscribe(res => {
-               this.submited = false;
-               this.waiting = false;
-               if(res.code == 1) {
-                   this.exportFile(res.data);
-                   // this.form.reset();
-                   this._snackBar.open('Lưu thông tin thành công', "x", {
-                       duration: 2000,
-                   });
-                   // location.reload();
-               } else {
-                   this._snackBar.open(res.message, "x", {
-                       duration: 2000,
-                   });
-               }
-           });
-       } else {
-           this._snackBar.open('Dữ liệu không hợp lệ, vui lòng kiểm tra lại thông tin', "x", {
-               duration: 2000,
-           });
-       }
-   }
+        this._snackBar.open("Thành công", "Đang chờ lưu thông tin", {
+            duration: 2000,
+        });
+        console.log(this.form);
+        console.log(this.form.value);
+        this.submited = true;
+        if (this.form.valid) {
+            this.waiting = true;
+            // Hàm này gửi dữ liệu lên server
+            let data = this.form.getRawValue();
+            data['file'] = this.file;
+            if(!this.file || this.file == '') {
+                this._snackBar.open("Vui lòng chọn ảnh", "x", {
+                    duration: 2000,
+                });
+                this.submited = false;
+                this.waiting = false;
+            } else {
+                this.formService.saveDataForm2(data).subscribe(res => {
+                    this.submited = false;
+                    this.waiting = false;
+                    if(res.code == 1) {
+                        this.exportFile(res.data);
+                        // this.form.reset();
+                        this._snackBar.open('Lưu thông tin thành công', "x", {
+                            duration: 2000,
+                        });
+                        this.file = null;
+                        this.reset();
+                        // location.reload();
+                    }
+                    else {
+                        this._snackBar.open(res.message, "x", {
+                            duration: 2000,
+                        });
+                        this.file = null;
+                        this.reset();
+                    }
+                });
+            }
+        } else {
+            this._snackBar.open('Dữ liệu không hợp lệ, vui lòng kiểm tra lại thông tin', "x", {
+                duration: 2000,
+            });
+        }
+    }
 
     exportFile(url) {
       this.formService.export(url).subscribe(data => saveAs(data, filename));

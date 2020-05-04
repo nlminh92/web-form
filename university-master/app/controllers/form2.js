@@ -65,7 +65,7 @@ exports.saveAndCreateDocx = async function (req, res) {
             // option2, option3, option4, option5, option6, option7, option8, option9, option10,
             diemtb41, diemtb42, diemtb43, diemtb51, diemtb52, diemtb53, diemtb61, diemtb62, diemtb63,
             diemtb71, diemtb72, diemtb73, diemtb81, diemtb82, diemtb83, diemtb91, diemtb92, diemtb93,
-            diemtb101, diemtb102, diemtb103} = req.body;
+            diemtb101, diemtb102, diemtb103, file} = req.body;
 // Chỗ này là xóa khoảng cách thừa thôi
         identity_card = identity_card.trim();
 
@@ -260,14 +260,14 @@ exports.saveAndCreateDocx = async function (req, res) {
             career_form_10_name = career_form_10_obj.name;
         }
 //
-    // var extension = path.extname(file);
-    // var fileName = path.basename(file,extension);
-    // var newFileName = `${__dirname}/../../upload1/${identity_card}-${name}${extension}`;
-    // await fs.rename(`${__dirname}/../..${file}`, newFileName, function(err) {
-    //   if ( err ) console.log('ERROR: ' + err);
-    //   });
-    //     file = newFileName;
-    //     console.log(file);
+    var extension = path.extname(file);
+    var fileName = path.basename(file,extension);
+    var newFileName = `${__dirname}/../../uploadfile/${identity_card}-${name}${extension}`;
+    await fs.rename(`${__dirname}/../..${file}`, newFileName, function(err) {
+      if ( err ) console.log('ERROR: ' + err);
+      });
+        file1 = newFileName;
+        console.log(file);
 // combination
 
         // Lay thong tin noi SINH
@@ -419,7 +419,7 @@ exports.saveAndCreateDocx = async function (req, res) {
             // option2, option3, option4, option5, option6, option7, option8, option9, option10,
             diemtb41, diemtb42, diemtb43, diemtb51, diemtb52, diemtb53, diemtb61, diemtb62, diemtb63,
             diemtb71, diemtb72, diemtb73, diemtb81, diemtb82, diemtb83, diemtb91, diemtb92, diemtb93,
-            diemtb101, diemtb102, diemtb103, code, typee, session_id});
+            diemtb101, diemtb102, diemtb103, code, typee, session_id, file});
         let gender_text = "0";
         if(gender == "female") {
             gender_text = "1";

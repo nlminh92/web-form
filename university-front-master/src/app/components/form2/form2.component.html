@@ -1582,7 +1582,6 @@ tiên như bảng sau:
             </div> -->
             </div>
             <div class="mdc-layout-grid__inner ">
-
                 <div class="mdc-layout-grid__cell--span-4">
                     <mat-form-field appearance="outline">
                         <mat-label>Điểm trung bình (Môn 1)</mat-label>
@@ -1606,27 +1605,36 @@ tiên như bảng sau:
             </div>
 </div>
 
-      <!-- <div class="mdc-layout-grid__cell--span-6">
-      <div class="input-group">
-      <div class="custom-file">
-      <form action="/api/upload" method="post" enctype="multipart/form-data">
-      <div class="form-group">
-      <label for="example-input-file"  type="file" ng-model="up.file" class="custom-file-input" id="inputGroupFile01" aria-describedby="inputGroupFileAddon01"> </label>
-      <input #inputFile type="file" (change)="fileChange($event)" id="fileInputId" name="file" class="form-control-file border">
+<div class="mdc-layout-grid__inner">
+  <div class="mdc-layout-grid__cell--span-12">
+      <p class="p-custom">
+(Nộp kèm file minh chứng, Lưu ý: Chỉ chấp nhận file có đuôi jpg, jpeg, png, pdf)
+      </p>
+  </div>
+      <div class="mdc-layout-grid__cell--span-6">
+        <div class="input-group">
+            <div class="custom-file">
+                <form action="/api/uploadfile" method="post" enctype="multipart/form-data">
+                  <div class="form-group">
+                    <label for="example-input-file"  type="file" ng-model="up.file" class="custom-file-input" id="inputGroupFile01" aria-describedby="inputGroupFileAddon01"> </label>
+                    <input #inputFile type="file" (change)="fileChange($event)" id="fileInputId" name="file" class="form-control-file border">
+                  </div>
+                </form>
+              </div>
+        </div>
       </div>
-      </form>
-      </div>
-      </div>
-      </div> -->
+</div>
+<br>
+<br>
 
           <!-- (Thí sinh có thể đăng ký tối đa 10 nguyện vọng nếu có nhu cầu) -->
-          <!-- <div class="mdc-layout-grid__inner">
+          <div class="mdc-layout-grid__inner">
               <div class="mdc-layout-grid__cell--span-12">
                   <p class="p-custom">
                       Lưu ý: Mỗi CMTND chỉ được lưu 1 lần, vui lòng kiểm tra kỹ các thông tin trước khi lưu
                   </p>
               </div>
-          </div> -->
+          </div>
             <div class="mdc-layout-grid__inner">
                 <div class="mdc-layout-grid__cell--span-12 text-center">
                     <button mat-flat-button color="primary" [disabled]="waiting">  <mat-icon matSuffix>save</mat-icon>  Lưu </button>
@@ -1635,3 +1643,17 @@ tiên như bảng sau:
         </form>
     </div>
 </div>
+
+            <div class="footer">
+              <table width="100%">
+              	<tbody><tr bgcolor="blue" style="text-align: left; font-family: sans-serif; color: white; font-size: 15px">
+              		<td>Phòng Khảo thí và Đảm bảo chất lượng đào tạo  <br>
+              			Địa chỉ email: @utc2.edu.vn <br> Điện thoại:
+              		</td>
+              		<td style="text-align: right; vertical-align: top">Phiên bản cập
+              			nhật ngày: 05/05/2020 <br> Phát triển hệ thống: ThS. Nguyễn Lê Minh (BM CNTT UTC2) <br> KS. Trần Thị Dung (BM CNTT UTC2) <br> Liên hệ: nlminh@utc2.edu.vn
+              		</td>
+              	</tr>
+              </tbody></table>
+              <br>
+            </div>

@@ -62,13 +62,13 @@ app.get('/api/upload', (req, res) => {
 //     });
 // });
 
-app.get('/api/upload1', (req, res) => {
+app.get('/api/uploadfile', (req, res) => {
     res.json({
       'message': 'hello'
     });
 });
 
-app.post('/api/upload1', (req, res) => {
+app.post('/api/uploadfile', (req, res) => {
   uploadFile(req, res, (error) => {
     if (error) {
       return res.send(`Error when trying to upload: ${error}`);
@@ -93,28 +93,7 @@ let diskStorage = multer.diskStorage({
     callback(null, filename);
   }
 });
-// app.get('/api/upload', (req, res) => {
-//   // res.sendFile(path.join(`${__dirname}/src/app/components/form3/form3.component.html`));
-//   res.json({
-//         'message': 'hello'
-//       });
-// });
-//
-// let diskStorage = multer.diskStorage({
-//   destination: (req, file, callback) => {
-//     callback(null, "./upload");
-//   },
-//   filename: (req, file, callback) => {
-//     let math = ["image/png", "image/jpeg"];
-//     if (math.indexOf(file.mimetype) === -1) {
-//       let errorMess = `The file <strong>${file.originalname}</strong> is invalid. Only allowed to upload image jpeg or png.`;
-//       return callback(errorMess, null);
-//     }
-//     let filename = `${Date.now()}-${file.originalname}`;
-//     callback(null, filename);
-//   }
-// });
-//
+
   let uploadFile = multer({storage: diskStorage}).single("file");
   //
   app.post('/api/upload', (req, res) => {
