@@ -53,6 +53,7 @@ export class ReportCareersComponent implements OnInit {
     changeSession(event) {
         this.session_id = event.value;
         this.getData();
+        this.getDataForm();
     }
 
 }
