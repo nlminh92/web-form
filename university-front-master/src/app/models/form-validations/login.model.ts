@@ -196,6 +196,26 @@ export const form2Validation = {
     ],
     'combination10': [
     ],
+    'combination11': [
+    ],
+    'combination12': [
+    ],
+    'combination13': [
+    ],
+    'combination14': [
+    ],
+    'combination15': [
+    ],
+    'combination16': [
+    ],
+    'combination17': [
+    ],
+    'combination18': [
+    ],
+    'combination19': [
+    ],
+    'combination20': [
+    ],
     'identity_card_address': [
       { type: 'required', messageKey: 'form.validation.required' }
     ],
@@ -394,6 +414,186 @@ export const form2Validation = {
     ],
     'diemtb109': [
     ],
+    'diemtb111': [
+    ],
+    'diemtb112': [
+    ],
+    'diemtb113': [
+    ],
+    'diemtb114': [
+    ],
+    'diemtb115': [
+    ],
+    'diemtb116': [
+    ],
+    'diemtb117': [
+    ],
+    'diemtb118': [
+    ],
+    'diemtb119': [
+    ],
+    'diemtb121': [
+    ],
+    'diemtb122': [
+    ],
+    'diemtb123': [
+    ],
+    'diemtb124': [
+    ],
+    'diemtb125': [
+    ],
+    'diemtb126': [
+    ],
+    'diemtb127': [
+    ],
+    'diemtb128': [
+    ],
+    'diemtb129': [
+    ],
+    'diemtb131': [
+    ],
+    'diemtb132': [
+    ],
+    'diemtb133': [
+    ],
+    'diemtb134': [
+    ],
+    'diemtb135': [
+    ],
+    'diemtb136': [
+    ],
+    'diemtb137': [
+    ],
+    'diemtb138': [
+    ],
+    'diemtb139': [
+    ],
+    'diemtb141': [
+    ],
+    'diemtb142': [
+    ],
+    'diemtb143': [
+    ],
+    'diemtb144': [
+    ],
+    'diemtb145': [
+    ],
+    'diemtb146': [
+    ],
+    'diemtb147': [
+    ],
+    'diemtb148': [
+    ],
+    'diemtb149': [
+    ],
+    'diemtb151': [
+    ],
+    'diemtb152': [
+    ],
+    'diemtb153': [
+    ],
+    'diemtb154': [
+    ],
+    'diemtb155': [
+    ],
+    'diemtb156': [
+    ],
+    'diemtb157': [
+    ],
+    'diemtb158': [
+    ],
+    'diemtb159': [
+    ],
+    'diemtb161': [
+    ],
+    'diemtb162': [
+    ],
+    'diemtb163': [
+    ],
+    'diemtb164': [
+    ],
+    'diemtb165': [
+    ],
+    'diemtb166': [
+    ],
+    'diemtb167': [
+    ],
+    'diemtb168': [
+    ],
+    'diemtb169': [
+    ],
+    'diemtb171': [
+    ],
+    'diemtb172': [
+    ],
+    'diemtb173': [
+    ],
+    'diemtb174': [
+    ],
+    'diemtb175': [
+    ],
+    'diemtb176': [
+    ],
+    'diemtb177': [
+    ],
+    'diemtb178': [
+    ],
+    'diemtb179': [
+    ],
+    'diemtb181': [
+    ],
+    'diemtb182': [
+    ],
+    'diemtb183': [
+    ],
+    'diemtb184': [
+    ],
+    'diemtb185': [
+    ],
+    'diemtb186': [
+    ],
+    'diemtb187': [
+    ],
+    'diemtb188': [
+    ],
+    'diemtb189': [
+    ],
+    'diemtb191': [
+    ],
+    'diemtb192': [
+    ],
+    'diemtb193': [
+    ],
+    'diemtb194': [
+    ],
+    'diemtb195': [
+    ],
+    'diemtb196': [
+    ],
+    'diemtb197': [
+    ],
+    'diemtb198': [
+    ],
+    'diemtb199': [
+    ],
+    'diemtb201': [
+    ],
+    'diemtb202': [
+    ],
+    'diemtb203': [
+    ],
+    'diemtb204': [
+    ],
+    'diemtb205': [
+    ],
+    'diemtb206': [
+    ],
+    'diemtb207': [
+    ],
+    'diemtb208': [
+    ],
+    'diemtb209': [
+    ],
     'career_form_1': [
       { type: 'required', messageKey: 'form.validation.required' }
     ],
@@ -414,6 +614,26 @@ export const form2Validation = {
     'career_form_9': [
     ],
     'career_form_10': [
+    ],
+    'career_form_11': [
+    ],
+    'career_form_12': [
+    ],
+    'career_form_13': [
+    ],
+    'career_form_14': [
+    ],
+    'career_form_15': [
+    ],
+    'career_form_16': [
+    ],
+    'career_form_17': [
+    ],
+    'career_form_18': [
+    ],
+    'career_form_19': [
+    ],
+    'career_form_20': [
     ],
     'district_code': [
       { type: 'required', messageKey: 'form.validation.required' }

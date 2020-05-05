@@ -231,6 +231,46 @@ module.exports = (sequelize, DataTypes) => {
             type: DataTypes.STRING,
             allowNull: true,
         },
+        combination11: {
+            type: DataTypes.STRING,
+            allowNull: true,
+        },
+        combination12: {
+            type: DataTypes.STRING,
+            allowNull: true,
+        },
+        combination13: {
+            type: DataTypes.STRING,
+            allowNull: true,
+        },
+        combination14: {
+            type: DataTypes.STRING,
+            allowNull: true,
+        },
+        combination15: {
+            type: DataTypes.STRING,
+            allowNull: true,
+        },
+        combination16: {
+            type: DataTypes.STRING,
+            allowNull: true,
+        },
+        combination17: {
+            type: DataTypes.STRING,
+            allowNull: true,
+        },
+        combination18: {
+            type: DataTypes.STRING,
+            allowNull: true,
+        },
+        combination19: {
+            type: DataTypes.STRING,
+            allowNull: true,
+        },
+        combination20: {
+            type: DataTypes.STRING,
+            allowNull: true,
+        },
         diemtb11: {
             type: DataTypes.STRING,
             allowNull: true,
@@ -555,6 +595,366 @@ module.exports = (sequelize, DataTypes) => {
             type: DataTypes.STRING,
             allowNull: true,
         },
+        diemtb111: {
+            type: DataTypes.STRING,
+            allowNull: true,
+        },
+        diemtb112: {
+            type: DataTypes.STRING,
+            allowNull: true,
+        },
+        diemtb113: {
+            type: DataTypes.STRING,
+            allowNull: true,
+        },
+        diemtb114: {
+            type: DataTypes.STRING,
+            allowNull: true,
+        },
+        diemtb115: {
+            type: DataTypes.STRING,
+            allowNull: true,
+        },
+        diemtb116: {
+            type: DataTypes.STRING,
+            allowNull: true,
+        },
+        diemtb117: {
+            type: DataTypes.STRING,
+            allowNull: true,
+        },
+        diemtb118: {
+            type: DataTypes.STRING,
+            allowNull: true,
+        },
+        diemtb119: {
+            type: DataTypes.STRING,
+            allowNull: true,
+        },
+        diemtb121: {
+            type: DataTypes.STRING,
+            allowNull: true,
+        },
+        diemtb122: {
+            type: DataTypes.STRING,
+            allowNull: true,
+        },
+        diemtb123: {
+            type: DataTypes.STRING,
+            allowNull: true,
+        },
+        diemtb124: {
+            type: DataTypes.STRING,
+            allowNull: true,
+        },
+        diemtb125: {
+            type: DataTypes.STRING,
+            allowNull: true,
+        },
+        diemtb126: {
+            type: DataTypes.STRING,
+            allowNull: true,
+        },
+        diemtb127: {
+            type: DataTypes.STRING,
+            allowNull: true,
+        },
+        diemtb128: {
+            type: DataTypes.STRING,
+            allowNull: true,
+        },
+        diemtb129: {
+            type: DataTypes.STRING,
+            allowNull: true,
+        },
+        diemtb131: {
+            type: DataTypes.STRING,
+            allowNull: true,
+        },
+        diemtb132: {
+            type: DataTypes.STRING,
+            allowNull: true,
+        },
+        diemtb133: {
+            type: DataTypes.STRING,
+            allowNull: true,
+        },
+        diemtb134: {
+            type: DataTypes.STRING,
+            allowNull: true,
+        },
+        diemtb135: {
+            type: DataTypes.STRING,
+            allowNull: true,
+        },
+        diemtb136: {
+            type: DataTypes.STRING,
+            allowNull: true,
+        },
+        diemtb137: {
+            type: DataTypes.STRING,
+            allowNull: true,
+        },
+        diemtb138: {
+            type: DataTypes.STRING,
+            allowNull: true,
+        },
+        diemtb139: {
+            type: DataTypes.STRING,
+            allowNull: true,
+        },
+        diemtb141: {
+            type: DataTypes.STRING,
+            allowNull: true,
+        },
+        diemtb142: {
+            type: DataTypes.STRING,
+            allowNull: true,
+        },
+        diemtb143: {
+            type: DataTypes.STRING,
+            allowNull: true,
+        },
+        diemtb144: {
+            type: DataTypes.STRING,
+            allowNull: true,
+        },
+        diemtb145: {
+            type: DataTypes.STRING,
+            allowNull: true,
+        },
+        diemtb146: {
+            type: DataTypes.STRING,
+            allowNull: true,
+        },
+        diemtb147: {
+            type: DataTypes.STRING,
+            allowNull: true,
+        },
+        diemtb148: {
+            type: DataTypes.STRING,
+            allowNull: true,
+        },
+        diemtb149: {
+            type: DataTypes.STRING,
+            allowNull: true,
+        },
+        diemtb151: {
+            type: DataTypes.STRING,
+            allowNull: true,
+        },
+        diemtb152: {
+            type: DataTypes.STRING,
+            allowNull: true,
+        },
+        diemtb153: {
+            type: DataTypes.STRING,
+            allowNull: true,
+        },
+        diemtb154: {
+            type: DataTypes.STRING,
+            allowNull: true,
+        },
+        diemtb155: {
+            type: DataTypes.STRING,
+            allowNull: true,
+        },
+        diemtb156: {
+            type: DataTypes.STRING,
+            allowNull: true,
+        },
+        diemtb157: {
+            type: DataTypes.STRING,
+            allowNull: true,
+        },
+        diemtb158: {
+            type: DataTypes.STRING,
+            allowNull: true,
+        },
+        diemtb159: {
+            type: DataTypes.STRING,
+            allowNull: true,
+        },
+        diemtb161: {
+            type: DataTypes.STRING,
+            allowNull: true,
+        },
+        diemtb162: {
+            type: DataTypes.STRING,
+            allowNull: true,
+        },
+        diemtb163: {
+            type: DataTypes.STRING,
+            allowNull: true,
+        },
+        diemtb164: {
+            type: DataTypes.STRING,
+            allowNull: true,
+        },
+        diemtb165: {
+            type: DataTypes.STRING,
+            allowNull: true,
+        },
+        diemtb166: {
+            type: DataTypes.STRING,
+            allowNull: true,
+        },
+        diemtb167: {
+            type: DataTypes.STRING,
+            allowNull: true,
+        },
+        diemtb168: {
+            type: DataTypes.STRING,
+            allowNull: true,
+        },
+        diemtb169: {
+            type: DataTypes.STRING,
+            allowNull: true,
+        },
+        diemtb171: {
+            type: DataTypes.STRING,
+            allowNull: true,
+        },
+        diemtb172: {
+            type: DataTypes.STRING,
+            allowNull: true,
+        },
+        diemtb173: {
+            type: DataTypes.STRING,
+            allowNull: true,
+        },
+        diemtb174: {
+            type: DataTypes.STRING,
+            allowNull: true,
+        },
+        diemtb175: {
+            type: DataTypes.STRING,
+            allowNull: true,
+        },
+        diemtb176: {
+            type: DataTypes.STRING,
+            allowNull: true,
+        },
+        diemtb177: {
+            type: DataTypes.STRING,
+            allowNull: true,
+        },
+        diemtb178: {
+            type: DataTypes.STRING,
+            allowNull: true,
+        },
+        diemtb179: {
+            type: DataTypes.STRING,
+            allowNull: true,
+        },
+        diemtb181: {
+            type: DataTypes.STRING,
+            allowNull: true,
+        },
+        diemtb182: {
+            type: DataTypes.STRING,
+            allowNull: true,
+        },
+        diemtb183: {
+            type: DataTypes.STRING,
+            allowNull: true,
+        },
+        diemtb184: {
+            type: DataTypes.STRING,
+            allowNull: true,
+        },
+        diemtb185: {
+            type: DataTypes.STRING,
+            allowNull: true,
+        },
+        diemtb186: {
+            type: DataTypes.STRING,
+            allowNull: true,
+        },
+        diemtb187: {
+            type: DataTypes.STRING,
+            allowNull: true,
+        },
+        diemtb188: {
+            type: DataTypes.STRING,
+            allowNull: true,
+        },
+        diemtb189: {
+            type: DataTypes.STRING,
+            allowNull: true,
+        },
+        diemtb191: {
+            type: DataTypes.STRING,
+            allowNull: true,
+        },
+        diemtb192: {
+            type: DataTypes.STRING,
+            allowNull: true,
+        },
+        diemtb193: {
+            type: DataTypes.STRING,
+            allowNull: true,
+        },
+        diemtb194: {
+            type: DataTypes.STRING,
+            allowNull: true,
+        },
+        diemtb195: {
+            type: DataTypes.STRING,
+            allowNull: true,
+        },
+        diemtb196: {
+            type: DataTypes.STRING,
+            allowNull: true,
+        },
+        diemtb197: {
+            type: DataTypes.STRING,
+            allowNull: true,
+        },
+        diemtb198: {
+            type: DataTypes.STRING,
+            allowNull: true,
+        },
+        diemtb199: {
+            type: DataTypes.STRING,
+            allowNull: true,
+        },
+        diemtb201: {
+            type: DataTypes.STRING,
+            allowNull: true,
+        },
+        diemtb202: {
+            type: DataTypes.STRING,
+            allowNull: true,
+        },
+        diemtb203: {
+            type: DataTypes.STRING,
+            allowNull: true,
+        },
+        diemtb204: {
+            type: DataTypes.STRING,
+            allowNull: true,
+        },
+        diemtb205: {
+            type: DataTypes.STRING,
+            allowNull: true,
+        },
+        diemtb206: {
+            type: DataTypes.STRING,
+            allowNull: true,
+        },
+        diemtb207: {
+            type: DataTypes.STRING,
+            allowNull: true,
+        },
+        diemtb208: {
+            type: DataTypes.STRING,
+            allowNull: true,
+        },
+        diemtb209: {
+            type: DataTypes.STRING,
+            allowNull: true,
+        },
         diemtb101: {
             type: DataTypes.STRING,
             allowNull: true,
@@ -628,6 +1028,46 @@ module.exports = (sequelize, DataTypes) => {
             allowNull: true,
         },
         career_form_10: {
+            type: DataTypes.INTEGER,
+            allowNull: true,
+        },
+        career_form_12: {
+            type: DataTypes.INTEGER,
+            allowNull: true,
+        },
+        career_form_13: {
+            type: DataTypes.INTEGER,
+            allowNull: true,
+        },
+        career_form_14: {
+            type: DataTypes.INTEGER,
+            allowNull: true,
+        },
+        career_form_15: {
+            type: DataTypes.INTEGER,
+            allowNull: true,
+        },
+        career_form_16: {
+            type: DataTypes.INTEGER,
+            allowNull: true,
+        },
+        career_form_17: {
+            type: DataTypes.INTEGER,
+            allowNull: true,
+        },
+        career_form_18: {
+            type: DataTypes.INTEGER,
+            allowNull: true,
+        },
+        career_form_19: {
+            type: DataTypes.INTEGER,
+            allowNull: true,
+        },
+        career_form_20: {
+            type: DataTypes.INTEGER,
+            allowNull: true,
+        },
+        career_form_11: {
             type: DataTypes.INTEGER,
             allowNull: true,
         },

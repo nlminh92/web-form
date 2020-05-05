@@ -81,6 +81,36 @@ exports.reportCareersForm = async function(req, res) {
                     },
                     {
                         career_form_10: careers[i].id
+                    },
+                    {
+                        career_form_11: careers[i].id
+                    },
+                    {
+                        career_form_12: careers[i].id
+                    },
+                    {
+                        career_form_13: careers[i].id
+                    },
+                    {
+                        career_form_14: careers[i].id
+                    },
+                    {
+                        career_form_15: careers[i].id
+                    },
+                    {
+                        career_form_16: careers[i].id
+                    },
+                    {
+                        career_form_17: careers[i].id
+                    },
+                    {
+                        career_form_18: careers[i].id
+                    },
+                    {
+                        career_form_19: careers[i].id
+                    },
+                    {
+                        career_form_20: careers[i].id
                     }
                 ]
             }
@@ -264,6 +294,26 @@ async function getData(item) {
         career_form_9_code: "",
         career_form_10_name: "",
         career_form_10_code: "",
+        career_form_11_name: "",
+        career_form_11_code: "",
+        career_form_12_name: "",
+        career_form_12_code: "",
+        career_form_13_name: "",
+        career_form_13_code: "",
+        career_form_14_name: "",
+        career_form_14_code: "",
+        career_form_15_name: "",
+        career_form_15_code: "",
+        career_form_16_name: "",
+        career_form_16_code: "",
+        career_form_17_name: "",
+        career_form_17_code: "",
+        career_form_18_name: "",
+        career_form_18_code: "",
+        career_form_19_name: "",
+        career_form_19_code: "",
+        career_form_20_name: "",
+        career_form_20_code: "",
         diemtb11: item.diemtb11,
         diemtb12: item.diemtb12,
         diemtb13: item.diemtb13,
@@ -354,6 +404,96 @@ async function getData(item) {
         diemtb107: item.diemtb107,
         diemtb108: item.diemtb108,
         diemtb109: item.diemtb109,
+        diemtb111: item.diemtb111,
+        diemtb112: item.diemtb112,
+        diemtb113: item.diemtb113,
+        diemtb114: item.diemtb114,
+        diemtb115: item.diemtb115,
+        diemtb116: item.diemtb116,
+        diemtb117: item.diemtb117,
+        diemtb118: item.diemtb118,
+        diemtb119: item.diemtb129,
+        diemtb121: item.diemtb121,
+        diemtb122: item.diemtb122,
+        diemtb123: item.diemtb123,
+        diemtb124: item.diemtb124,
+        diemtb125: item.diemtb125,
+        diemtb126: item.diemtb126,
+        diemtb127: item.diemtb127,
+        diemtb128: item.diemtb128,
+        diemtb129: item.diemtb129,
+        diemtb131: item.diemtb131,
+        diemtb132: item.diemtb132,
+        diemtb133: item.diemtb133,
+        diemtb134: item.diemtb134,
+        diemtb135: item.diemtb135,
+        diemtb136: item.diemtb136,
+        diemtb137: item.diemtb137,
+        diemtb138: item.diemtb138,
+        diemtb139: item.diemtb139,
+        diemtb141: item.diemtb141,
+        diemtb142: item.diemtb142,
+        diemtb143: item.diemtb143,
+        diemtb144: item.diemtb144,
+        diemtb145: item.diemtb145,
+        diemtb146: item.diemtb146,
+        diemtb147: item.diemtb147,
+        diemtb148: item.diemtb148,
+        diemtb149: item.diemtb149,
+        diemtb151: item.diemtb151,
+        diemtb152: item.diemtb152,
+        diemtb153: item.diemtb153,
+        diemtb154: item.diemtb154,
+        diemtb155: item.diemtb155,
+        diemtb156: item.diemtb156,
+        diemtb157: item.diemtb157,
+        diemtb158: item.diemtb158,
+        diemtb159: item.diemtb159,
+        diemtb161: item.diemtb161,
+        diemtb162: item.diemtb162,
+        diemtb163: item.diemtb163,
+        diemtb164: item.diemtb164,
+        diemtb165: item.diemtb165,
+        diemtb166: item.diemtb166,
+        diemtb167: item.diemtb167,
+        diemtb168: item.diemtb168,
+        diemtb169: item.diemtb169,
+        diemtb171: item.diemtb171,
+        diemtb172: item.diemtb172,
+        diemtb173: item.diemtb173,
+        diemtb174: item.diemtb174,
+        diemtb175: item.diemtb175,
+        diemtb176: item.diemtb176,
+        diemtb177: item.diemtb177,
+        diemtb178: item.diemtb178,
+        diemtb179: item.diemtb179,
+        diemtb181: item.diemtb181,
+        diemtb182: item.diemtb182,
+        diemtb183: item.diemtb183,
+        diemtb184: item.diemtb184,
+        diemtb185: item.diemtb185,
+        diemtb186: item.diemtb186,
+        diemtb187: item.diemtb17,
+        diemtb188: item.diemtb188,
+        diemtb189: item.diemtb189,
+        diemtb191: item.diemtb191,
+        diemtb192: item.diemtb192,
+        diemtb193: item.diemtb193,
+        diemtb194: item.diemtb194,
+        diemtb195: item.diemtb195,
+        diemtb196: item.diemtb196,
+        diemtb197: item.diemtb197,
+        diemtb198: item.diemtb198,
+        diemtb199: item.diemtb199,
+        diemtb201: item.diemtb201,
+        diemtb202: item.diemtb202,
+        diemtb203: item.diemtb203,
+        diemtb204: item.diemtb204,
+        diemtb205: item.diemtb205,
+        diemtb206: item.diemtb206,
+        diemtb207: item.diemtb207,
+        diemtb208: item.diemtb208,
+        diemtb209: item.diemtb209,
         combination1: item.combination1,
         combination2: item.combination2,
         combination3: item.combination3,
@@ -363,7 +503,17 @@ async function getData(item) {
         combination7: item.combination7,
         combination8: item.combination8,
         combination9: item.combination9,
-        combination10: item.combination10
+        combination10: item.combination10,
+        combination11: item.combination11,
+        combination12: item.combination12,
+        combination13: item.combination13,
+        combination14: item.combination14,
+        combination15: item.combination15,
+        combination16: item.combination16,
+        combination17: item.combination17,
+        combination18: item.combination18,
+        combination19: item.combination19,
+        combination20: item.combination20,
     };
 
     let place_province = await ProvinceCms.findOne({
@@ -653,6 +803,236 @@ async function getData(item) {
 
     if(career_form_10_obj) {
         data.combination10 = combination10_object.name;
+    }
+    //
+    let career_form_11_obj = await CareersFormCms.findOne({
+        where: {
+            id: item.career_form_11
+        },
+        raw: true
+    });
+
+    let combination11_object = await CombinationCms.findOne({
+        where: {
+            id: item.combination11
+        },
+        raw: true
+    })
+
+    if(career_form_11_obj) {
+        data.career_form_11_code = career_form_11_obj.code;
+        data.career_form_11_name = career_form_11_obj.name;
+    }
+
+    if(career_form_11_obj) {
+        data.combination11 = combination11_object.name;
+    }
+    //
+    let career_form_12_obj = await CareersFormCms.findOne({
+        where: {
+            id: item.career_form_12
+        },
+        raw: true
+    });
+
+    let combination12_object = await CombinationCms.findOne({
+        where: {
+            id: item.combination12
+        },
+        raw: true
+    })
+
+    if(career_form_12_obj) {
+        data.career_form_12_code = career_form_12_obj.code;
+        data.career_form_12_name = career_form_12_obj.name;
+    }
+
+    if(career_form_12_obj) {
+        data.combination12 = combination1_object.name;
+    }
+    //
+    let career_form_13_obj = await CareersFormCms.findOne({
+        where: {
+            id: item.career_form_13
+        },
+        raw: true
+    });
+
+    let combination13_object = await CombinationCms.findOne({
+        where: {
+            id: item.combination13
+        },
+        raw: true
+    })
+
+    if(career_form_13_obj) {
+        data.career_form_13_code = career_form_13_obj.code;
+        data.career_form_13_name = career_form_13_obj.name;
+    }
+
+    if(career_form_13_obj) {
+        data.combination13 = combination13_object.name;
+    }
+    //
+    let career_form_14_obj = await CareersFormCms.findOne({
+        where: {
+            id: item.career_form_14
+        },
+        raw: true
+    });
+
+    let combination14_object = await CombinationCms.findOne({
+        where: {
+            id: item.combination14
+        },
+        raw: true
+    })
+
+    if(career_form_14_obj) {
+        data.career_form_14_code = career_form_14_obj.code;
+        data.career_form_14_name = career_form_14_obj.name;
+    }
+
+    if(career_form_14_obj) {
+        data.combination14 = combination14_object.name;
+    }
+    //
+    let career_form_15_obj = await CareersFormCms.findOne({
+        where: {
+            id: item.career_form_15
+        },
+        raw: true
+    });
+
+    let combination15_object = await CombinationCms.findOne({
+        where: {
+            id: item.combination15
+        },
+        raw: true
+    })
+
+    if(career_form_15_obj) {
+        data.career_form_15_code = career_form_15_obj.code;
+        data.career_form_15_name = career_form_15_obj.name;
+    }
+
+    if(career_form_15_obj) {
+        data.combination15 = combination15_object.name;
+    }
+    //
+    let career_form_16_obj = await CareersFormCms.findOne({
+        where: {
+            id: item.career_form_16
+        },
+        raw: true
+    });
+
+    let combination16_object = await CombinationCms.findOne({
+        where: {
+            id: item.combination16
+        },
+        raw: true
+    })
+
+    if(career_form_16_obj) {
+        data.career_form_16_code = career_form_16_obj.code;
+        data.career_form_16_name = career_form_16_obj.name;
+    }
+
+    if(career_form_16_obj) {
+        data.combination16 = combination16_object.name;
+    }
+    //
+    let career_form_17_obj = await CareersFormCms.findOne({
+        where: {
+            id: item.career_form_17
+        },
+        raw: true
+    });
+
+    let combination17_object = await CombinationCms.findOne({
+        where: {
+            id: item.combination17
+        },
+        raw: true
+    })
+
+    if(career_form_17_obj) {
+        data.career_form_17_code = career_form_17_obj.code;
+        data.career_form_17_name = career_form_17_obj.name;
+    }
+
+    if(career_form_17_obj) {
+        data.combination17 = combination17_object.name;
+    }
+    //
+    let career_form_18_obj = await CareersFormCms.findOne({
+        where: {
+            id: item.career_form_18
+        },
+        raw: true
+    });
+
+    let combination18_object = await CombinationCms.findOne({
+        where: {
+            id: item.combination18
+        },
+        raw: true
+    })
+
+    if(career_form_18_obj) {
+        data.career_form_18_code = career_form_18_obj.code;
+        data.career_form_18_name = career_form_18_obj.name;
+    }
+
+    if(career_form_18_obj) {
+        data.combination1 = combination18_object.name;
+    }
+    //
+    let career_form_19_obj = await CareersFormCms.findOne({
+        where: {
+            id: item.career_form_19
+        },
+        raw: true
+    });
+
+    let combination19_object = await CombinationCms.findOne({
+        where: {
+            id: item.combination19
+        },
+        raw: true
+    })
+
+    if(career_form_19_obj) {
+        data.career_form_19_code = career_form_19_obj.code;
+        data.career_form_19_name = career_form_19_obj.name;
+    }
+
+    if(career_form_19_obj) {
+        data.combination19 = combination19_object.name;
+    }
+    //
+    let career_form_20_obj = await CareersFormCms.findOne({
+        where: {
+            id: item.career_form_20
+        },
+        raw: true
+    });
+
+    let combination20_object = await CombinationCms.findOne({
+        where: {
+            id: item.combination20
+        },
+        raw: true
+    })
+
+    if(career_form_20_obj) {
+        data.career_form_20_code = career_form_20_obj.code;
+        data.career_form_20_name = career_form_20_obj.name;
+    }
+
+    if(career_form_20_obj) {
+        data.combination20 = combination20_object.name;
     }
 
     return data;

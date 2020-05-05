@@ -21,7 +21,7 @@ export class Form1Component implements OnInit {
     numberCareer = 1;
 
     areas = ['1', '2', '3', '2NT']; // areas co them 1 truong nua la 2NT
-    priorities = ['1', '2', '3', '4', '5', '6', '7'];
+    priorities = ['','1', '2', '3', '4', '5', '6', '7'];
 
     genders = [
         {

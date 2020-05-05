@@ -18,13 +18,13 @@ export class Form2Component implements OnInit {
     public form: FormGroup;
     public formValidationModel: any;
     submited = false;
-    number_careers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+    number_careers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20];
     numberCareer = 1;
 
   //  areas = [1, 2, 3];
   //  priorities = [1, 2, 3];
   areas = ['1', '2', '3', '2NT']; // areas co them 1 truong nua la 2NT
-  priorities = ['1', '2', '3', '4', '5', '6', '7'];
+  priorities = ['' ,'1', '2', '3', '4', '5', '6', '7'];
 
     genders = [
         {
@@ -90,6 +90,16 @@ export class Form2Component implements OnInit {
     career_form_8_code="";
     career_form_9_code="";
     career_form_10_code="";
+    career_form_11_code="";
+    career_form_12_code="";
+    career_form_13_code="";
+    career_form_14_code="";
+    career_form_15_code="";
+    career_form_16_code="";
+    career_form_17_code="";
+    career_form_18_code="";
+    career_form_19_code="";
+    career_form_20_code="";
     diemtb11 = "";
     diemtb51 = "";
 
@@ -180,6 +190,36 @@ export class Form2Component implements OnInit {
         }
         if(type == "10") {
             this.career_form_10_code = code;
+        }
+        if(type == "11") {
+            this.career_form_11_code = code;
+        }
+        if(type == "12") {
+            this.career_form_12_code = code;
+        }
+        if(type == "13") {
+            this.career_form_13_code = code;
+        }
+        if(type == "14") {
+            this.career_form_14_code = code;
+        }
+        if(type == "15") {
+            this.career_form_15_code = code;
+        }
+        if(type == "16") {
+            this.career_form_16_code = code;
+        }
+        if(type == "17") {
+            this.career_form_17_code = code;
+        }
+        if(type == "18") {
+            this.career_form_18_code = code;
+        }
+        if(type == "19") {
+            this.career_form_19_code = code;
+        }
+        if(type == "20") {
+            this.career_form_20_code = code;
         }
     }
 

@@ -50,7 +50,9 @@ exports.saveAndCreateDocx = async function (req, res) {
             grade_ten, grade_ten_province_code, grade_ten_school_code, grade_eleven, grade_eleven_school_code, grade_eleven_province_code,
             grade_twelve, grade_twelve_school_code, grade_twelve_province_code, identity_card_date,identity_card_address, province_code, district_code, village_code, permanent_residence,
             career_form_2, career_form_3, career_form_4, career_form_5, career_form_6, career_form_7, career_form_8, career_form_9, career_form_10, career_form_1,
+            career_form_12, career_form_13, career_form_14, career_form_15, career_form_16, career_form_17, career_form_18, career_form_19, career_form_20, career_form_11,
             combination1, combination2, combination3, combination4, combination5, combination6, combination7, combination8, combination9, combination10,
+            combination11, combination12, combination13, combination14, combination15, combination16, combination17, combination18, combination19, combination20,
             diemtb11, diemtb12, diemtb13, diemtb21, diemtb22, diemtb23, diemtb31, diemtb32, diemtb33,
             diemtb14, diemtb15, diemtb16, diemtb17, diemtb18, diemtb19,
             diemtb24, diemtb25, diemtb26, diemtb27, diemtb28, diemtb29,
@@ -62,6 +64,16 @@ exports.saveAndCreateDocx = async function (req, res) {
             diemtb84, diemtb85, diemtb86, diemtb87, diemtb88, diemtb89,
             diemtb94, diemtb95, diemtb96, diemtb97, diemtb98, diemtb99,
             diemtb104, diemtb105, diemtb106, diemtb107, diemtb108, diemtb109,
+            diemtb111, diemtb112, diemtb113, diemtb114, diemtb115, diemtb116, diemtb117, diemtb118, diemtb119,
+            diemtb121, diemtb122, diemtb123, diemtb124, diemtb125, diemtb126, diemtb127, diemtb128, diemtb129,
+            diemtb131, diemtb132, diemtb133, diemtb134, diemtb135, diemtb136, diemtb137, diemtb138, diemtb139,
+            diemtb141, diemtb142, diemtb143, diemtb144, diemtb145, diemtb146, diemtb147, diemtb148, diemtb149,
+            diemtb151, diemtb152, diemtb153, diemtb154, diemtb155, diemtb156, diemtb157, diemtb158, diemtb159,
+            diemtb161, diemtb162, diemtb163, diemtb164, diemtb165, diemtb166, diemtb167, diemtb168, diemtb169,
+            diemtb171, diemtb172, diemtb173, diemtb174, diemtb175, diemtb176, diemtb177, diemtb178, diemtb179,
+            diemtb181, diemtb182, diemtb183, diemtb184, diemtb185, diemtb186, diemtb187, diemtb188, diemtb189,
+            diemtb191, diemtb192, diemtb193, diemtb194, diemtb195, diemtb196, diemtb197, diemtb198, diemtb199,
+            diemtb201, diemtb202, diemtb203, diemtb204, diemtb205, diemtb206, diemtb207, diemtb208, diemtb209,
             // option2, option3, option4, option5, option6, option7, option8, option9, option10,
             diemtb41, diemtb42, diemtb43, diemtb51, diemtb52, diemtb53, diemtb61, diemtb62, diemtb63,
             diemtb71, diemtb72, diemtb73, diemtb81, diemtb82, diemtb83, diemtb91, diemtb92, diemtb93,
@@ -94,27 +106,31 @@ exports.saveAndCreateDocx = async function (req, res) {
              raw: true
          });
 
-        let arr = [career_form_2, career_form_3, career_form_4, career_form_5, career_form_6,
-          career_form_7, career_form_8, career_form_9, career_form_10, career_form_1];
-
-        let comb = [combination1, combination2, combination3, combination4, combination5,
-                    combination6, combination7, combination8, combination9, combination10]
-
-        var filtered = arr.filter(function (el) {
-          return el != null;
-        });
-
-        var unique = filtered.filter((v, i, a) => a.indexOf(v) === i);
-
-        var filtereda = comb.filter(function (ela) {
-          return ela != null;
-        });
-
-        var uniquea = filtereda.filter((v, i, a) => a.indexOf(v) === i);
-
-        if(unique.length != filtered.length && uniquea.length != filtereda.length) {
-          return handleErrorResponse(res, "Các nguyện vọng đăng ký không được trùng nhau");
-        }
+      //   let arr = [career_form_2, career_form_3, career_form_4, career_form_5, career_form_6,
+      //     career_form_7, career_form_8, career_form_9, career_form_10, career_form_11,
+      //   career_form_12, career_form_13, career_form_14, career_form_15, career_form_16,
+      // career_form_17, career_form_18, career_form_19, career_form_20, career_form_1];
+      //
+      //   let comb = [combination1, combination2, combination3, combination4, combination5,
+      //               combination6, combination7, combination8, combination9, combination10,
+      //             combination11, combination12, combination13, combination14, combination15,
+      //           combination16, combination17, combination18, combination19, combination20];
+      //
+      //   var filtered = arr.filter(function (el) {
+      //     return el != null;
+      //   });
+      //
+      //   var unique = filtered.filter((v, i, a) => a.indexOf(v) === i);
+      //
+      //   var filtereda = comb.filter(function (ela) {
+      //     return ela != null;
+      //   });
+      //
+      //   var uniquea = filtereda.filter((v, i, a) => a.indexOf(v) === i);
+      //
+      //   if(unique.length != filtered.length && uniquea.length != filtereda.length) {
+      //     return handleErrorResponse(res, "Các nguyện vọng đăng ký không được trùng nhau");
+      //   }
 
          // chỗ này bạn phải khai báo biến trước khi dùng
          let career_form_1_code = "";
@@ -146,6 +162,36 @@ exports.saveAndCreateDocx = async function (req, res) {
 
          let career_form_10_code = "";
          let career_form_10_name = "";
+
+         let career_form_11_code = "";
+         let career_form_11_name = "";
+
+         let career_form_20_code = "";
+         let career_form_20_name = "";
+
+         let career_form_12_code = "";
+         let career_form_12_name = "";
+
+         let career_form_13_code = "";
+         let career_form_13_name = "";
+
+         let career_form_14_code = "";
+         let career_form_14_name = "";
+
+         let career_form_15_code = "";
+         let career_form_15_name = "";
+
+         let career_form_16_code = "";
+         let career_form_16_name = "";
+
+         let career_form_17_code = "";
+         let career_form_17_name = "";
+
+         let career_form_18_code = "";
+         let career_form_18_name = "";
+
+         let career_form_19_code = "";
+         let career_form_19_name = "";
 
          if(career_form_1_obj) {
              career_form_1_code = career_form_1_obj.code;
@@ -259,6 +305,127 @@ exports.saveAndCreateDocx = async function (req, res) {
             career_form_10_code = career_form_10_obj.code;
             career_form_10_name = career_form_10_obj.name;
         }
+        //
+        let career_form_11_obj = await CareersFormCms.findOne({
+            where: {
+                id: career_form_11
+            },
+            raw: true
+        });
+
+        if(career_form_11_obj) {
+            career_form_11_code = career_form_11_obj.code;
+            career_form_11_name = career_form_11_obj.name;
+        }
+        //
+        let career_form_12_obj = await CareersFormCms.findOne({
+            where: {
+                id: career_form_12
+            },
+            raw: true
+        });
+
+        if(career_form_12_obj) {
+            career_form_12_code = career_form_12_obj.code;
+            career_form_12_name = career_form_12_obj.name;
+        }
+        //
+        let career_form_13_obj = await CareersFormCms.findOne({
+            where: {
+                id: career_form_13
+            },
+            raw: true
+        });
+
+        if(career_form_13_obj) {
+            career_form_13_code = career_form_13_obj.code;
+            career_form_13_name = career_form_13_obj.name;
+        }
+        //
+        let career_form_14_obj = await CareersFormCms.findOne({
+            where: {
+                id: career_form_14
+            },
+            raw: true
+        });
+
+        if(career_form_14_obj) {
+            career_form_14_code = career_form_14_obj.code;
+            career_form_14_name = career_form_14_obj.name;
+        }
+        //
+        let career_form_15_obj = await CareersFormCms.findOne({
+            where: {
+                id: career_form_15
+            },
+            raw: true
+        });
+
+        if(career_form_15_obj) {
+            career_form_15_code = career_form_15_obj.code;
+            career_form_15_name = career_form_15_obj.name;
+        }
+        //
+        let career_form_16_obj = await CareersFormCms.findOne({
+            where: {
+                id: career_form_16
+            },
+            raw: true
+        });
+
+        if(career_form_16_obj) {
+            career_form_16_code = career_form_16_obj.code;
+            career_form_16_name = career_form_16_obj.name;
+        }
+        //
+        let career_form_17_obj = await CareersFormCms.findOne({
+            where: {
+                id: career_form_17
+            },
+            raw: true
+        });
+
+        if(career_form_17_obj) {
+            career_form_17_code = career_form_17_obj.code;
+            career_form_17_name = career_form_17_obj.name;
+        }
+        //
+        let career_form_18_obj = await CareersFormCms.findOne({
+            where: {
+                id: career_form_18
+            },
+            raw: true
+        });
+
+        if(career_form_18_obj) {
+            career_form_18_code = career_form_18_obj.code;
+            career_form_18_name = career_form_18_obj.name;
+        }
+        //
+        let career_form_19_obj = await CareersFormCms.findOne({
+            where: {
+                id: career_form_19
+            },
+            raw: true
+        });
+
+        if(career_form_19_obj) {
+            career_form_19_code = career_form_19_obj.code;
+            career_form_19_name = career_form_19_obj.name;
+        }
+        //
+        let career_form_20_obj = await CareersFormCms.findOne({
+            where: {
+                id: career_form_20
+            },
+            raw: true
+        });
+
+        if(career_form_20_obj) {
+            career_form_20_code = career_form_20_obj.code;
+            career_form_20_name = career_form_20_obj.name;
+        }
+
 //
     var extension = path.extname(file);
     var fileName = path.basename(file,extension);
@@ -305,6 +472,16 @@ exports.saveAndCreateDocx = async function (req, res) {
         let combination8_code = "";
         let combination9_code = "";
         let combination10_code = "";
+        let combination11_code = "";
+        let combination12_code = "";
+        let combination13_code = "";
+        let combination14_code = "";
+        let combination15_code = "";
+        let combination16_code = "";
+        let combination17_code = "";
+        let combination18_code = "";
+        let combination19_code = "";
+        let combination20_code = "";
 
         let combination1Obj = await CombinationCms.findOne({
           where: {
@@ -395,6 +572,96 @@ exports.saveAndCreateDocx = async function (req, res) {
         if(combination10Obj) {
           combination10_code = combination10Obj.name
         }
+
+        let combination11Obj = await CombinationCms.findOne({
+          where: {
+            id: combination11
+          }
+        })
+        if(combination11Obj) {
+          combination11_code = combination11Obj.name
+        }
+
+        let combination12Obj = await CombinationCms.findOne({
+          where: {
+            id: combination12
+          }
+        })
+        if(combination12Obj) {
+          combination12_code = combination12Obj.name
+        }
+
+        let combination13Obj = await CombinationCms.findOne({
+          where: {
+            id: combination13
+          }
+        })
+        if(combination13Obj) {
+          combination13_code = combination13Obj.name
+        }
+
+        let combination14Obj = await CombinationCms.findOne({
+          where: {
+            id: combination14
+          }
+        })
+        if(combination14Obj) {
+          combination14_code = combination14Obj.name
+        }
+
+        let combination15Obj = await CombinationCms.findOne({
+          where: {
+            id: combination15
+          }
+        })
+        if(combination15Obj) {
+          combination15_code = combination15Obj.name
+        }
+
+        let combination16Obj = await CombinationCms.findOne({
+          where: {
+            id: combination16
+          }
+        })
+        if(combination16Obj) {
+          combination16_code = combination16Obj.name
+        }
+
+        let combination17Obj = await CombinationCms.findOne({
+          where: {
+            id: combination17
+          }
+        })
+        if(combination17Obj) {
+          combination17_code = combination17Obj.name
+        }
+
+        let combination18Obj = await CombinationCms.findOne({
+          where: {
+            id: combination18
+          }
+        })
+        if(combination18Obj) {
+          combination18_code = combination18Obj.name
+        }
+
+        let combination19Obj = await CombinationCms.findOne({
+          where: {
+            id: combination19
+          }
+        })
+        if(combination19Obj) {
+          combination19_code = combination19Obj.name
+        }
+
+        let combination20Obj = await CombinationCms.findOne({
+          where: {
+            id: combination20
+          }
+        })
+        if(combination20Obj) {
+          combination20_code = combination20Obj.name
+        }
         //let session_id = 2;
          let session_id = session.id;
 
@@ -404,7 +671,9 @@ exports.saveAndCreateDocx = async function (req, res) {
             grade_ten, grade_ten_province_code, grade_ten_school_code, grade_eleven, grade_eleven_school_code, grade_eleven_province_code,
             grade_twelve, grade_twelve_school_code, grade_twelve_province_code, area, priority, identity_card_date,identity_card_address, province_code, district_code, village_code, permanent_residence, career_form_1,
             career_form_2, career_form_3, career_form_4, career_form_5, career_form_6, career_form_7, career_form_8, career_form_9, career_form_10,
+            career_form_12, career_form_13, career_form_14, career_form_15, career_form_16, career_form_17, career_form_18, career_form_19, career_form_20, career_form_11,
             combination1, combination2, combination3, combination4, combination5, combination6, combination7, combination8, combination9, combination10,
+                        combination11, combination12, combination13, combination14, combination15, combination16, combination17, combination18, combination19, combination20,
             diemtb11, diemtb12, diemtb13, diemtb21, diemtb22, diemtb23, diemtb31, diemtb32, diemtb33,
             diemtb14, diemtb15, diemtb16, diemtb17, diemtb18, diemtb19,
             diemtb24, diemtb25, diemtb26, diemtb27, diemtb28, diemtb29,
@@ -416,6 +685,16 @@ exports.saveAndCreateDocx = async function (req, res) {
             diemtb84, diemtb85, diemtb86, diemtb87, diemtb88, diemtb89,
             diemtb94, diemtb95, diemtb96, diemtb97, diemtb98, diemtb99,
             diemtb104, diemtb105, diemtb106, diemtb107, diemtb108, diemtb109,
+            diemtb111, diemtb112, diemtb113, diemtb114, diemtb115, diemtb116, diemtb117, diemtb118, diemtb119,
+            diemtb121, diemtb122, diemtb123, diemtb124, diemtb125, diemtb126, diemtb127, diemtb128, diemtb129,
+            diemtb131, diemtb132, diemtb133, diemtb134, diemtb135, diemtb136, diemtb137, diemtb138, diemtb139,
+            diemtb141, diemtb142, diemtb143, diemtb144, diemtb145, diemtb146, diemtb147, diemtb148, diemtb149,
+            diemtb151, diemtb152, diemtb153, diemtb154, diemtb155, diemtb156, diemtb157, diemtb158, diemtb159,
+            diemtb161, diemtb162, diemtb163, diemtb164, diemtb165, diemtb166, diemtb167, diemtb168, diemtb169,
+            diemtb171, diemtb172, diemtb173, diemtb174, diemtb175, diemtb176, diemtb177, diemtb178, diemtb179,
+            diemtb181, diemtb182, diemtb183, diemtb184, diemtb185, diemtb186, diemtb187, diemtb188, diemtb189,
+            diemtb191, diemtb192, diemtb193, diemtb194, diemtb195, diemtb196, diemtb197, diemtb198, diemtb199,
+            diemtb201, diemtb202, diemtb203, diemtb204, diemtb205, diemtb206, diemtb207, diemtb208, diemtb209,
             // option2, option3, option4, option5, option6, option7, option8, option9, option10,
             diemtb41, diemtb42, diemtb43, diemtb51, diemtb52, diemtb53, diemtb61, diemtb62, diemtb63,
             diemtb71, diemtb72, diemtb73, diemtb81, diemtb82, diemtb83, diemtb91, diemtb92, diemtb93,
@@ -473,6 +752,16 @@ exports.saveAndCreateDocx = async function (req, res) {
             career_form_8: career_form_8_name,
             career_form_9: career_form_9_name,
             career_form_10: career_form_10_name,
+            career_form_11: career_form_11_name,
+            career_form_12: career_form_12_name,
+            career_form_13: career_form_13_name,
+            career_form_14: career_form_14_name,
+            career_form_15: career_form_15_name,
+            career_form_16: career_form_16_name,
+            career_form_17: career_form_17_name,
+            career_form_18: career_form_18_name,
+            career_form_19: career_form_19_name,
+            career_form_20: career_form_20_name,
             career_form_1_code: career_form_1_code,
             career_form_2_code: career_form_2_code,
             career_form_3_code: career_form_3_code,
@@ -483,6 +772,16 @@ exports.saveAndCreateDocx = async function (req, res) {
             career_form_8_code: career_form_8_code,
             career_form_9_code: career_form_9_code,
             career_form_10_code: career_form_10_code,
+            career_form_11_code: career_form_11_code,
+            career_form_12_code: career_form_12_code,
+            career_form_13_code: career_form_13_code,
+            career_form_14_code: career_form_14_code,
+            career_form_15_code: career_form_15_code,
+            career_form_16_code: career_form_16_code,
+            career_form_17_code: career_form_17_code,
+            career_form_18_code: career_form_18_code,
+            career_form_19_code: career_form_19_code,
+            career_form_20_code: career_form_20_code,
             i0: identity_card[0] ? identity_card[0] : '',
             i1: identity_card[1] ? identity_card[1] : '',
             i2: identity_card[2] ? identity_card[2] : '',
@@ -538,6 +837,16 @@ exports.saveAndCreateDocx = async function (req, res) {
             combination8: combination8_code,
             combination9: combination9_code,
             combination10: combination10_code,
+            combination11: combination11_code,
+            combination12: combination12_code,
+            combination13: combination13_code,
+            combination14: combination14_code,
+            combination15: combination15_code,
+            combination16: combination16_code,
+            combination17: combination17_code,
+            combination18: combination18_code,
+            combination19: combination19_code,
+            combination20: combination20_code,
             diemtb11: diemtb11,
             diemtb12: diemtb12,
             diemtb13: diemtb13,
@@ -636,6 +945,106 @@ exports.saveAndCreateDocx = async function (req, res) {
             diemtb107: diemtb107 ? diemtb107: "",
             diemtb108: diemtb108 ? diemtb108: "",
             diemtb109: diemtb109 ? diemtb109: "",
+
+            diemtb111: diemtb111 ? diemtb111: "",
+            diemtb112: diemtb112 ? diemtb112: "",
+            diemtb113: diemtb113 ? diemtb113: "",
+            diemtb114: diemtb114 ? diemtb114: "",
+            diemtb115: diemtb115 ? diemtb115: "",
+            diemtb116: diemtb116 ? diemtb116: "",
+            diemtb117: diemtb117 ? diemtb117: "",
+            diemtb118: diemtb118 ? diemtb118: "",
+            diemtb119: diemtb119 ? diemtb119: "",
+
+            diemtb121: diemtb121 ? diemtb121: "",
+            diemtb122: diemtb122 ? diemtb122: "",
+            diemtb123: diemtb123 ? diemtb123: "",
+            diemtb124: diemtb124 ? diemtb124: "",
+            diemtb125: diemtb125 ? diemtb125: "",
+            diemtb126: diemtb126 ? diemtb126: "",
+            diemtb127: diemtb127 ? diemtb127: "",
+            diemtb128: diemtb128 ? diemtb128: "",
+            diemtb129: diemtb129 ? diemtb129: "",
+
+            diemtb131: diemtb131 ? diemtb131: "",
+            diemtb132: diemtb132 ? diemtb132: "",
+            diemtb133: diemtb133 ? diemtb133: "",
+            diemtb134: diemtb134 ? diemtb134: "",
+            diemtb135: diemtb135 ? diemtb135: "",
+            diemtb136: diemtb136 ? diemtb136: "",
+            diemtb137: diemtb137 ? diemtb137: "",
+            diemtb138: diemtb138 ? diemtb138: "",
+            diemtb139: diemtb139 ? diemtb139: "",
+
+            diemtb141: diemtb141 ? diemtb141: "",
+            diemtb142: diemtb142 ? diemtb142: "",
+            diemtb143: diemtb143 ? diemtb143: "",
+            diemtb144: diemtb144 ? diemtb144: "",
+            diemtb145: diemtb145 ? diemtb145: "",
+            diemtb146: diemtb146 ? diemtb146: "",
+            diemtb147: diemtb147 ? diemtb147: "",
+            diemtb148: diemtb148 ? diemtb148: "",
+            diemtb149: diemtb149 ? diemtb149: "",
+
+            diemtb151: diemtb151 ? diemtb151: "",
+            diemtb152: diemtb152 ? diemtb152: "",
+            diemtb153: diemtb153 ? diemtb153: "",
+            diemtb154: diemtb154 ? diemtb154: "",
+            diemtb155: diemtb155 ? diemtb155: "",
+            diemtb156: diemtb156 ? diemtb156: "",
+            diemtb157: diemtb157 ? diemtb157: "",
+            diemtb158: diemtb158 ? diemtb158: "",
+            diemtb159: diemtb159 ? diemtb159: "",
+
+            diemtb161: diemtb161 ? diemtb161: "",
+            diemtb162: diemtb162 ? diemtb162: "",
+            diemtb163: diemtb163 ? diemtb163: "",
+            diemtb164: diemtb164 ? diemtb164: "",
+            diemtb165: diemtb165 ? diemtb165: "",
+            diemtb166: diemtb166 ? diemtb166: "",
+            diemtb167: diemtb167 ? diemtb167: "",
+            diemtb168: diemtb168 ? diemtb168: "",
+            diemtb169: diemtb169 ? diemtb169: "",
+
+            diemtb171: diemtb171 ? diemtb171: "",
+            diemtb172: diemtb172 ? diemtb172: "",
+            diemtb173: diemtb173 ? diemtb173: "",
+            diemtb174: diemtb174 ? diemtb174: "",
+            diemtb175: diemtb175 ? diemtb175: "",
+            diemtb176: diemtb176 ? diemtb176: "",
+            diemtb177: diemtb177 ? diemtb177: "",
+            diemtb178: diemtb178 ? diemtb178: "",
+            diemtb179: diemtb179 ? diemtb179: "",
+
+            diemtb181: diemtb181 ? diemtb181: "",
+            diemtb182: diemtb182 ? diemtb182: "",
+            diemtb183: diemtb183 ? diemtb183: "",
+            diemtb184: diemtb184 ? diemtb184: "",
+            diemtb185: diemtb185 ? diemtb185: "",
+            diemtb186: diemtb186 ? diemtb186: "",
+            diemtb187: diemtb187 ? diemtb187: "",
+            diemtb188: diemtb188 ? diemtb188: "",
+            diemtb189: diemtb189 ? diemtb189: "",
+
+            diemtb191: diemtb191 ? diemtb191: "",
+            diemtb192: diemtb192 ? diemtb192: "",
+            diemtb193: diemtb193 ? diemtb193: "",
+            diemtb194: diemtb194 ? diemtb194: "",
+            diemtb195: diemtb195 ? diemtb195: "",
+            diemtb196: diemtb196 ? diemtb196: "",
+            diemtb197: diemtb197 ? diemtb197: "",
+            diemtb198: diemtb198 ? diemtb198: "",
+            diemtb199: diemtb199 ? diemtb199: "",
+
+            diemtb201: diemtb201 ? diemtb201: "",
+            diemtb202: diemtb202 ? diemtb202: "",
+            diemtb203: diemtb203 ? diemtb203: "",
+            diemtb204: diemtb204 ? diemtb204: "",
+            diemtb205: diemtb205 ? diemtb205: "",
+            diemtb206: diemtb206 ? diemtb206: "",
+            diemtb207: diemtb207 ? diemtb207: "",
+            diemtb208: diemtb208 ? diemtb208: "",
+            diemtb209: diemtb209 ? diemtb209: "",
 
             d1: new Date().getDate(),
             m1: new Date().getMonth() + 1
