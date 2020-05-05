@@ -7,7 +7,7 @@
         <div class="mdc-layout-grid__inner">
             <div class="mdc-layout-grid__cell--span-12">
                 <p class="p-custom">
-                    Lưu ý: Tải Form điền thông tin  <a href="https://drive.google.com/file/d/1S3hlTAtm1RvmjoIRnd9448yYpuHg2IiM/view?usp=sharing">tại đây</a>, vui lòng hoàn thành Form có xác nhận của trường trước khi nhập thông tin.
+                    Lưu ý: Tải Form và điền thông tin  <a href="https://drive.google.com/file/d/1S3hlTAtm1RvmjoIRnd9448yYpuHg2IiM/view?usp=sharing">tại đây</a>, vui lòng hoàn thành Form có xác nhận của trường THPT trước khi nhập thông tin.
                 </p>
             </div>
         </div>
@@ -2875,7 +2875,7 @@ tiên như bảng sau:
 <div class="mdc-layout-grid__inner">
   <div class="mdc-layout-grid__cell--span-12">
       <p class="p-custom">
-(Nộp kèm file minh chứng, Lưu ý: Chỉ chấp nhận file có đuôi jpg, jpeg, png, pdf)
+(Nộp kèm file minh chứng, Lưu ý: Chỉ chấp nhận file pdf)
       </p>
   </div>
       <div class="mdc-layout-grid__cell--span-6">
@@ -2884,7 +2884,7 @@ tiên như bảng sau:
                 <form action="/api/uploadfile" method="post" enctype="multipart/form-data">
                   <div class="form-group">
                     <label for="example-input-file"  type="file" ng-model="up.file" class="custom-file-input" id="inputGroupFile01" aria-describedby="inputGroupFileAddon01"> </label>
-                    <input #inputFile type="file" (change)="fileChange($event)" id="fileInputId" name="file" class="form-control-file border">
+                    <input #inputFile type="file" accept=".pdf" (change)="fileChange($event)" id="fileInputId" name="file" class="form-control-file border">
                   </div>
                 </form>
               </div>
