@@ -245,7 +245,7 @@ export class Form2Component implements OnInit {
             let data = this.form.getRawValue();
             data['file'] = this.file;
             if(!this.file || this.file == '') {
-                this._snackBar.open("Vui lòng chọn ảnh", "x", {
+                this._snackBar.open("Vui lòng đính kèm file minh chứng", "x", {
                     duration: 2000,
                 });
                 this.submited = false;

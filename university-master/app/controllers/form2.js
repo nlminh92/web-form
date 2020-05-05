@@ -46,14 +46,14 @@ exports.getCombination = async function(req, res) {
 exports.saveAndCreateDocx = async function (req, res) {
     try {
         // Đây bạn thay bằng các param clien gửi lên
-        let {name, gender, birthday, place_of_birth, place_of_birth2, identity_card, address, mobilephone, email, nation, area, priority, graduate_year,
+        let {name, gender, birthday, place_of_birth, place_of_birth2, identity_card, address, mobilephone, email, nation,
             grade_ten, grade_ten_province_code, grade_ten_school_code, grade_eleven, grade_eleven_school_code, grade_eleven_province_code,
             grade_twelve, grade_twelve_school_code, grade_twelve_province_code, identity_card_date,identity_card_address, province_code, district_code, village_code, permanent_residence,
             career_form_2, career_form_3, career_form_4, career_form_5, career_form_6, career_form_7, career_form_8, career_form_9, career_form_10, career_form_1,
             career_form_12, career_form_13, career_form_14, career_form_15, career_form_16, career_form_17, career_form_18, career_form_19, career_form_20, career_form_11,
             combination1, combination2, combination3, combination4, combination5, combination6, combination7, combination8, combination9, combination10,
             combination11, combination12, combination13, combination14, combination15, combination16, combination17, combination18, combination19, combination20,
-            diemtb11, diemtb12, diemtb13, diemtb21, diemtb22, diemtb23, diemtb31, diemtb32, diemtb33,
+            diemtb11, diemtb12, diemtb13, diemtb21, diemtb22, diemtb23, diemtb31, diemtb32, diemtb33, graduate_year, area, priority,
             diemtb14, diemtb15, diemtb16, diemtb17, diemtb18, diemtb19,
             diemtb24, diemtb25, diemtb26, diemtb27, diemtb28, diemtb29,
             diemtb34, diemtb35, diemtb36, diemtb37, diemtb38, diemtb39,
@@ -106,31 +106,31 @@ exports.saveAndCreateDocx = async function (req, res) {
              raw: true
          });
 
-      //   let arr = [career_form_2, career_form_3, career_form_4, career_form_5, career_form_6,
-      //     career_form_7, career_form_8, career_form_9, career_form_10, career_form_11,
-      //   career_form_12, career_form_13, career_form_14, career_form_15, career_form_16,
-      // career_form_17, career_form_18, career_form_19, career_form_20, career_form_1];
-      //
-      //   let comb = [combination1, combination2, combination3, combination4, combination5,
-      //               combination6, combination7, combination8, combination9, combination10,
-      //             combination11, combination12, combination13, combination14, combination15,
-      //           combination16, combination17, combination18, combination19, combination20];
-      //
-      //   var filtered = arr.filter(function (el) {
-      //     return el != null;
-      //   });
-      //
-      //   var unique = filtered.filter((v, i, a) => a.indexOf(v) === i);
-      //
-      //   var filtereda = comb.filter(function (ela) {
-      //     return ela != null;
-      //   });
-      //
-      //   var uniquea = filtereda.filter((v, i, a) => a.indexOf(v) === i);
-      //
-      //   if(unique.length != filtered.length && uniquea.length != filtereda.length) {
-      //     return handleErrorResponse(res, "Các nguyện vọng đăng ký không được trùng nhau");
-      //   }
+        let arr = [career_form_2, career_form_3, career_form_4, career_form_5, career_form_6,
+          career_form_7, career_form_8, career_form_9, career_form_10, career_form_11,
+        career_form_12, career_form_13, career_form_14, career_form_15, career_form_16,
+      career_form_17, career_form_18, career_form_19, career_form_20, career_form_1];
+
+        let comb = [combination1, combination2, combination3, combination4, combination5,
+                    combination6, combination7, combination8, combination9, combination10,
+                  combination11, combination12, combination13, combination14, combination15,
+                combination16, combination17, combination18, combination19, combination20];
+
+        var filtered = arr.filter(function (el) {
+          return el != null;
+        });
+
+        var unique = filtered.filter((v, i, a) => a.indexOf(v) === i);
+
+        var filtereda = comb.filter(function (el) {
+          return el != null;
+        });
+
+        var uniquea = filtereda.filter((v, i, a) => a.indexOf(v) === i);
+
+        if(unique.length != filtered.length && uniquea.length != filtereda.length) {
+          return handleErrorResponse(res, "Các nguyện vọng đăng ký không được trùng nhau");
+        }
 
          // chỗ này bạn phải khai báo biến trước khi dùng
          let career_form_1_code = "";
@@ -667,14 +667,14 @@ exports.saveAndCreateDocx = async function (req, res) {
 
 
 // Lưu dữ liệu vào bảng
-        let result = await CurriculumVitaeCms.create({name, gender, birthday, place_of_birth, place_of_birth2, identity_card, address, mobilephone, email, nation, graduate_year,
+        let result = await CurriculumVitaeCms.create({name, gender, birthday, place_of_birth, place_of_birth2, identity_card, address, mobilephone, email, nation,
             grade_ten, grade_ten_province_code, grade_ten_school_code, grade_eleven, grade_eleven_school_code, grade_eleven_province_code,
-            grade_twelve, grade_twelve_school_code, grade_twelve_province_code, area, priority, identity_card_date,identity_card_address, province_code, district_code, village_code, permanent_residence, career_form_1,
+            grade_twelve, grade_twelve_school_code, grade_twelve_province_code, priority, identity_card_date,identity_card_address, province_code, district_code, village_code, permanent_residence, career_form_1,
             career_form_2, career_form_3, career_form_4, career_form_5, career_form_6, career_form_7, career_form_8, career_form_9, career_form_10,
             career_form_12, career_form_13, career_form_14, career_form_15, career_form_16, career_form_17, career_form_18, career_form_19, career_form_20, career_form_11,
             combination1, combination2, combination3, combination4, combination5, combination6, combination7, combination8, combination9, combination10,
                         combination11, combination12, combination13, combination14, combination15, combination16, combination17, combination18, combination19, combination20,
-            diemtb11, diemtb12, diemtb13, diemtb21, diemtb22, diemtb23, diemtb31, diemtb32, diemtb33,
+            diemtb11, diemtb12, diemtb13, diemtb21, diemtb22, diemtb23, diemtb31, diemtb32, diemtb33, graduate_year, area,
             diemtb14, diemtb15, diemtb16, diemtb17, diemtb18, diemtb19,
             diemtb24, diemtb25, diemtb26, diemtb27, diemtb28, diemtb29,
             diemtb34, diemtb35, diemtb36, diemtb37, diemtb38, diemtb39,
@@ -736,6 +736,9 @@ exports.saveAndCreateDocx = async function (req, res) {
             province: place_province.name,
           //  place_of_birth: place_province ? place_province.name : "",
             place_of_birth2: place_of_birth2,
+            graduate_year: graduate_year,
+            area: area,
+            priority: priority ? priority: "",
             identity_card_date: day,
             identity_card_address: identity_card_address,
             province_code: province_code,
