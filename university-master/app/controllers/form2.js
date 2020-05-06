@@ -197,7 +197,7 @@ exports.saveAndCreateDocx = async function (req, res) {
              career_form_1_code = career_form_1_obj.code;
              career_form_1_name = career_form_1_obj.name;
          }
-        // máy chỗ này b phải dùng careform chứ
+     
          let career_form_2_obj = await CareersFormCms.findOne({
              where: {
                  id: career_form_2
@@ -673,7 +673,7 @@ exports.saveAndCreateDocx = async function (req, res) {
             career_form_2, career_form_3, career_form_4, career_form_5, career_form_6, career_form_7, career_form_8, career_form_9, career_form_10,
             career_form_12, career_form_13, career_form_14, career_form_15, career_form_16, career_form_17, career_form_18, career_form_19, career_form_20, career_form_11,
             combination1, combination2, combination3, combination4, combination5, combination6, combination7, combination8, combination9, combination10,
-                        combination11, combination12, combination13, combination14, combination15, combination16, combination17, combination18, combination19, combination20,
+            combination11, combination12, combination13, combination14, combination15, combination16, combination17, combination18, combination19, combination20,
             diemtb11, diemtb12, diemtb13, diemtb21, diemtb22, diemtb23, diemtb31, diemtb32, diemtb33, graduate_year, area,
             diemtb14, diemtb15, diemtb16, diemtb17, diemtb18, diemtb19,
             diemtb24, diemtb25, diemtb26, diemtb27, diemtb28, diemtb29,
