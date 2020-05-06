@@ -80,7 +80,7 @@ exports.saveAndCreateDocx = async function (req, res) {
             diemtb101, diemtb102, diemtb103, file} = req.body;
 // Chỗ này là xóa khoảng cách thừa thôi
         identity_card = identity_card.trim();
-
+        console.log(village_code);
         // Check xem quá giờ đăng ký chưa?
         let session = await SessionCms.findOne({
             where: {
@@ -197,7 +197,7 @@ exports.saveAndCreateDocx = async function (req, res) {
              career_form_1_code = career_form_1_obj.code;
              career_form_1_name = career_form_1_obj.name;
          }
-     
+
          let career_form_2_obj = await CareersFormCms.findOne({
              where: {
                  id: career_form_2
@@ -743,7 +743,7 @@ exports.saveAndCreateDocx = async function (req, res) {
             identity_card_address: identity_card_address,
             province_code: province_code,
             district_code: district_code,
-            village_code: village_code,
+            village_code: village_code ? village_code: "",
             permanent_residence: permanent_residence,
             career_form_1: career_form_1_name,
             career_form_2: career_form_2_name,
@@ -828,8 +828,8 @@ exports.saveAndCreateDocx = async function (req, res) {
             u2: province_code[1] ? province_code[1] : '',
             n1: district_code[0] ? district_code[0] : '',
             n2: district_code[1] ? district_code[1] : '',
-            o1: village_code[0] ? village_code[0] : '',
-            o2: village_code[1] ? village_code[1] : '',
+            o1: village_code && village_code[0] ? village_code[0] : '',
+            o2: village_code && village_code[1] ? village_code[1] : '',
             combination1: combination1_code,
             combination2: combination2_code,
             combination3: combination3_code,

@@ -639,7 +639,6 @@ export const form2Validation = {
       { type: 'required', messageKey: 'form.validation.required' }
     ],
     'village_code': [
-      { type: 'required', messageKey: 'form.validation.required' }
     ],
     'grade_ten': [
         { type: 'required', messageKey: 'form.validation.required' }

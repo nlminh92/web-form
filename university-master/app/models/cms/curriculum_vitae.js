@@ -80,8 +80,8 @@ module.exports = (sequelize, DataTypes) => {
             allowNull: true,
         },
         village_code: {
-            type: DataTypes.INTEGER,
-            allowNull: true,
+            type: DataTypes.STRING,
+              allowNull: true,
         },
         permanent_residence: {
             type: DataTypes.STRING,
