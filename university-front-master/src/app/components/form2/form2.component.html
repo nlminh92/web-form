@@ -2884,7 +2884,7 @@ tiên như bảng sau:
                 <form action="/api/uploadfile" method="post" enctype="multipart/form-data">
                   <div class="form-group">
                     <label for="example-input-file"  type="file" ng-model="up.file" class="custom-file-input" id="inputGroupFile01" aria-describedby="inputGroupFileAddon01"> </label>
-                    <input #inputFile type="file" accept=".pdf, image/png, image/jpeg, image/png  " (change)="fileChange($event)" id="fileInputId" name="file" class="form-control-file border">
+                    <input #inputFile type="file" accept=".pdf, image/png, image/jpeg, image/png  " (change)="fileChange($event)" id="fileInputId" name="file" class="form-control-file border" multiple>
                   </div>
                 </form>
               </div>

@@ -73,8 +73,16 @@ app.post('/api/uploadfile', (req, res) => {
     if (error) {
       return res.send(`Error when trying to upload: ${error}`);
     }
+    console.log(req.files);
+    let files = [
+
+    ];
+    for(let i = 0; i < req.files.length; i ++) {
+      let file = `/upload/${req.files[i].filename}`;
+      files.push(file);
+    }
     res.json({
-      'file': `/upload/${req.file.filename}`
+      'file': files
     });
   });
 });
@@ -89,15 +97,16 @@ let diskStorage = multer.diskStorage({
       let errorMess = `The file <strong>${file.originalname}</strong> is invalid. Only allowed to upload image jpeg or png.`;
       return callback(errorMess, null);
     }
-    let filename = `${file.originalname}`;
+    let filename = `${new Date().getTime()}_${file.originalname}`;
     callback(null, filename);
   }
 });
 
-  let uploadFile = multer({storage: diskStorage}).single("file");
+  let uploadFile = multer({storage: diskStorage}).array("file");
+  let uploadImage = multer({storage: diskStorage}).single("file");
   //
   app.post('/api/upload', (req, res) => {
-    uploadFile(req, res, (error) => {
+    uploadImage(req, res, (error) => {
       if (error) {
         return res.send(`Error when trying to upload: ${error}`);
       }

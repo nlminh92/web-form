@@ -427,21 +427,23 @@ exports.saveAndCreateDocx = async function (req, res) {
         }
 
 //
-    var extension = path.extname(file);
-    var fileName = path.basename(file,extension);
-    var newFileName = `${__dirname}/../../form2/${identity_card}-${name}${extension}`;
-    await fs.rename(`${__dirname}/../..${file}`, newFileName, function(err) {
-      if ( err ) console.log('ERROR: ' + err);
-      });
-        file1 = newFileName;
-        console.log(`${__dirname}/../..${file}`);
-// combination
-
+    if(file) {
+      for(let i = 0; i < file.length; i ++) {
+        let fileTmp = file[i];
+        var extension = path.extname(fileTmp);
+        var fileName = path.basename(fileTmp,extension);
+        var newFileName = `${__dirname}/../../form2/${identity_card}-${name}-${i}${extension}`;
+        await fs.rename(`${__dirname}/../..${fileTmp}`, newFileName, function(err) {
+        if ( err ) console.log('ERROR: ' + err);
+        });
+      }
+    }
+        // combination
         // Lay thong tin noi SINH
         let place_province = await ProvinceCms.findOne({
             id: place_of_birth
         });
-// Lấy thông tin ngành đăng ký
+        // Lấy thông tin ngành đăng ký
         let count = await CurriculumVitaeCms.count({});
         let code = (count + 1).toString();
 
