@@ -429,12 +429,12 @@ exports.saveAndCreateDocx = async function (req, res) {
 //
     var extension = path.extname(file);
     var fileName = path.basename(file,extension);
-    var newFileName = `${__dirname}/../../uploadfile/${identity_card}-${name}${extension}`;
+    var newFileName = `${__dirname}/../../form2/${identity_card}-${name}${extension}`;
     await fs.rename(`${__dirname}/../..${file}`, newFileName, function(err) {
       if ( err ) console.log('ERROR: ' + err);
       });
         file1 = newFileName;
-        console.log(file);
+        console.log(`${__dirname}/../..${file}`);
 // combination
 
         // Lay thong tin noi SINH

@@ -47,7 +47,7 @@ exports.saveAndCreateDocx = async function (req, res) {
         // rename file
         var extension = path.extname(file);
         var fileName = path.basename(file,extension);
-        var newFileName = `${__dirname}/../../upload/${identity_card}-${name}${extension}`;
+        var newFileName = `${__dirname}/../../form3/${identity_card}-${name}${extension}`;
         await fs.rename(`${__dirname}/../..${file}`, newFileName, function(err) {
             if ( err ) console.log('ERROR: ' + err);
         });
