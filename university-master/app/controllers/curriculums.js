@@ -599,7 +599,7 @@ async function getData(item) {
 
 
 
-    if(career_form_1_obj) {
+    if(combination1_object) {
         data.combination1 = combination1_object.name;
     }
 
@@ -616,7 +616,7 @@ async function getData(item) {
         data.career_form_2_name = career_form_2_obj.name;
     }
 
-    if(career_form_2_obj) {
+    if(combination2_object) {
         data.combination2 = combination2_object.name;
     }
 
@@ -640,7 +640,7 @@ async function getData(item) {
         data.career_form_3_name = career_form_3_obj.name;
     }
 
-    if(career_form_3_obj) {
+    if(combination3_object) {
         data.combination3 = combination3_object.name;
     }
 
@@ -663,7 +663,7 @@ async function getData(item) {
         data.career_form_4_name = career_form_4_obj.name;
     }
 
-    if(career_form_4_obj) {
+    if(combination4_object) {
         data.combination4 = combination4_object.name;
     }
 
@@ -686,7 +686,7 @@ async function getData(item) {
         data.career_form_5_name = career_form_5_obj.name;
     }
 
-    if(career_form_5_obj) {
+    if(combination5_object) {
         data.combination5 = combination5_object.name;
     }
 
@@ -709,7 +709,7 @@ async function getData(item) {
         data.career_form_6_name = career_form_6_obj.name;
     }
 
-    if(career_form_6_obj) {
+    if(combination6_object) {
         data.combination6 = combination6_object.name;
     }
 
@@ -732,7 +732,7 @@ async function getData(item) {
         data.career_form_7_name = career_form_7_obj.name;
     }
 
-    if(career_form_7_obj) {
+    if(combination7_object) {
         data.combination7 = combination7_object.name;
     }
 
@@ -755,7 +755,7 @@ async function getData(item) {
         data.career_form_8_name = career_form_8_obj.name;
     }
 
-    if(career_form_8_obj) {
+    if(combination8_object) {
         data.combination8 = combination8_object.name;
     }
 
@@ -778,7 +778,7 @@ async function getData(item) {
         data.career_form_9_name = career_form_9_obj.name;
     }
 
-    if(career_form_9_obj) {
+    if(combination9_object) {
         data.combination9 = combination9_object.name;
     }
 
@@ -801,7 +801,7 @@ async function getData(item) {
         data.career_form_10_name = career_form_10_obj.name;
     }
 
-    if(career_form_10_obj) {
+    if(combination10_object) {
         data.combination10 = combination10_object.name;
     }
     //
@@ -824,7 +824,7 @@ async function getData(item) {
         data.career_form_11_name = career_form_11_obj.name;
     }
 
-    if(career_form_11_obj) {
+    if(combination11_object) {
         data.combination11 = combination11_object.name;
     }
     //
@@ -847,7 +847,7 @@ async function getData(item) {
         data.career_form_12_name = career_form_12_obj.name;
     }
 
-    if(career_form_12_obj) {
+    if(combination12_object) {
         data.combination12 = combination1_object.name;
     }
     //
@@ -870,7 +870,7 @@ async function getData(item) {
         data.career_form_13_name = career_form_13_obj.name;
     }
 
-    if(career_form_13_obj) {
+    if(combination13_object) {
         data.combination13 = combination13_object.name;
     }
     //
@@ -893,7 +893,7 @@ async function getData(item) {
         data.career_form_14_name = career_form_14_obj.name;
     }
 
-    if(career_form_14_obj) {
+    if(combination14_object) {
         data.combination14 = combination14_object.name;
     }
     //
@@ -916,7 +916,7 @@ async function getData(item) {
         data.career_form_15_name = career_form_15_obj.name;
     }
 
-    if(career_form_15_obj) {
+    if(combination15_object) {
         data.combination15 = combination15_object.name;
     }
     //
@@ -939,7 +939,7 @@ async function getData(item) {
         data.career_form_16_name = career_form_16_obj.name;
     }
 
-    if(career_form_16_obj) {
+    if(combination16_object) {
         data.combination16 = combination16_object.name;
     }
     //
@@ -962,7 +962,7 @@ async function getData(item) {
         data.career_form_17_name = career_form_17_obj.name;
     }
 
-    if(career_form_17_obj) {
+    if(combination17_object) {
         data.combination17 = combination17_object.name;
     }
     //
@@ -985,7 +985,7 @@ async function getData(item) {
         data.career_form_18_name = career_form_18_obj.name;
     }
 
-    if(career_form_18_obj) {
+    if(combination18_object) {
         data.combination1 = combination18_object.name;
     }
     //
@@ -1008,7 +1008,7 @@ async function getData(item) {
         data.career_form_19_name = career_form_19_obj.name;
     }
 
-    if(career_form_19_obj) {
+    if(combination19_object) {
         data.combination19 = combination19_object.name;
     }
     //
@@ -1031,7 +1031,7 @@ async function getData(item) {
         data.career_form_20_name = career_form_20_obj.name;
     }
 
-    if(career_form_20_obj) {
+    if(combination20_object) {
         data.combination20 = combination20_object.name;
     }
 
