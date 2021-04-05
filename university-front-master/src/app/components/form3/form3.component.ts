@@ -8,6 +8,7 @@ import { FormService } from '@app/core/services/form.service';
 import { saveAs } from 'file-saver';
 import {MatSnackBar} from '@angular/material/snack-bar';
 import { HttpClient } from '@angular/common/http';
+import { environment } from '../../../environments/environment';
 
 @Component({
     selector: 'app-form3',
@@ -18,6 +19,7 @@ export class Form3Component implements OnInit {
     public form: FormGroup;
     public formValidationModel: any;
     submited = false;
+    protected urlApi = environment.apiEndpoint;
 
     uploadedFiles: Array < File > ;
     file: any = null;
@@ -43,7 +45,7 @@ export class Form3Component implements OnInit {
         for (var i = 0; i < this.uploadedFiles.length; i++) {
             formData.append("file", this.uploadedFiles[i], this.uploadedFiles[i].name);
         }
-        this.http.post('/api/upload', formData)
+        this.http.post(`${this.urlApi}/api/upload`, formData)
         .subscribe((response) => {
             this.file = response['file'];
           })
